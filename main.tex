@@ -1,0 +1,39 @@
+\documentclass[preprint,review,12pt]{elsarticle}
+\usepackage[T1]{fontenc}  
+\usepackage[scaled=0.82]{beramono}  
+\usepackage{microtype} 
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{slashed}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{lineno}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
+\usepackage{nameref}
+\usepackage{siunitx}
+\usepackage{mhchem}
+\usepackage{subcaption}
+\usepackage[margin=2cm]{geometry}
+
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\Var}{Var}
+\begin{document}
+\title{{The study of JUNO water-phase}}
+\author{Jun Weng, Baona Wu}
+
+
+\input{reconstruction}
+\input{neutronTag}
+\input{IBDSearch}
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\end{document}
