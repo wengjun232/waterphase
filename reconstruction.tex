@@ -5,33 +5,31 @@ Building upon the liquid scintillator-Cherenkov combined track reconstruction te
 
 \subsection{The Likelihood function}
 FiTQun simultaneously determines particle types, vertex positions, momentums, event times.
-In JUNO water-phase, we just need to determine the vertex position, momentums and event times. 
+In JUNO water-phase, we just need to determine the vertex position, momentums and event times.
 The likelihood function of fiTQun is defined as:
 \begin{equation}
-    \log \mathcal{L}(\boldsymbol{x};{q},{t}) = \sum_{j \in \{q=0\}} \log P_j \bigl( q=0\bigm| \mu_j \bigr) + \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( q_i \bigm| \mu_i \bigr) \bigr) + \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{t}} \bigl( t_i \bigm| \boldsymbol{x} \bigr) \bigr)
+	\log \mathcal{L}(\boldsymbol{x};{q},{t}) = \sum_{j \in \{q=0\}} \log P_j \bigl( q=0\bigm| \mu_j \bigr) + \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( q_i \bigm| \mu_i \bigr) \bigr) + \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{t}} \bigl( t_i \bigm| \boldsymbol{x} \bigr) \bigr)
 \end{equation}
 \begin{itemize}
-    \item $\boldsymbol{x} = (t_0, x, y, z, p_x, p_y, p_z)$: Event vertex containing time $t_0$, position $(x,y,z)$, and momentum $(p_x,p_y,p_z)$.
-    \item $\mu_i(\boldsymbol{x})$: Expected photoelectrons (PEs) at the $i$-th PMT, computed from the vertex $\boldsymbol{x}$.
-    \item $q_i$: Charge at the $i$-th PMT, ${q}$ is the sequence of $q_i$, when $q_i=0$, the PMT is unhitted.
-    \item $t_i$: Hit time at the $i$-th PMT, ${t}$ is the sequence of $q_i$.
+	\item $\boldsymbol{x} = (t_0, x, y, z, p_x, p_y, p_z)$: Event vertex containing time $t_0$, position $(x,y,z)$, and momentum $(p_x,p_y,p_z)$.
+	\item $\mu_i(\boldsymbol{x})$: Expected photoelectrons (PEs) at the $i$-th PMT, computed from the vertex $\boldsymbol{x}$.
+	\item $q_i$: Charge observed at the $i$-th PMT, $\{q\}$ is the sequence of $q_i$, when $q_i=0$, the PMT is unhitted.
+	\item $t_i$: Hit time of the $i$-th PMT, $\{t\}$ is the sequence of $t_i$.
 \end{itemize}
 
-The first term is the unhit likelihood, which is the probability of not detecting a hit in the PMT. The second term is the hit likelihood, which is the probability of detecting a hit in the PMT. The third term is the time likelihood, which is the probability of detecting a hit at a certain time. 
+The first term is the unhit likelihood, which is the probability of not detecting a hit in the PMT. The second term is the hit likelihood, which is the probability of detecting a hit in the PMT. The third term is the time likelihood, which is the probability of detecting a hit at a certain time.
 
+\subsection{The Fast reconstruction~(FRE) of the JUNO water-phase}
 In the original fiTQun, the probability calculation for the charge term required generating extensive lookup tables to model. To streamline computations, we simplified the charge term by discretizing the charge $q$ into the number of photoelectrons~($N_{\mathrm{PE}}$).
-In parallel, we utilize the first hit time of each PMT for reconstruction. This approach prioritizes the earliest detected photon arrival time at each PMT, which typically carries the most direct geometric and temporal information about the particle interaction. Building on the first-principles derivation of charge-time joint reconstruction in liquid scintillator detectors by Xuewei Liu et al.~\cite{xuewei}, we adapted their methodology to reformulate the likelihood function into Eq.~\ref{eq:likelihood}.
-\begin{equation}
-    \label{eq:likelihood}
-    \log \mathcal{L}(\boldsymbol{x};{N_{\mathrm{PE}}},{t}) = \sum_{j \in \{N_{\mathrm{PE}}>0\}}\frac{1}{(N_{\mathrm{PE},j}-1)!}  
-\end{equation}
-
-\subsection{The Fast reconstruction of the JUNO water-phase}
+In parallel, we utilize the first hit time of each PMT for reconstruction. This approach prioritizes the earliest detected photon arrival time at each PMT, which typically carries the most direct geometric and temporal information about the particle interaction. Based on the first-principles derivation of charge-time joint reconstruction in liquid scintillator detectors by Xuewei Liu et al.~\cite{xuewei}, we adapted their methodology to reformulate the likelihood function into Eq.~\ref{eq:likelihood}.
 \section{The evaluation of reconstructions}
 \subsection{In the dector simulation}
 \subsection{In the electronic simulation}
 \subsection{The \ce{AmC} and \ce{AmBe} calibrations in water-phase}
-In Run~3671, the \ce{AmBe} source is placed at $(0,0,-10)$\si{m}.
+Despite utilizing GPU acceleration for the reconstruction algorithms, we still face challenges in fully reconstructing all events. To reduce the data volume, we apply additional filtering during the fast reconstruction stage to remove dark noise-triggered events and events originating from PMT surface radioactivity outside the fiducial volume.
+Let us use Run~3671 in which the \ce{AmBe} source is placed at $(0,0,-10)$\si{m} as an example to illustrate. Additionally, Run 3677, conducted under identical configuration conditions without deploying a calibration source, was selected as the background run.
+\subsubsection{The reconstruction result of LFR}
+
 
 \subsection{The combination of the two reconstruction algorithms}
 \subsubsection{The events selected from the fast reconstruction}
