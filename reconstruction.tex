@@ -19,6 +19,23 @@ The likelihood function of fiTQun is defined as:
 
 The first term is the unhit likelihood, which is the probability of not detecting a hit in the PMT. The second term is the hit likelihood, which is the probability of detecting a hit in the PMT. The third term is the time likelihood, which is the probability of detecting a hit at a certain time.
 
+Since in the operation of the detector, only TQ information (time and charge) is recorded for low-energy events, waveform data is unavailable, and only the first hit time can be obtained. Therefore, it is necessary to reformulate the likelihood to adopt a first-hit-time-based reconstruction approach. Xuewei Liu~et.al developed a first-principles-based reconstruction method using time-charge information or time-PE information.
+In low-energy events, where each PMT typically detects only few photon, the number of hits can be directly approximated as NPE~($N_{PE}$). We can reformulate the likelihood function as:
+\begin{equation}
+	\log \mathcal{L}(\boldsymbol{x};{q},{t})= \sum_{j \in \{q=0\}}\log P_j \bigl( q=0\bigm| \mu_j \bigr)+\sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( 0 \bigm| \mu_{i,T_{low}}^{T_i} \bigr) * f_{\mathrm{t}}(T_i) * f_{\mathrm{q}}(N_{PE,i}-1|\mu_{i,T_{i}}^{T_{up}}) \bigr)
+\end{equation}
+
+In this case, we define the data taking as $[T_{low},T_{up}]$, and the first hit time of the $i$-th PMT as $T_{i}$, $\mu_{i,T_{low}}^{T_i}$ is the expected PEs in [$T_{low}$,${T_i}$], same as $\mu_{i,T_{i}}^{T_{up}}$.
+
+\subsection{Response of the water-phase dector}
+To compute the likelihood, we need to predict, given a vertex, at what time and how many photons each PMT will detect.
+The more accurate the predictions, the better the reconstruction performance. Therefore, we need to gain a comprehensive understanding of the detector response and develop accurate models for it.
+\subsubsection{The }
+
+\begin{equation}
+
+\end{equation}
+
 \subsection{The Fast reconstruction~(FRE) of the JUNO water-phase}
 In the original fiTQun, the probability calculation for the charge term required generating extensive lookup tables to model. To streamline computations, we simplified the charge term by discretizing the charge $q$ into the number of photoelectrons~($N_{\mathrm{PE}}$).
 In parallel, we utilize the first hit time of each PMT for reconstruction. This approach prioritizes the earliest detected photon arrival time at each PMT, which typically carries the most direct geometric and temporal information about the particle interaction. Based on the first-principles derivation of charge-time joint reconstruction in liquid scintillator detectors by Xuewei Liu et al.~\cite{xuewei}, we adapted their methodology to reformulate the likelihood function into Eq.~\ref{eq:likelihood}.
