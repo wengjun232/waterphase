@@ -36,6 +36,9 @@ The Cherenkov radiation is emitted when a charged particle travels faster than t
 In the original fiTQun, the probability calculation for the charge term required generating extensive lookup tables to model. To streamline computations, we simplified the charge term by discretizing the charge $q$ into the number of photoelectrons~($N_{\mathrm{PE}}$).
 In parallel, we utilize the first hit time of each PMT for reconstruction. This approach prioritizes the earliest detected photon arrival time at each PMT, which typically carries the most direct geometric and temporal information about the particle interaction. Based on the first-principles derivation of charge-time joint reconstruction in liquid scintillator detectors by Xuewei Liu et al.~\cite{xuewei}, we adapted their methodology to reformulate the likelihood function into Eq.~\ref{eq:likelihood}.
 \section{The evaluation of reconstructions}
+\subsection{The parameters used in the reconstruction}
+\subsection{The reconstruction goodness of reconstruction}
+The goodness of vertex is defined as the
 \subsection{In the dector simulation}
 \subsection{In the electronic simulation}
 \subsection{The \ce{AmC} and \ce{AmBe} calibrations in water-phase}
