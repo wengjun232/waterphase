@@ -28,8 +28,137 @@ In this case, we define the data taking as $[T_{low},T_{up}]$, and the first hit
 
 \subsection{Response of the water-phase dector}
 To compute the likelihood, we need to predict how many photons each PMT will detect when given a vertex. The more accurate the predictions are, the better the reconstruction performances. Therefore, we need a comprehensive understanding of the detector response and develop accurate models for it.
+It naturally comes to mind that when a charged particle enters water, emits Cherenkov photons, and triggers the PMT, this process can be divided into two parts. One pertains to how Cherenkov light is emitted, while the other concerns how the Cherenkov photons propagate and are detected.
+
 \subsubsection{The Cherenkov emission profile}
-When a charged particle
+When a charged particle travels through a medium at a speed exceeding that of light, it emits Cherenkov photons within a specific solid angle range. The phenomenon arises from local polarization occurring along the charged particle's trajectory: when polarized molecules return to their ground state, they emit electromagnetic radiation. When the refractive index of the medium is $n$, and the speed of light in vacuum is $c_0$, the condition of particle speed~$v_p$ for Cherenkov emmision is $\beta=v_p/c_0>1/n$. When in pure water, whose refractive index is $n_w=1.333$, and the paitical is electron~($m_0=\SI{0.511}{MeV}$), the energy threthold is $E_{th}=m_0\times(\sqrt{1-1/n_w^2}-1)=\SI{0.262}{MeV}$. That means, only when the energy of electron is larger than \SI{0.262}{MeV}, the Cherenkov photons will emit.
+
+The direction of Cherenkov photons can be discribed as: $\cos\theta=\frac{1}{\beta n_w}$ as Fig~\ref{Fig:Cherenkov_emmision} shown.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[height=6cm]{reconstruction/cherenkov_emission.pdf}
+	\end{center}
+	\caption{The direction of Cherenkov photons. $\theta$ is the angle between the photon emission direction and the direction of particle motion.}
+	\label{Fig:Cherenkov_emmision}
+\end{figure}
+
+When in water, $\cos\theta\approxeq0.75$. We can use simulation to get the emmision profile of Cherenkov photons. We used JUNO software~(version: J24.2.0) for this simulation. Also, we consider the light yield of Cherenkov by simulating electron with momentum from \SI{2}{MeV} to \SI{30}{MeV}. Our simulation is based on JUNO software~(JUNOsw)~\cite{junosw}, and the version is J24.2.1. We simulated electrons with momenta ranging from 2 to 50 MeV, uniformly distributed within the detector, while their emission directions were randomly oriented.
+
+We extended Dou Wei's angular coordinate definition method for liquid scintillator detectors~\cite{Dou:2022} to Cherenkov radiation detection by incorporating momentum direction degrees of freedom, resulting in the coordinate system illustrated in the figure.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[height=6cm]{reconstruction/zuobiao.pdf}
+	\end{center}
+	\caption{Coordinate system definition: $\theta$ is the angle of the emission direction of Cherenkov photon and the incident direction of the electron, $s$ is the distance from the position where the particle emits light to its initial position. $R$ is the distance of PMT to the position of electron.}
+	\label{Fig:Coordinate}
+\end{figure}
+
+In this simulation, we recorded the angles between the emission directions of all Cherenkov photons and the incident direction of the electron, and we do not care the photons are detected or not. Simultaneously, a crucial parameter is the distance between the photon generation point and the origin position of the charged particle.
+\begin{itemize}
+	\item From Fig~\ref{fig:thetaemmision}, most photons are emitted along the Cherenkov angle~($\cos\theta=0.75$), while a minority exhibit significant angular deviations from the electron's direction. When calculating the emission angle distribution, it must be analyzed separately for different particle energies rather than applying a single angular distribution to electrons of all energies.
+	\item From Fig~\ref{fig:semmision}, as the particle moves, Cherenkov photons emitted along the initial segment of its trajectory exhibit a uniform distribution. When the particle's velocity significantly decreases, photon emission drops markedly, with the vast majority of photons being emitted within the first half of the trajectory.
+	\item From Fig~\ref{fig:tsemmision}, after traveling some distance, the probability of photons deviating from the Cherenkov angle gradually increases due to multiple scattering. As illustrated in the figure, when electrons undergo multiple scattering, their direction changes significantly. However, when calculating the Cherenkov emission angle, we still use the initial incident direction, thereby producing photons emitted at angles far from the ideal Cherenkov angle.
+	\item In this case, we get the Cherenkov emmision profile~($g(p,s,\theta)$).
+\end{itemize}
+
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/2.pdf}
+		\caption{\SI{2}{MeV} electron}
+		\label{fig:theta2mev}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/5.pdf}
+		\caption{\SI{5}{MeV} electron}
+		\label{fig:theta5mev}
+	\end{subfigure}
+
+	\vspace{\baselineskip}
+
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/10.pdf}
+		\caption{\SI{10}{MeV} electron}
+		\label{fig:theta10mev}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/20.pdf}
+		\caption{\SI{20}{MeV} electron}
+		\label{fig:theta20mev}
+	\end{subfigure}
+	\caption{The relationship of emission probability with $\cos\theta$.}
+	\label{fig:thetaemmision}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/2.pdf}
+		\caption{\SI{2}{MeV} electron}
+		\label{fig:s2mev}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/5.pdf}
+		\caption{\SI{5}{MeV} electron}
+		\label{fig:s5mev}
+	\end{subfigure}
+
+	\vspace{\baselineskip}
+
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/10.pdf}
+		\caption{\SI{10}{MeV} electron}
+		\label{fig:s10mev}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/20.pdf}
+		\caption{\SI{20}{MeV} electron}
+		\label{fig:s20mev}
+	\end{subfigure}
+	\caption{The relationship of emission probability with $s$.}
+	\label{fig:semmision}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/2.pdf}
+		\caption{\SI{2}{MeV} electron}
+		\label{fig:ts2mev}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/5.pdf}
+		\caption{\SI{5}{MeV} electron}
+		\label{fig:ts5mev}
+	\end{subfigure}
+
+	\vspace{\baselineskip}
+
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/10.pdf}
+		\caption{\SI{10}{MeV} electron}
+		\label{fig:ts10mev}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/20.pdf}
+		\caption{\SI{20}{MeV} electron}
+		\label{fig:ts20mev}
+	\end{subfigure}
+	\caption{The relationship of emission probability with $s$ and .}
+	\label{fig:tsemmision}
+\end{figure}
+
+
 
 
 \subsection{The Fast reconstruction~(FRE) of the JUNO water-phase}
