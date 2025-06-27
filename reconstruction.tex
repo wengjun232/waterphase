@@ -1,7 +1,7 @@
 
 \section{The likelihood-based reconstruction of the JUNO water-phase}
 Super-Kamiokande~(SK) is the largest water Cherenkov detector in the world, with a water mass of 50 kilotons~\cite{SK}.
-Building upon the liquid scintillator-Cherenkov combined track reconstruction technique developed for the MiniBooNE experiment~\cite{minibone}, SK collaboration has advanced a likelihood-based reconstruction method, utilizing PMT charge and time information~\cite{SKfiTQun}, named as fiTQun.  For JUNO water-phase, we have implemented targeted improvements to the fiTQun and extended its application to low-energy event reconstruction at the MeV scale.
+Building upon the liquid scintillator-Cherenkov combined track reconstruction technique developed for the MiniBooNE experiment~\cite{minibone}, SK collaboration has advanced a likelihood-based reconstruction method, utilizing PMT charge and time information~\cite{SKfiTQun}, named as fiTQun.  For JUNO water-phase, we have implemented targeted improvements to the fiTQun and extended its application to low-energy event reconstruction at the \si{MeV} scale.
 
 \subsection{The Likelihood function}
 FiTQun simultaneously determines particle types, vertex positions, momentums, event times.
@@ -59,10 +59,9 @@ In this simulation, we recorded the angles between the emission directions of al
 \begin{itemize}
 	\item From Fig~\ref{fig:thetaemmision}, most photons are emitted along the Cherenkov angle~($\cos\theta=0.75$), while a minority exhibit significant angular deviations from the electron's direction. When calculating the emission angle distribution, it must be analyzed separately for different particle energies rather than applying a single angular distribution to electrons of all energies.
 	\item From Fig~\ref{fig:semmision}, as the particle moves, Cherenkov photons emitted along the initial segment of its trajectory exhibit a uniform distribution. When the particle's velocity significantly decreases, photon emission drops markedly, with the vast majority of photons being emitted within the first half of the trajectory.
-	\item From Fig~\ref{fig:tsemmision}, after traveling some distance, the probability of photons deviating from the Cherenkov angle gradually increases due to multiple scattering. As illustrated in the figure, when electrons undergo multiple scattering, their direction changes significantly. However, when calculating the Cherenkov emission angle, we still use the initial incident direction, thereby producing photons emitted at angles far from the ideal Cherenkov angle.
-	\item In this case, we get the Cherenkov emmision profile~($g(p,s,\theta)$).
+	\item From Fig~\ref{fig:tsemmision}, after traveling some distance, the probability of photons deviating from the Cherenkov angle gradually increases due to multiple scattering. As illustrated in the figure, when electrons undergo multiple scattering, their direction changes significantly, as Fig~\ref{fig:multipleScattering} shown. However, when calculating the Cherenkov emission angle, we still use the initial incident direction, thereby producing photons emitted at angles far from the ideal Cherenkov angle.
+	\item In this case, we get the Cherenkov emmision profile~($g(p,s,\theta)$) which describes the proportion of Cherenkov photons emitted at specific locations and directions along the trajectory of a charged particle with a given energy, relative to the total number of emitted photons. For the convenience of research, we use momentum~($p$) instead of energy~($E$).
 \end{itemize}
-
 
 \begin{figure}[h]
 	\centering
@@ -154,11 +153,64 @@ In this simulation, we recorded the angles between the emission directions of al
 		\caption{\SI{20}{MeV} electron}
 		\label{fig:ts20mev}
 	\end{subfigure}
-	\caption{The relationship of emission probability with $s$ and .}
+	\caption{The relationship of emission probability with $s$ and $\cos\theta$.}
 	\label{fig:tsemmision}
 \end{figure}
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{reconstruction/emmisionProfile/multiscatter.pdf}
+	\end{center}
+	\caption{An example of a \SI{10}{MeV} electron undergoing multiple scattering.}
+	\label{fig:multipleScattering}
+\end{figure}
 
+Through Gaussian fitting as shown in Fig~\ref{fig:yield_gauss_fit} in simulation, we obtain the total number of photons emitted at various energies and calculate the Cherenkov photon yield. After linear fitting, we obtain the relationship between light yield and momentum: $\phi(p)=1182\times p-956$.
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{reconstruction/emmisionProfile/yield_gauss_fit_20.pdf}
+		\caption{An example of Gaussian fit for light yield.}
+		\label{fig:yield_gauss_fit}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{reconstruction/emmisionProfile/phip.pdf}
+		\caption{\SI{5}{MeV} electron}
+		\label{fig:yield_fit}
+	\end{subfigure}
+	\caption{The relationship of emission probability with $s$ and .}
+\end{figure}
+
+\subsubsection{The calculation of direct light}
+After establishing the coordinate system, we can readily determine the number of photons received by a specific PMT when an electron is incident.
+\begin{equation}
+	\mu_{\mathrm{dir}}=\int ds g(p,s,\cos\theta)\phi(p)\Omega(R)T(R)\epsilon(\eta)
+	\label{equ:directLight}
+\end{equation}
+\begin{itemize}
+	\item $R$ is the distance between the position of electron and the PMT.
+	\item $\Omega(R)$ is the solid angle factor of PMT.
+	\item $T(R)$ is the light transmission factor.
+	\item $\epsilon(\eta)$ is the PMT angular acceptance of PMT, and $\eta$ is the incident angle of light when captured by PMT.
+\end{itemize}
+
+\paragraph{The solid angle factor}
+The main PMTs employed in JUNO are 20-inch with a radius of $a=SI{0.622}{m}$. And we can calculate the solid angle of PMT by Eq.~\eqref{equ:solid}.
+\begin{equation}
+	\Omega(R)=\frac{\pi a^2}{4\pi(R^2+a^2)}\times (4\pi)=\frac{\pi a^2}{R^2+a^2}
+	\label{equ:solid}
+\end{equation}
+This approximation remains valid only when PMTs are sufficiently distant from the particle. In JUNO, PMTs are mounted at around \SI{19.5}{m} , while our region of interest lies within \SI{17.7}{m}. Based on SK's experience, the approximation holds effectively at radial distances $R > \SI{1.5}{m}$.
+
+\paragraph{The transmission factor}
+In our work, we just use Eq.~\eqref{eq:att}, and the attenuation length $L^{a}$ is \SI{75}{m}.
+\begin{equation}
+	T(R) = \exp(-R/L^{a})
+	\label{eq:att}
+\end{equation}
+
+\paragraph{PMT angular accptance}
 
 
 \subsection{The Fast reconstruction~(FRE) of the JUNO water-phase}
