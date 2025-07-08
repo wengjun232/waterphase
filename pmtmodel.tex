@@ -644,7 +644,7 @@ The small contribution of the back-scattered and rediffused electrons in SEE is 
 
 
 
-\subsection{Model Simplification with Tweedie}\label{sec:model}
+\subsection{Gamma-Tweedie model for MCP-PMT}\label{sec:model}
 In our calculation, the distribution of the MCP charge response to the true-secondary electrons $\varGamma(\alpha_{i},\beta_{i})$ is determined by their energies $E_{i}$,
 which satisfy $\sum_{i}^{n}E_{i}<E_0$.
 The incident energy \(E_0\) of the PEs is \SI{650}{eV},
@@ -706,3 +706,11 @@ Typically $\frac{\alpha'}{\beta'}\approx 0.45Q_1$ and \(\sqrt{\frac{\alpha'}{\be
 It is practical to bound them in $[0.3,0.7]Q_1$ and $[0.05,0.3]~Q_1$ when the incident energy $E_0$ is significantly greater than $E_{i}$.
 We also have checked the chi-square results in the Gamma-Tweedie fitting,
 which gives good $\chi^2/\mathrm{ndf}<10$.
+
+In this case, we can write the mathematical model for the SER of the MCP-PMT:
+\begin{equation}
+	\label{eq:GTmodel}
+	f_{\text{MCP-PMT}}(Q) = p_0 \varGamma(Q; \alpha, \beta) + (1-p_0) \mathrm{Tw}_{\xi}(Q; \alpha', \beta')
+\end{equation}
+We can get the peak gain $G_p=\alpha/\beta$ and average gain $G_m=p_0\alpha/\beta+(1-p_0)\delta_{\mathrm{ts}}'\alpha'/\beta'$. 
+
