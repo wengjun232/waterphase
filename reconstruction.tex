@@ -215,19 +215,10 @@ In our work, we just use Eq.~\eqref{eq:att}, and the attenuation length $L^{a}$ 
 
 
 \subsection{The Fast reconstruction~(FRE) of the JUNO water-phase}
-In the original fiTQun, the probability calculation for the charge term required generating extensive lookup tables to model. To streamline computations, we simplified the charge term by discretizing the charge $q$ into the number of photoelectrons~($N_{\mathrm{PE}}$).
-In parallel, we utilize the first hit time of each PMT for reconstruction. This approach prioritizes the earliest detected photon arrival time at each PMT, which typically carries the most direct geometric and temporal information about the particle interaction. Based on the first-principles derivation of charge-time joint reconstruction in liquid scintillator detectors by Xuewei Liu et al.~\cite{xuewei}, we adapted their methodology to reformulate the likelihood function into Eq.~\ref{eq:likelihood}.
+
 \section{The evaluation of reconstructions}
 \subsection{The parameters used in the reconstruction}
 \subsection{The reconstruction goodness of reconstruction}
-The goodness of vertex is defined as the
+The goodness of vertex is defined
 \subsection{In the dector simulation}
 \subsection{In the electronic simulation}
-\subsection{The \ce{AmC} and \ce{AmBe} calibrations in water-phase}
-Despite utilizing GPU acceleration for the reconstruction algorithms, we still face challenges in fully reconstructing all events. To reduce the data volume, we apply additional filtering during the fast reconstruction stage to remove dark noise-triggered events and events originating from PMT surface radioactivity outside the fiducial volume.
-Let us use Run~3671 in which the \ce{AmBe} source is placed at $(0,0,-10)$\si{m} as an example to illustrate. Additionally, Run 3677, conducted under identical configuration conditions without deploying a calibration source, was selected as the background run.
-\subsubsection{The reconstruction result of LFR}
-
-
-\subsection{The combination of the two reconstruction algorithms}
-\subsubsection{The events selected from the fast reconstruction}
