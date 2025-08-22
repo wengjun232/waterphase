@@ -1,13 +1,5 @@
 \chapter{The PMT calibration in water phase}\label{sec:Introduction}
-
-\section{The single electron response of MCP-PMTs}
-The photomultiplier tubes~(PMT) see extensive deployments in particle physics, particularly neutrino experiments.
-A PMT comprises a photocathode, an electron multiplier, an anode, and other necessary structural components~\cite{1955Scintillation}.
-Photons from a light source incident on the photocathode follow a Poisson process.
-Some of them are converted to photoelectrons~(PE) via the photoelectric effect
-and such PEs enter the multiplier~\cite{2016Optimization}.
-Those two processes are Bernoulli selections, with the probabilities known as the \emph{quantum efficiency}~(QE) and the \emph{collection efficiency}~(CE).
-The PE count~($n_{\mathrm{PE}}$) in a specific time interval follows a Poisson distribution~\cite{1994Absolute}.
+The photomultiplier tubes~(PMT) find extensive applications in the realm of particle physics, especially within neutrino experiments. A PMT is composed of a photocathode, an electron multiplier, an anode, and other essential structural components, as cited in \ref{1955Scintillation}. Photons originating from a light source and impinging upon the photocathode adhere to a Poisson process. A fraction of these photons are transformed into photoelectrons~(PE) through the photoelectric effect, and these PEs then make their way into the multiplier, as detailed in \cite{2016Optimization}. These two processes are Bernoulli selections, with the associated probabilities referred to as the quantum efficiency~(QE) and the collection efficiency~(CE). The count of photoelectrons ($n_{\mathrm{PE}}$) within a specific time interval follows a Poisson distribution, as stated in \cite{1994Absolute}.
 
 The electron amplification is driven by the secondary electron emission~(SEE).
 When an incident particle, such as electron and ion, collides with or goes through a solid surface, one or more secondary electrons are emitted~\cite{2016Secondary}.
@@ -57,20 +49,16 @@ the overall charge distribution can be expressed in Eq.~(\ref{eq:sreal}):
 where $\theta(Q)$ is the Heaviside function.
 When $\lambda$ is less than 0.1,
 the probability of observing two or more PEs is less than one-tenth of the probability of observing a single PE.
-In this case, the charge distribution will only show the peak of the pedestal ($Q=0$) and the peak of the single PE ($Q=Q_1$) as indicated in the blue histogram in Fig~\ref{fig:spe_sreal}.
+In this case, the charge distribution will only show the peak of the pedestal~($Q=0$) and the peak of the single PE~($Q=Q_1$) as indicated in the blue histogram in Fig~\ref{fig:spe_sreal}.
 We can obtain an approximate SER charge spectrum after applying some cuts to remove the pedestal.
 Our work aligns different PMTs' gain by dividing the SER charge spectrum with $Q_1$ as $Q/Q_1$.
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{PMTRelated/GTmodel/spe.pdf}
-	\caption{The charge spectrum of the high-CE MCP-PMT GDB-6082~(red) and a dynode-PMT~(blue)~\cite{Zhang:2023ued}.
-		The blue histogram consists of the pedestal $Q=0$ and the principal peak of $Q=Q_1$, while the red histogram includes jumbo charges.}
-	\label{fig:spe_sreal}
-\end{figure}
+
+\section{The single electron response of MCP-PMTs}
+\subsubsection{The newly developed MCP-PMT}
 Instead of a large-sized dynode-chain commonly used in PMTs,
 MCP-PMTs employ MCPs as electron multipliers.
 MCP-PMTs are currently in use or planned for neutrino experiments
-like the Jiangmen Underground Neutrino Observatory~(JUNO)~\cite{ZHU2020162002} and the Jinping Neutrino Experiment~\cite{Zhang:2023ued},
+like the JUNO~\cite{ZHU2020162002} and the Jinping Neutrino Experiment~\cite{Zhang:2023ued},
 collider experiments like the Belle II TOP detector~\cite{MATSUOKA2014148} and the PANDA DIRC Cherenkov detector at FAIR~\cite{KRAUSS2023168659},
 and cosmic ray observatories like the Large High Altitude Air Shower Observatory~\cite{Cao2019UpgradingPT}.
 Initially, the fact that the feedback ions cause damage to the photocathode
@@ -100,6 +88,13 @@ Thus, the MCP gain for the secondaries differs from that for the PEs entering th
 The SER charge model in Eq.~\eqref{eq:sreal} is no longer sufficient to accurately calibrate this type of PMT.
 Understanding the origin of the jumbo charges is necessary for an appropriate SER charge calibration.
 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{PMTRelated/GTmodel/spe.pdf}
+	\caption{The charge spectrum of the high-CE MCP-PMT GDB-6082~(red) and a dynode-PMT~(blue)~\cite{Zhang:2023ued}.
+		The blue histogram consists of the pedestal $Q=0$ and the principal peak of $Q=Q_1$, while the red histogram includes jumbo charges.}
+	\label{fig:spe_sreal}
+\end{figure}
 
 To elucidate the nature of the jumbo charges, the Gamma distribution is introduced and a voltage-division experiment is developed to measure the relationship
 between MCP gain and the energy of the incident electrons.
