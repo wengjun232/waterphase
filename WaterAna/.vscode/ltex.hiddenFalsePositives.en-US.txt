@@ -1,2 +1,0 @@
-{"rule":"TOO_LONG_PARAGRAPH","sentence":"^\\QOur work aligns different PMTs' gain by dividing the SER charge spectrum with \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q as \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
-{"rule":"TOO_LONG_SENTENCE","sentence":"^\\QChen et al. \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q indicated that depositing high SEY materials such as Al2O3 via ALD on the input electrode of the first MCP can enhance the probability of collecting the secondaries to improve CE to nearly 100 % rather than being constrained by the MCP open-area ratio.\\E$"}

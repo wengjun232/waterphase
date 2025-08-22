@@ -1,0 +1,57 @@
+\contentsline {chapter}{Table of Contents}{D}{section*.2}%
+\contentsline {chapter}{\numberline {Chapter 1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {Chapter 2}The JUNO detector}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {Chapter 3}The PMT calibration in water phase}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The single electron response of MCP-PMTs}{3}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Gamma-Distributed SER charges}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Jumbo Charges through Extra Multiplication}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Furman probabilistic model}{7}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}An extra multiplication mode}{8}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}Voltage-division Experiment}{9}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}Charge-Spectra Decomposition}{11}{subsubsection.3.1.2.4}%
+\contentsline {subsection}{\numberline {3.1.3}Parameter Extraction from Data}{15}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Gamma-Tweedie model for MCP-PMT}{17}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}The timing calibration}{19}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The dark count rate}{19}{section.3.3}%
+\contentsline {chapter}{\numberline {Chapter 4}The reconstruction for the water-phase}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Likelihood function}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Response of the water-phase dector}{21}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}The Cherenkov emission profile}{21}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}The calculation of direct light}{23}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}The solid angle factor}{24}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}The transmission factor}{25}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}PMT angular accptance}{25}{subsubsection.4.2.2.3}%
+\contentsline {section}{\numberline {4.3}The Fast reconstruction\nobreakspace {}(FRE) of the JUNO water-phase}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}The parameters definition}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The energy related parameters}{25}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}The parameters for reconstruction quality}{26}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Kurtosis test\nobreakspace {}($k$)}{26}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Akaike Information Criterion\nobreakspace {}(AIC)\nobreakspace {}$\mitdelta A$}{27}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}The likelihood-energy combined Criterion\nobreakspace {}($LE$)}{28}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}The goodness of reconstruction\nobreakspace {}($G_{vd}$)}{28}{subsubsection.4.4.2.4}%
+\contentsline {subsection}{\numberline {4.4.3}In the dector simulation}{29}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}In the electronic simulation}{29}{subsection.4.4.4}%
+\contentsline {chapter}{\numberline {Chapter 5}Neutron detection in JUNO water phase}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}JUNO's low-energy threshold in water phase}{31}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}The source calibration in water phase}{31}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}The reconstruction of the prompt signals}{31}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}The event selection before reconstruction}{31}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}The position distribution of the prompt signals}{33}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}The energy distribution of prompt signals}{35}{subsubsection.5.1.2.3}%
+\contentsline {subsection}{\numberline {5.1.3}The search for delayed signals}{36}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}The reconstruction of delayed signals}{36}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}The search for delayed signals}{36}{subsubsection.5.1.3.2}%
+\contentsline {subsection}{\numberline {5.1.4}The low-energy threshold in water phase}{37}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}The neutron capture detecting ability of JUNO in water phase}{39}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}The maximum neutron detection efficiency}{41}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}The highest neutron detection signal-to-noise ratio}{44}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}The balance between neutron detection efficiency and SNR}{45}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {Chapter 6}The measurement of spallation neutron yield in water phase}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}The reconstruction of muon track}{49}{section.6.1}%
+\contentsline {section}{\numberline {6.2}The search for spallation neutron}{49}{section.6.2}%
+\contentsline {section}{\numberline {6.3}The spallation neutron yield calibration}{53}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Cross check using water-pool reconstructed muon}{56}{subsection.6.3.1}%
+\contentsline {chapter}{\numberline {Chapter 7}The observation of solar neutrino}{58}{chapter.7}%
+\contentsline {chapter}{References}{59}{section*.72}%
+\setcounter {tocdepth}{0}
+\contentsfinish 
