@@ -1,5 +1,5 @@
 \chapter{The PMT calibration in water phase}\label{sec:Introduction}
-The photomultiplier tubes~(PMT) find extensive applications in the realm of particle physics, especially within neutrino experiments. A PMT is composed of a photocathode, an electron multiplier, an anode, and other essential structural components, as cited in \ref{1955Scintillation}. Photons originating from a light source and impinging upon the photocathode adhere to a Poisson process. A fraction of these photons are transformed into photoelectrons~(PE) through the photoelectric effect, and these PEs then make their way into the multiplier, as detailed in \cite{2016Optimization}. These two processes are Bernoulli selections, with the associated probabilities referred to as the quantum efficiency~(QE) and the collection efficiency~(CE). The count of photoelectrons ($n_{\mathrm{PE}}$) within a specific time interval follows a Poisson distribution, as stated in \cite{1994Absolute}.
+The photomultiplier tubes~(PMT) find extensive applications in the realm of particle physics, especially within neutrino experiments. A PMT is composed of a photocathode, an electron multiplier, an anode, and other essential structural components, as cited in \cite{1955Scintillation}. Photons originating from a light source and impinging upon the photocathode adhere to a Poisson process. A fraction of these photons are transformed into photoelectrons~(PE) through the photoelectric effect, and these PEs then make their way into the multiplier, as detailed in \cite{2016Optimization}. These two processes are Bernoulli selections, with the associated probabilities referred to as the quantum efficiency~(QE) and the collection efficiency~(CE). The count of photoelectrons ($n_{\mathrm{PE}}$) within a specific time interval follows a Poisson distribution, as stated in \cite{1994Absolute}.
 
 The electron amplification is driven by the secondary electron emission~(SEE).
 When an incident particle, such as electron and ion, collides with or goes through a solid surface, one or more secondary electrons are emitted~\cite{2016Secondary}.
@@ -59,10 +59,8 @@ Instead of a large-sized dynode-chain commonly used in PMTs,
 MCP-PMTs employ MCPs as electron multipliers.
 MCP-PMTs are currently in use or planned for neutrino experiments
 like the JUNO~\cite{ZHU2020162002} and the Jinping Neutrino Experiment~\cite{Zhang:2023ued},
-collider experiments like the Belle II TOP detector~\cite{MATSUOKA2014148} and the PANDA DIRC Cherenkov detector at FAIR~\cite{KRAUSS2023168659},
-and cosmic ray observatories like the Large High Altitude Air Shower Observatory~\cite{Cao2019UpgradingPT}.
-Initially, the fact that the feedback ions cause damage to the photocathode
-led to a lifetime issue of MCP-PMTs~\cite{N2006Lifetime}.
+collider experiments like the Belle II TOP detector~\cite{MATSUOKA2014148} and the PANDA DIRC Cherenkov detector at FAIR~\cite{KRAUSS2023168659}, and cosmic ray observatories like the Large High Altitude Air Shower Observatory~\cite{Cao2019UpgradingPT}.
+Initially, the fact that the feedback ions cause damage to the photocathode led to a lifetime issue of MCP-PMTs~\cite{N2006Lifetime}.
 
 The atomic layer deposition~(ALD) technique~\cite{2012An}
 is applied to fabricate MCP-PMTs solving the lifetime issue~\cite{Lehmann:2022ret}.
@@ -75,32 +73,20 @@ by Cao~et~al.~\cite{cao_secondary_2021} and Zhang~et~al.~\cite{zzj2021Al}
 to allow for increased gain, improved single electron resolution,
 and a higher peak-to-valley ratio of the MCP-PMTs~\cite{2021Effects}.
 
-In the performance tests to evaluate the 8-inch high-CE MCP-PMT by the Jinping Neutrino Experiment,
-\emph{jumbo charges} are found in the SER charge spectra~\cite{Zhang:2023ued},
-as shown in the red histogram in Fig~\ref{fig:spe_sreal}.
-Similar charges have also been observed in the mass testing of the 20-inch MCP-PMTs at JUNO,
-identified as the ``long tail'' in the SER charge distribution~\cite{JUNO:2022hlz}.
-Orlov~et~al.~\cite{reviewer1} reported that the pulse height distribution of the high-CE MCP-PMTs had a non-Gaussian long-tail structure.
-Zhang~et~al.~\cite{2021Gain} used the charge model in Eq.~\eqref{eq:sreal} for the jumbo charges and recommended an extra gain calibration.
-Yang~et~al.~\cite{2017MCP} conducted a voltage-division experiment to reveal that the MCP gain for the low-energy electrons is significantly smaller than
-that for the high-energy ones.
+\subsection{The difficulty of MCP-PMT gain calibration}
+In the mass testing of of the 20-inch MCP-PMTs at Pan-Asia, a ``long tail'' in the SER charge distribution was found~\cite{JUNO:2022hlz}. Similar structure was found in the performance tests to evaluate the 8-inch high-CE MCP-PMT by the Jinping Neutrino Experiment~(JNE)~\cite{Zhang:2023ued} and we define those as "jumbo charge".
+Orlov~et~al.~\cite{reviewer1} reported that the pulse height distribution of the high-CE MCP-PMTs had a non-Gaussian long-tail structure. Zhang~et~al.~\cite{2021Gain} used the charge model in Eq.~\eqref{eq:sreal} for the jumbo charges and recommended an extra gain calibration. Yang~et~al.~\cite{2017MCP} conducted a voltage-division experiment to reveal that the MCP gain for the low-energy electrons is significantly smaller than that for the high-energy ones.
 Thus, the MCP gain for the secondaries differs from that for the PEs entering the channels directly.
 The SER charge model in Eq.~\eqref{eq:sreal} is no longer sufficient to accurately calibrate this type of PMT.
 Understanding the origin of the jumbo charges is necessary for an appropriate SER charge calibration.
-
+Considering the structural similarity of the MCP-PMT in the JNE and the fact that the 8-inch PMT is more flexible compared to the 20-inch PMT in JUNO, we take the MCP-PMT in JNE as the research object and extend the results to the 20-inch PMT in JUNO.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{PMTRelated/GTmodel/spe.pdf}
+	\includegraphics[width=0.7\textwidth]{PMTRelated/GTmodel/spe.pdf}
 	\caption{The charge spectrum of the high-CE MCP-PMT GDB-6082~(red) and a dynode-PMT~(blue)~\cite{Zhang:2023ued}.
 		The blue histogram consists of the pedestal $Q=0$ and the principal peak of $Q=Q_1$, while the red histogram includes jumbo charges.}
 	\label{fig:spe_sreal}
 \end{figure}
-
-To elucidate the nature of the jumbo charges, the Gamma distribution is introduced and a voltage-division experiment is developed to measure the relationship
-between MCP gain and the energy of the incident electrons.
-Considering the SEE model, we elucidate the nature of the jumbo charges
-and calculate the total SEY of the \ce{Al2O3}-\ce{MgO} layer when the incident energy is \SI{650}{eV}.
-Through convolution-based modeling, the physical mechanisms driving have been clarified, and a quantitative mathematical framework establishe, which is the first formulation for these kind of high-CE MCP-PMTs.
 
 \subsection{Gamma-Distributed SER charges}\label{gammapossion}
 Every multiplication of electrons at the dynodes or MCP channels follows approximately a Poisson distribution~\cite{branchandPoisson}.
@@ -123,7 +109,7 @@ defined by the scale factor $\alpha$ and the rate factor $\beta$, as shown in Eq
 \end{equation}
 where $\Gamma(\alpha)$ is the Gamma function.
 A Gamma distribution is uniquely determined by its expectation value \(\alpha/\beta=Q_1\) and variance \(\alpha/\beta^2=\sigma_1^2\),
-which can be converted into the Gaussian counterparts in~Eq.~\eqref{eq:sreal}.
+which can be converted into the Gaussian counterparts in Eq.~\eqref{eq:sreal}.
 The charge spectrum based on the Gamma distribution is,
 \begin{equation}
 	\begin{aligned}
