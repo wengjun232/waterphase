@@ -43,7 +43,7 @@ Given the background charge distribution $ f_{\mathrm{b}}(Q) $, the overall char
 	\end{aligned}
 	\label{eq:sreal}
 \end{equation}
-The Heaviside function $\theta(Q)$ serves as a critical component in this model. For $\lambda < 0.1$, the probability of detecting two or more photoelectrons (PEs) falls below one-tenth of the single-PE observation probability. Consequently, the charge distribution exhibits only two distinct peaks: the pedestal peak at $Q=0$ and the single-PE peak at $Q=Q_1$, as demonstrated by the blue histogram in Fig~\ref{fig:spe_sreal}.
+The Heaviside function $\theta(Q)$ serves as a critical component in this model. For $\lambda < 0.1$, the probability of detecting two or more PEs falls below one-tenth of the single-PE observation probability. Consequently, the charge distribution exhibits only two distinct peaks: the pedestal peak at $Q=0$ and the single-PE peak at $Q=Q_1$, as demonstrated by the blue histogram in Fig~\ref{fig:spe_sreal}.
 An approximate SER charge spectrum can thus be derived through pedestal suppression via targeted cuts. To standardize gain calibration across different PMTs, we normalize the SER charge spectrum by dividing all charge values by $Q_1$, yielding the dimensionless ratio $Q/Q_1$.
 
 \subsubsection{The newly developed MCP-PMT}
@@ -60,7 +60,7 @@ Understanding the origin of the jumbo charges is necessary for an appropriate SE
 Considering the structural similarity of the MCP-PMT in the JNE and the fact that the 8-inch PMT is more flexible compared to the 20-inch PMT in JUNO, we take the MCP-PMT in JNE as the research object and extend the results to the 20-inch PMT in JUNO.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{PMTRelated/GTmodel/spe.pdf}
+	\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/spe.pdf}
 	\caption{The charge spectrum of the high-CE MCP-PMT GDB-6082~(red) and a dynode-PMT~(blue)~\cite{Zhang:2023ued}.
 		The blue histogram consists of the pedestal $Q=0$ and the principal peak of $Q=Q_1$, while the red histogram includes jumbo charges.}
 	\label{fig:spe_sreal}
@@ -90,7 +90,7 @@ The charge spectrum based on the Gamma distribution is,
 \subsection{Jumbo Charges through Extra Multiplication}\label{sec:see}
 SEE has garnered significant research interest due to its critical role in vacuum electronic devices. Bruining's seminal monograph \textit{Physics and Applications of Secondary Electron Emmision}~\cite{bruining_physics_1954} consolidated foundational methodologies, empirical findings, and technological implementations of SEE. Baroody~\cite{baroody1950theory} proposed a metallic SEE theory postulating that incident primary electrons interact exclusively with conduction-band free electrons, neglecting energy-dependent variations in secondary emission. Dekker~et~al.~\cite{dekker1952theory} established a quantum theory addressing Coulomb interactions between incident primaries and lattice electrons. Wolff~\cite{wolff1954theory} developed the cascade theory describing secondary electron diffusion, energy dissipation, and multiplication within metals.
 
-Under isotropic conditions for incident and backscattered electrons, Kanaya~et~al.~\cite{Kanaya_1978} derived secondary emission yield (SEY) values for insulators incorporating ionization potentials, valence electron contributions, backscattering coefficients, and free-electron density effects. Vaughan~\cite{vaughan} empirically expressed SEY as a function of impact energy and direction~(the Vaughan model), enabling computational implementation. Furman and Pivi~\cite{2002Probabilistic} created a mathematically self-consistent Monte Carlo framework~(the Furman model) characterizing SEE from solid surfaces. This model probabilistically describes secondary emission statistics, treating emitted electron energies as independent, identically distributed random variables governed by material properties and primary energies.
+Under isotropic conditions for incident and backscattered electrons, Kanaya~et~al.~\cite{Kanaya_1978} derived SEY values for insulators incorporating ionization potentials, valence electron contributions, backscattering coefficients, and free-electron density effects. Vaughan~\cite{vaughan} empirically expressed SEY as a function of impact energy and direction~(the Vaughan model), enabling computational implementation. Furman and Pivi~\cite{2002Probabilistic} created a mathematically self-consistent Monte Carlo framework~(the Furman model) characterizing SEE from solid surfaces. This model probabilistically describes secondary emission statistics, treating emitted electron energies as independent, identically distributed random variables governed by material properties and primary energies.
 
 Whereas early theoretical models emphasized mechanistic explanations, the Vaughan and Furman frameworks prioritize Monte Carlo computational methods. The Furman model achieves superior physical consistency and experimental agreement, justifying its selection for precision applications requiring adaptable parameters and enhanced accuracy.
 
@@ -98,7 +98,7 @@ Whereas early theoretical models emphasized mechanistic explanations, the Vaugha
 In the Furman model~\cite{2002Probabilistic}, there are three kinds of secondary electrons, as shown in Fig.~\ref{fig:furmanelectrons}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{PMTRelated/GTmodel/furman.pdf}
+	\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/furman.pdf}
 	\caption{The three kinds of secondary electrons in Furman model.}
 	\label{fig:furmanelectrons}
 \end{figure}
@@ -171,10 +171,6 @@ As shown in Fig.~\ref{fig:circuit}, through the ALD technology, an \ce{Al2O3}-\c
 but also on the entrance electrode M1 of the first MCP.
 
 Such a design enables each PE to have two potential amplification methods, as shown in Fig.~\ref{fig:circuit}.
-\begin{itemize}
-	\item \textit{channel mode}
-	\item \textit{surface mode}
-\end{itemize}
 In the channel mode, they directly penetrate the channels; in the surface mode, they strike $\mathrm{M}1$, generating secondary electrons that subsequently enter the channels, as detailed in ~\cite{2016Optimization}. Once inside the MCP channel, the electrons undergo multiple collisions with the channel wall, leading to amplification through a series of multiplicative processes, as described in~\cite{1955Scintillation}
 
 The choice of these two routes constitutes a Bernoulli trial~\cite{1955Scintillation}. Regarding those low-energy secondary electrons in the surface mode, the MCP gain is significantly lower than that of the primary PEs in the channel mode, as reported in Ref.~\cite{2012An}.
@@ -219,16 +215,16 @@ We acquired approximate values of $\mu_{\mathrm{p}}$ and $\sigma_{\mathrm{p}}$ f
 
 \begin{figure}[!ht]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/fit_noald.pdf}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/fit_noald.pdf}
 		\caption{}
 		\label{fig:gain_noald}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/fit_ald.pdf}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/fit_ald.pdf}
 		\caption{}
 		\label{fig:gain_ald}
 	\end{subfigure}
@@ -241,22 +237,22 @@ We acquired approximate values of $\mu_{\mathrm{p}}$ and $\sigma_{\mathrm{p}}$ f
 After performing Gaussian fitting, we conduct linear interpolation and extrapolation to acquire the relationships of $\mu(E_0)$ and $\sigma(E_0)$ presented in Fig.~\ref{fig:gaintest}. The disparity in the relationships of MCP-PMTs with and without \ce{Al2O3}-\ce{MgO} deposited on $\mathrm{M}1$ stems from the impact of the charge contributed by the surface mode. When \(E_0 < \SI{200}{eV}\), $\mu(E_0)$ experiences a rapid increase. Once \(E_0 > \SI{200}{eV}\), $\mu(E_0)$ gradually reaches a stable state. The $\sigma(E_0)$ generally increases in a manner similar to $\mu(E_0)$, yet it shows a decrease around \SI{200}{eV}. Yang et al.~\cite{2017MCP} reported a similar tendency for $\mu(E_0)$. In our study, the optimal relative resolution $\sigma/\mu$ occurs at approximately \SI{600}{eV}, while the results of Yang et al. indicated \SI{200}{eV}. Cao et al.\cite{cao_secondary_2021} discovered that the SEY of \ce{Al2O3}-\ce{MgO} rises with the incident energy within the range of 100 - \SI{600}{eV}. Even though the film structure and thickness we employed are different, taking into account the variation curves of the SEY of \ce{Al2O3} and \ce{MgO} with energy, we can still make a rough evaluation that the trend of $\sigma/\mu$ obtained herein is reasonable.
 \begin{figure}[!ht]
 	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/gain_mu.pdf}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/gain_mu.pdf}
 		\caption{}
 		\label{fig:gain}
 	\end{subfigure}%
-	\begin{subfigure}[b]{0.45\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/gain_sigma.pdf}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/gain_sigma.pdf}
 		\caption{}
 		\label{fig:sigma}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.45\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/gain_sigmamu.pdf}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/gain_sigmamu.pdf}
 		\caption{}
 		\label{fig:sigmamu}
 	\end{subfigure}
@@ -266,7 +262,7 @@ After performing Gaussian fitting, we conduct linear interpolation and extrapola
 \end{figure}
 
 \subsubsection{Charge-Spectra Decomposition}\label{sec:convolution}
-The Furman model presented in Sec.~\ref{subsec:fuman} forecasts the energies of the secondaries. In our voltage-division experiment detailed in Sec.~\ref{sec:gain}, we measured the correlation between the MCP gain and the incident energies of electrons. We calculate the charge distribution using Monte Carlo following the flowchart shown in Fig.~\ref{fig:process}. In this research, we directed the laser at the apex of the photocathode hemisphere, and the photoelectrons (PEs) struck M1 with an incident angle of $\theta_0 = 0^\circ$. The intricate amplification process within the channels is characterized by the incident energy-dependent Gamma distributions $\varGamma(\alpha(E), \beta(E))$ as described in Sec.~\ref{gammapossion}. The values of $\alpha(E)$ and $\beta(E)$ are estimated based on the relationships of $\mu(E)$ and $\sigma(E)$ of an MCP-PMT without an \ce{Al2O3}-\ce{MgO} coating on the input electrode. This approach removes the influence of the surface mode.
+The Furman model presented in Sec.~\ref{subsec:fuman} forecasts the energies of the secondaries. In our voltage-division experiment detailed in Sec.~\ref{sec:gain}, we measured the correlation between the MCP gain and the incident energies of electrons. We calculate the charge distribution using Monte Carlo following the flowchart shown in Fig.~\ref{fig:process}. In this research, we directed the laser at the apex of the photocathode hemisphere, and the PEs struck M1 with an incident angle of $\theta_0 = 0^\circ$. The intricate amplification process within the channels is characterized by the incident energy-dependent Gamma distributions $\varGamma(\alpha(E), \beta(E))$ as described in Sec.~\ref{gammapossion}. The values of $\alpha(E)$ and $\beta(E)$ are estimated based on the relationships of $\mu(E)$ and $\sigma(E)$ of an MCP-PMT without an \ce{Al2O3}-\ce{MgO} coating on the input electrode. This approach removes the influence of the surface mode.
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\linewidth]{PMTRelated/GTmodel/process.pdf}
@@ -323,14 +319,14 @@ For the true-secondary electrons, the count $n$ follows a Poissonian. The sum of
 where \(E_{i}\) is sampled from Eq.~(\ref{eq:true}).
 The values of \(\alpha(E_{i})\) and \(\beta(E_{i})\) are derived from \(\mu(E_{i})\) and \(\sigma(E_{i})\) as presented in Fig.~\ref{fig:gaintest}. For the sake of comprehensiveness, \(\delta_\mathrm{ts} = (1-\delta_{\mathrm{bs}} - \delta_{\mathrm{rd}})\delta_{\mathrm{ts}}'\) represents the ratio of the electric current of the true-secondary electrons to that of the primary electrons. The charge spectra corresponding to different values of \(n\) are depicted in Fig.~\ref{fig:true_n}. Owing to the relatively lower energies of the secondary electrons, their charges are smaller. Differentiating each charge formed at the anode is a difficult task because multiple secondary electrons enter the MCP channels at the same time. A larger value of \(n\) leads to a greater charge.
 \begin{figure}[!htbp]
-	\begin{subfigure}{0.47\linewidth}
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/true_all.pdf}
+	\begin{subfigure}{0.5\linewidth}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/true_all.pdf}
 		\caption{}
 		\label{fig:true_n}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.47\linewidth}
-		\includegraphics[width=\textwidth]{PMTRelated/GTmodel/allmode.pdf}
+	\begin{subfigure}{0.5\linewidth}
+		\includegraphics[width=0.95\textwidth]{PMTRelated/GTmodel/allmode.pdf}
 		\caption{}
 		\label{fig:allmode}
 	\end{subfigure}
@@ -343,16 +339,16 @@ Fig.~\ref{fig:allmode} presents a typical decomposition of the SER charge spectr
 From Eq.~(\ref{eq:1}) and (\ref{eq:ts_all}), it can be clearly seen that $\delta_{\mathrm{ts}}'$ and \(p_0\) have a substantial influence on the SER charge distribution, as shown in Fig.~\ref{fig:tsp}. To determine these two parameters, we utilize the MCP - PMT test data provided by Zhang et al.~\cite{Zhang:2023ued}.
 \begin{figure}[!htbp]
 	\centering
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/p.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/p.pdf}
 		\caption{}
 		\label{fig:p}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/ts.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/ts.pdf}
 		\caption{}
 		\label{fig:ts}
 	\end{subfigure}
@@ -375,16 +371,16 @@ The \(\chi^2_{r - 1}\) values are scanned across the \((p_0,\delta_{\mathrm{ts}}
 
 \begin{figure}[!htbp]
 	\centering
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/cour.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/cour.pdf}
 		\caption{}
 		\label{fig:cour}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/hist.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/hist.pdf}
 		\caption{}
 		\label{fig:hist}
 	\end{subfigure}
@@ -397,7 +393,7 @@ The scatter plot of $\hat{\delta}_{\mathrm{ts}}'$ versus $\hat{p}_0$ for 9 MCP-P
 The PEs of the channel, back-scattered, and rediffused surface modes make up \SI{53.41}{\percent}, forming the peak. For each of the remaining cases, when hitting the surface, it induces 5.979 true-secondary electrons on average.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.6\textwidth]{PMTRelated/GTmodel/true_p.pdf}
+	\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/true_p.pdf}
 	\caption{When performing convolution with 9 MCP-PMTs, the distribution of $\delta_{\mathrm{ts}}'$ and $p_0$ takes place at the point of minimum chi-square. The blue dashed line represents the expected $\hat{p}_0$ that is estimated from~\cite{chen2018photoelectron}. }
 	\label{fig:true_p}
 \end{figure}
@@ -407,19 +403,19 @@ To make a comparison between our measurement and previous studies, we transform 
 	\label{eq:2}
 	\delta = \delta_\text{bs} + \delta_\text{rd} + (1-\delta_\text{bs} - \delta_\text{rd}) \delta_\text{ts}'
 \end{equation}
-and the fraction \(p_0\) to \(p\) is determined by Eq.~\eqref{eq:p0}. Cao et al.~\cite{cao_secondary_2021} measured the secondary electron yield (SEY) of the \ce{Al2O3}-\ce{MgO} double - layered film to be in the range of 4 - 5. Chen et al.~\cite{2016Optimization} noted that there exists an electrostatic lens effect at the entrances of the microchannel plate (MCP) channels. This effect results in the ratio of the photoelectrons (PEs) entering the MCP channels being smaller than the open - area ratio. When the incident angle of the PEs is \(\theta_0 = 0^\circ\), when the open - area ratio of the MCP is \SI{74.9}{\percent}, the proportion of PEs directly entering the MCP channels is approximately \SI{60}{\percent}. Chen et al.~\cite{chen2018photoelectron} showed that when the open - area ratio is \SI{65}{\percent}, this proportion is around \SI{55}{\percent}. In our study, the MCPs have pore diameters of \SI{12}{\mu\meter}, the spacing between pores is \SI{14} {\mu\meter}, and the open - area ratio is \SI{66.6}{\percent}. For \(\delta_{\mathrm{rd}}+\delta_{\mathrm{bs}} = 0.1\), the expected value of \(\hat{p}_0\) is calculated as \(\hat{p}_0=\frac{55\%}{1-(1 - 55\%)\delta_{\mathrm{rd}}+\delta_{\mathrm{bs}}}\approx 57.6\%\).
+and the fraction \(p_0\) to \(p\) is determined by Eq.~\eqref{eq:p0}. Cao et al.~\cite{cao_secondary_2021} measured the secondary electron yield (SEY) of the \ce{Al2O3}-\ce{MgO} double - layered film to be in the range of 4 - 5. Chen et al.~\cite{2016Optimization} noted that there exists an electrostatic lens effect at the entrances of the microchannel plate (MCP) channels. This effect results in the ratio of the PEs entering the MCP channels being smaller than the open - area ratio. When the incident angle of the PEs is \(\theta_0 = 0^\circ\), when the open - area ratio of the MCP is \SI{74.9}{\percent}, the proportion of PEs directly entering the MCP channels is approximately \SI{60}{\percent}. Chen et al.~\cite{chen2018photoelectron} showed that when the open - area ratio is \SI{65}{\percent}, this proportion is around \SI{55}{\percent}. In our study, the MCPs have pore diameters of \SI{12}{\mu\meter}, the spacing between pores is \SI{14} {\mu\meter}, and the open - area ratio is \SI{66.6}{\percent}. For \(\delta_{\mathrm{rd}}+\delta_{\mathrm{bs}} = 0.1\), the expected value of \(\hat{p}_0\) is calculated as \(\hat{p}_0=\frac{55\%}{1-(1 - 55\%)\delta_{\mathrm{rd}}+\delta_{\mathrm{bs}}}\approx 57.6\%\).
 \begin{figure}[!htbp]
 	\centering
-	\begin{subfigure}{0.48\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/parameter_pp0.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/parameter_pp0.pdf}
 		\caption{}
 		\label{fig:pp0}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.48\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/parameters_ts.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/parameters_ts.pdf}
 		\caption{}
 		\label{fig:tsts}
 	\end{subfigure}
@@ -436,16 +432,16 @@ In our computations, the distribution of the MCP charge response to the true-sec
 
 \begin{figure}[!htbp]
 	\centering
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/single_pecharge.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/single_pecharge.pdf}
 		\caption{}
 		\label{fig:single_pe}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/GTmodel/singlepefit.pdf}
+		\includegraphics[width=0.95\linewidth]{PMTRelated/GTmodel/singlepefit.pdf}
 		\caption{}
 		\label{fig:single_fit}
 	\end{subfigure}
@@ -473,9 +469,101 @@ We have also examined the chi-square results in the Gamma-Tweedie fitting, and t
 \end{equation}
 
 \subsection{The gain distribution of PMTs}
-For the Dynode-PMTs in JUNO, we deploy the Gamma distribution for the gain calculation and Gamma-Tweedie distribution for MCP-PMTs.
-For the MCP-PMT, in addition to defining the gain of the main peak, we also need to define the average gain that describes the mean of the entire SER.
+We used the charge spectrum of dark noise for gain calibration. As shown in the Fig.~\ref{fig:gain_100range}, we only utilized the information within the first \SI{100}{ns} of each event to ensure obtaining a clean dark noise signal.
+For the Dynode-PMTs in JUNO, we deploy the Gamma distribution~($\Gamma(Q;\alpha,\beta)$) for the gain calculation and Gamma-Tweedie distribution~($p_0\Gamma(Q;\alpha,\beta) + (1-p_0)\mathrm{Tw}_{\xi}(Q;\alpha',\beta')$)for MCP-PMTs.
+As shown in Fig.~\ref{fig:pmtfit}, for Dynode-PMT, the Gamma distribution can already depict the properties of the main peak extremely clearly. For MCP-PMT, the Gamma-Tweedie distribution can not only clearly describe the long-tail structure, but also demonstrates excellent performance during the fitting process.
+In addition to defining the gain of the main peak~($G_p$), we also need to define the average gain~($G_m$) that describes the mean of the entire SER for MCP-PMTs. Therefore, in our work, we have defined the gain of each of the two distributions respectively.
+\begin{itemize}
+	\item For Dynode-PMTs, $G_m=G_p=\frac{\alpha}{\beta}$
+	\item For MCP-PMTs, $G_p=\frac{\alpha}{\beta}$ and $G_m=p_0\frac{\alpha}{\beta}+\lambda\frac{\alpha'}{\beta'}$
+\end{itemize}
 
-\section{The timing calibration}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{PMTRelated/Gain_DCR_window.pdf}
+	\caption{The range of PE time for gain and calibration. Only the PEs in the first \SI{100}{ns} are used.}
+	\label{fig:gain_100range}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{PMTRelated/Dynode-PMT_fit.pdf}
+		\caption{}
+		\label{fig:dynode-fit}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{PMTRelated/MCP-PMT_fit.pdf}
+		\caption{}
+		\label{fig:mcp-fit}
+	\end{subfigure}
+	\caption{The gain fit of PMTs. \subref{fig:dynode-fit} shows the Gamma distribution fit of Dynode-PMTs, and \subref{fig:mcp-fit} shows the Gamma-Tweedie fit of MCP-PMTs.}
+	\label{fig:pmtfit}
+\end{figure}
+
+As illustrated in Fig.~\ref{fig:gmp}, for the two types of PMTs, the fitted $G_p$ values are already aligned quite well. However, regarding $G_m$, the value of MCP-PMT is significantly higher than that of Dynode-PMT. Also, the average gain of MCP-PMTs is much larger than the peak gain. This indicates that in the long-tail structure, $\lambda\frac{\alpha'}{\beta'}$ is greater than $\frac{\alpha}{\beta}$, which is consistent with our experimental conclusion.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{PMTRelated/gp.pdf}
+		\caption{}
+		\label{fig:gp}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{PMTRelated/gm.pdf}
+		\caption{}
+		\label{fig:gm}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{PMTRelated/mcp-gpm.pdf}
+		\caption{}
+		\label{fig:gmp_mcp}
+	\end{subfigure}
+	\caption{The gain distribution of PMTs. \subref{fig:gp} shows the peak gain distribution, \subref{fig:gm} indicated the average gain distribution, and \subref{fig:gmp_mcp} illustrates the peak gain and average gain of MCP-PMTs.}
+	\label{fig:gmp}
+\end{figure}
+
 \section{The dark count rate}
+Since we imposed restrictions on the selection of dark noise when performing gain calibration, on this basis, the dark noise count rate~(DCR) of the PMT can be calibrated. The formula used to calculate the DCR is Eq.~\eqref{eq:dcr}. $n_{PE,100}$ is the number of PEs in first \SI{100}{ns} and $n_w$ is the number of events.
+\begin{equation}
+	DCR=\frac{n_{PE,100}}{n_w*100}
+	\label{eq:dcr}
+\end{equation}
+Taking Run~3279 on February 2nd as an example, the distribution of the DCR obtained from the calibration is shown in the Fig.~\ref{fig:dcr_calib}. It can be seen that the mean dark noise rate of the MCP-PMT is about \SI{33}{kHz}, which is about \SI{5}{kHz} higher than that of the Dynode-PMT. At the same time, from the perspective of the position distribution, the distribution of the DCR is relatively uniform and there is no obvious asymmetry.
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}{0.6\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{PMTRelated/dcr_3279.pdf}
+		\caption{}
+		\label{fig:dcr}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{PMTRelated/dcr_3279_pos.pdf}
+		\caption{}
+		\label{fig:dcrpos}
+	\end{subfigure}
+	\caption{The DCR distribution of PMTs. In \subref{fig:dcr}, the blue line shows the DCR of MCP-PMTs and the red one shows that of Dynode-PMTs. \subref{fig:dcrpos} shows the postion distribution of DCR.}
+	\label{fig:dcr_calib}
+\end{figure}
+For each analyzed run, the DCR was calibrated independently. Consequently, the variation law of DCR with the data acquisition time can be straightforwardly investigated, as shown in Fig.~\ref{fig:dcr_time}. It has been observed that as the detector is in operation, the DCR initially increased, then gradually decreased, and ultimately stabilized. Throughout this transformation process, the DCR of the MCP-PMT consistently remained approximately \SI{5}{kHz} higher than that of the Dynode-PMT. Simultaneously, the DCRs of both PMTs consistently exceeded \SI{20}{kHz}. This situation exerted a certain influence on and presents challenges to the Cherenkov reconstruction of the water phase. Thus, it was essential to develop a mathematical model of the dark noise and apply it to the reconstruction.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{PMTRelated/dcr_time.pdf}
+	\caption{The curve of DCR changing with time.}
+	\label{fig:dcr_time}
+\end{figure}
+\section{The timing calibration}
+
 \section{The Photon detection efficiency}
