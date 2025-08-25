@@ -1,7 +1,7 @@
 \chapter{The PMT calibration in water phase}\label{sec:Introduction}
 In JUNO, it is essential to comprehensively and accurately calibrate the properties of the photomultiplier tubes~(PMTs) in order to precisely extract both timing information and photon counts from the captured waveforms. This requires systematic characterization of key parameters including the PMT timing response, gain stability, linearity, noise levels, and single-photon detection capability. Such calibration is critical for achieving the high-precision energy resolution and vertex reconstruction necessary for JUNO's physics goals, particularly in the determination of neutrino mass ordering. In this chapter, we will investigate the performance characteristics of PMTs in the water phase.
-
-\section{The traditional mixxed Gaussian model}
+\section{The gain calibration}
+\subsection{The traditional mixxed Gaussian model}
 As outlined in foundational studies~\cite{1955Scintillation}, a PMT's operational core comprises three functional stages:
 \begin{itemize}
 	\item photon-to-electron conversion at the photocathode interface
@@ -46,7 +46,6 @@ Given the background charge distribution $ f_{\mathrm{b}}(Q) $, the overall char
 The Heaviside function $\theta(Q)$ serves as a critical component in this model. For $\lambda < 0.1$, the probability of detecting two or more photoelectrons (PEs) falls below one-tenth of the single-PE observation probability. Consequently, the charge distribution exhibits only two distinct peaks: the pedestal peak at $Q=0$ and the single-PE peak at $Q=Q_1$, as demonstrated by the blue histogram in Fig~\ref{fig:spe_sreal}.
 An approximate SER charge spectrum can thus be derived through pedestal suppression via targeted cuts. To standardize gain calibration across different PMTs, we normalize the SER charge spectrum by dividing all charge values by $Q_1$, yielding the dimensionless ratio $Q/Q_1$.
 
-\section{The single electron response of MCP-PMTs}
 \subsubsection{The newly developed MCP-PMT}
 In contrast to traditional Dynode-PMTs that typically employ large-scale dynode chains for electron multiplication, MCP-PMTs implement microchannel plates~(MCPs) as their amplification components. These devices are actively utilized or planned for deployment in major scientific initiatives, including neutrino experiments such as JUNO~\cite{ZHU2020162002} and the Jinping Neutrino Experiment~(JNE)~\cite{Zhang:2023ued}, collider facilities like the Belle~II TOP detector~\cite{MATSUOKA2014148} and PANDA's DIRC Cherenkov detector at FAIR~\cite{KRAUSS2023168659}, as well as cosmic ray observatories exemplified by the Large High Altitude Air Shower Observatory~\cite{Cao2019UpgradingPT}. Early operational challenges stemmed from ion feedback-induced photocathode degradation, imposing lifetime constraints on MCP-PMTs~\cite{N2006Lifetime}.
 
@@ -472,9 +471,11 @@ We have also examined the chi-square results in the Gamma-Tweedie fitting, and t
 	\label{eq:GTmodel}
 	f_{\text{MCP-PMT}}(Q) = p_0 \varGamma(Q; \alpha, \beta) + (1-p_0) \mathrm{Tw}_{\xi}(Q; \alpha', \beta')
 \end{equation}
-We can get the peak gain $G_p=\alpha/\beta$ and average gain $G_m=p_0\alpha/\beta+(1-p_0)\delta_{\mathrm{ts}}'\alpha'/\beta'$.
-\section{The calibration of PMTs in JUNO water phase}
-\subsection{The gain calibration}
-\subsection{The timing calibration}
-\subsection{The dark count rate}
-\subsection{The Photon detection efficiency}
+
+\subsection{The gain distribution of PMTs}
+For the Dynode-PMTs in JUNO, we deploy the Gamma distribution for the gain calculation and Gamma-Tweedie distribution for MCP-PMTs.
+For the MCP-PMT, in addition to defining the gain of the main peak, we also need to define the average gain that describes the mean of the entire SER.
+
+\section{The timing calibration}
+\section{The dark count rate}
+\section{The Photon detection efficiency}
