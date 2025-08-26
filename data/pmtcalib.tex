@@ -564,6 +564,35 @@ For each analyzed run, the DCR was calibrated independently. Consequently, the v
 	\caption{The curve of DCR changing with time.}
 	\label{fig:dcr_time}
 \end{figure}
-\section{The timing calibration}
 
-\section{The Photon detection efficiency}
+\section{The timing calibration}
+In the water phase, the time characteristics are calibrated by laser.
+What has a relatively large impact on the subsequent reconstruction are the time starting point of each PMT, that is, the time-offset, and the transit time spread~(TTS) of the PMT. In this work, we use the standard deviation to represent TTS instead of using the full width at half maximum.
+The distribution of time-offset is as shown in Fig.~\ref{fig:offset} and that of TTS is as illustrated in Fig.~\ref{fig:tts}. The timing jitter (TTS) of the MCP-PMT is around \SI{10}{ns}, which is significantly higher than that of the Dynode-PMT (around \SI{2.5}{ns}). Therefore, in the reconstruction, the impact of TTS cannot be ignored, and modeling and application are required.
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{PMTRelated/offset.pdf}
+		\caption{}
+		\label{fig:offset}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{PMTRelated/TTS.pdf}
+		\caption{}
+		\label{fig:tts}
+	\end{subfigure}
+	\caption{The timing characteristics in water phase. \subref{fig:offset} shows the distribution of time-offset and \subref{fig:tts} illustrates the distribution of TTS.}
+	\label{fig:timeCailb}
+\end{figure}
+
+\section{The Photon Detection Efficiency}
+The Photon Detection Efficiency~(PDE) is an important parameter for measuring the photon detection ability of a PMT. Numerically, it is equal to the product of QE and CE. In this work, we directly use the results obtained from the batch tests at Pan-Asia~\cite{JUNO:2022hlz}, as shown in Fig.~\ref{fig:PDE}.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{PMTRelated/PDE.pdf}
+	\caption{The distribution of PDE.}
+	\label{fig:PDE}
+\end{figure}
