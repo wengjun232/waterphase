@@ -1,7 +1,8 @@
 
 \chapter{The reconstruction for the water-phase}
 \label{chap:recon}
-Super-Kamiokande~(SK) stands as the world's largest pure water Cherenkov detector, housing \SI{50}{kilotons} of ultrapure water~\cite{SK}. Building upon the liquid scintillator-Cherenkov combined track reconstruction technique developed for the MiniBooNE experiment~\cite{minibone}, SK collaboration has advanced a likelihood-based reconstruction method, utilizing PMT charge and time information~\cite{SKfiTQun}, named as fiTQun. For JUNO water-phase, we have implemented targeted improvements to the fiTQun and extended its application to low-energy event reconstruction at the \si{MeV} scale.
+After carefully calibrating the PMTs, we can obtain the number of photons hitting the PMT and their arrival times for each event. Based on these information, we will use statistical methods to infer information such as the position, energy, and direction of the physical events that produced these photons.
+In the field of Cherenkov reconstruction, the Super-Kamiokande~(SK) experiment is the most worthy of reference. SK stands as the world's largest pure water Cherenkov detector, housing \SI{50}{kilotons} of ultrapure water~\cite{SK}. Building upon the liquid scintillator-Cherenkov combined track reconstruction technique developed for the MiniBooNE experiment~\cite{minibone}, SK collaboration has advanced a likelihood-based reconstruction method, utilizing PMT charge and time information~\cite{SKfiTQun}, named as fiTQun. For JUNO water-phase, we have implemented targeted improvements to the fiTQun and extended its application to low-energy event reconstruction at the \si{MeV} scale.
 
 \section{The Likelihood function}
 \label{sec:recon}
@@ -52,7 +53,7 @@ The direction of Cherenkov photons can be discribed as: $\cos\theta=\frac{1}{\be
 	\label{Fig:Cherenkov_emmision}
 \end{figure}
 
-When in water, $\cos\theta\approxeq0.75$. We can use simulation to get the emmision profile of Cherenkov photons. We used JUNO software~(version: J24.2.0) for this simulation. Also, we consider the light yield of Cherenkov by simulating electron with momentum from \SI{2}{MeV} to \SI{30}{MeV}. Our simulation is based on JUNO software~(JUNOsw)~\cite{junosw}, and the version is J24.2.1. We simulated electrons with momenta ranging from 2 to 50 MeV, uniformly distributed within the detector, while their emission directions were randomly oriented.
+When in water, $\cos\theta\approxeq0.75$. We can use simulation to get the emmision profile of Cherenkov photons. Also, we consider the light yield of Cherenkov by simulating electron with momentum from \SI{2}{MeV} to \SI{30}{MeV}. Our simulation is based on JUNO software~(JUNOsw)~\cite{junosw}, and the version is J24.2.1. We simulated electrons with momenta ranging from 2 to \SI{50}{MeV}, uniformly distributed within the detector, while their emission directions were randomly oriented.
 
 We extended Dou Wei's angular coordinate definition method for liquid scintillator detectors~\cite{Dou:2022} to Cherenkov radiation detection by incorporating momentum direction degrees of freedom, resulting in the coordinate system illustrated in the figure.
 
@@ -72,15 +73,15 @@ In this simulation, we recorded the angles between the emission directions of al
 	\item In this case, we get the Cherenkov emmision profile~($g(p,s,\theta)$) which describes the proportion of Cherenkov photons emitted at specific locations and directions along the trajectory of a charged particle with a given energy, relative to the total number of emitted photons. For the convenience of research, we use momentum~($p$) instead of energy~($E$).
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/2.pdf}
 		\caption{\SI{2}{MeV} electron}
 		\label{fig:theta2mev}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/5.pdf}
 		\caption{\SI{5}{MeV} electron}
 		\label{fig:theta5mev}
@@ -88,13 +89,13 @@ In this simulation, we recorded the angles between the emission directions of al
 
 	\vspace{\baselineskip}
 
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/10.pdf}
 		\caption{\SI{10}{MeV} electron}
 		\label{fig:theta10mev}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=1,width=\textwidth]{reconstruction/emmisionProfile/20.pdf}
 		\caption{\SI{20}{MeV} electron}
 		\label{fig:theta20mev}
@@ -103,15 +104,15 @@ In this simulation, we recorded the angles between the emission directions of al
 	\label{fig:thetaemmision}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/2.pdf}
 		\caption{\SI{2}{MeV} electron}
 		\label{fig:s2mev}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/5.pdf}
 		\caption{\SI{5}{MeV} electron}
 		\label{fig:s5mev}
@@ -119,13 +120,13 @@ In this simulation, we recorded the angles between the emission directions of al
 
 	\vspace{\baselineskip}
 
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/10.pdf}
 		\caption{\SI{10}{MeV} electron}
 		\label{fig:s10mev}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=2,width=\textwidth]{reconstruction/emmisionProfile/20.pdf}
 		\caption{\SI{20}{MeV} electron}
 		\label{fig:s20mev}
@@ -135,15 +136,15 @@ In this simulation, we recorded the angles between the emission directions of al
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/2.pdf}
 		\caption{\SI{2}{MeV} electron}
 		\label{fig:ts2mev}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/5.pdf}
 		\caption{\SI{5}{MeV} electron}
 		\label{fig:ts5mev}
@@ -151,13 +152,13 @@ In this simulation, we recorded the angles between the emission directions of al
 
 	\vspace{\baselineskip}
 
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/10.pdf}
 		\caption{\SI{10}{MeV} electron}
 		\label{fig:ts10mev}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[page=3,width=\textwidth]{reconstruction/emmisionProfile/20.pdf}
 		\caption{\SI{20}{MeV} electron}
 		\label{fig:ts20mev}
@@ -168,22 +169,22 @@ In this simulation, we recorded the angles between the emission directions of al
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{reconstruction/emmisionProfile/multiscatter.pdf}
+		\includegraphics[width=\textwidth]{reconstruction/emmisionProfile/multiscatter.pdf}
 	\end{center}
 	\caption{An example of a \SI{10}{MeV} electron undergoing multiple scattering.}
 	\label{fig:multipleScattering}
 \end{figure}
 
 Through Gaussian fitting as shown in Fig~\ref{fig:yield_gauss_fit} in simulation, we obtain the total number of photons emitted at various energies and calculate the Cherenkov photon yield. After linear fitting, we obtain the relationship between light yield and momentum: $\phi(p)=1182\times p-956$.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[width=\textwidth]{reconstruction/emmisionProfile/yield_gauss_fit_20.pdf}
 		\caption{An example of Gaussian fit for light yield.}
 		\label{fig:yield_gauss_fit}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.475\textwidth}
 		\includegraphics[width=\textwidth]{reconstruction/emmisionProfile/phip.pdf}
 		\caption{\SI{5}{MeV} electron}
 		\label{fig:yield_fit}
@@ -210,7 +211,7 @@ The main PMTs employed in JUNO are 20-inch with a radius of $a=SI{0.622}{m}$. An
 	\Omega(R)=\frac{\pi a^2}{4\pi(R^2+a^2)}\times (4\pi)=\frac{\pi a^2}{R^2+a^2}
 	\label{equ:solid}
 \end{equation}
-This approximation remains valid only when PMTs are sufficiently distant from the particle. In JUNO, PMTs are mounted at around \SI{19.5}{m} , while our region of interest lies within \SI{17.7}{m}. Based on SK's experience, the approximation holds effectively at radial distances $R > \SI{1.5}{m}$.
+In this approximation, the geometric shape of the PMT is ignored and approximated by a circular wafer. This approximation remains valid only when PMTs are sufficiently distant from the particle. In JUNO, PMTs are mounted at around \SI{19.5}{m} , while our region of interest lies within \SI{17.7}{m}. Based on SK's experience, the approximation holds effectively at radial distances $R > \SI{1.5}{m}$.
 
 \subsubsection{The transmission factor}
 In our work, we just use Eq.~\eqref{eq:att}, and the attenuation length $L^{a}$ is \SI{75}{m}.
@@ -220,7 +221,91 @@ In our work, we just use Eq.~\eqref{eq:att}, and the attenuation length $L^{a}$ 
 \end{equation}
 
 \subsubsection{PMT angular accptance}
+$\epsilon(\cos\eta)$ serves as a correction term for the approximation of the PMT wafer, describing the probability of photons being received by the PMT when incident from different directions. We extracted the particles at the same distance from the PMT in the simulation and counted the number of photons received by the PMT, as shown in Fig.~\ref{fig:eta_stat}. We performed a "normalization" calculation of the probability using the number of photons directly incident on the PMT, as shown in Fig.~\ref{fig:cd_norm} and \ref{fig:buffer_norm}. Then we extracted the probability distributions at different $\cos\eta$ values and fitted them with a Gaussian distribution, as shown in Fig.~\ref{fig:eta_gauss_fit}. Thus, we obtained the variation curve of $\epsilon(\cos\eta)$ and fitted it with a polynomial, as illustrated in Fig.~\ref{fig:eta_fit}. Whether it is in CD or buffer, a cut-off point can be observed. This is due to the mutual occlusion between the boundary of the detector and the PMT.
 
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=1, width=\textwidth]{reconstruction/eta/fig.pdf}
+		\caption{}
+		\label{fig:eta_init}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=2, width=\textwidth]{reconstruction/eta/fig.pdf}
+		\caption{}
+		\label{fig:eta_R}
+	\end{subfigure}
+	\caption{\subref{fig:eta_init} is the position distribution, $R_{init}$ is the initial position of \SI{4}{MeV} electron.The boundary of the detector is at \SI{17.7}{m}. There is an acrylic spherical shell with a thickness of \SI{12}{cm}. The area between 17.7 and \SI{19.5}{m} is the buffer.
+		\subref{fig:eta_R} shows the relationship between $R$ and $\cos\eta$. The boundary of the two distributions is the acrylic spherical shell.}
+	\label{fig:eta_stat}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=3, width=\textwidth]{reconstruction/eta/fig.pdf}
+		\caption{}
+		\label{fig:cd_norm}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=4, width=\textwidth]{reconstruction/eta/fig.pdf}
+		\caption{}
+		\label{fig:buffer_norm}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=45, width=\textwidth]{reconstruction/eta/cd.pdf}
+		\caption{}
+		\label{fig:eta_gauss_fit}
+	\end{subfigure}
+	\caption{\subref{fig:cd_norm} and \subref{fig:buffer_norm} are the normalized probability distribution. \subref{fig:eta_gauss_fit} is an example of Gaussian fit.}
+	\label{fig:eta_gassian_fit}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=1, width=\textwidth]{reconstruction/eta/fit.pdf}
+		\caption{}
+		\label{fig:eta_cd}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[page=2, width=\textwidth]{reconstruction/eta/fit.pdf}
+		\caption{}
+		\label{fig:eta_buffer}
+	\end{subfigure}
+	\caption{The relationship between acceptance~$\epsilon$ and $\cos\eta$ of when event in CD~\subref{fig:eta_cd} and in buffer~\subref{fig:eta_buffer}. }
+	\label{fig:eta_fit}
+\end{figure}
+
+\subsubsection{The prediction of direct light}
+For a single photon, we can combine its propagation process and the process of being captured by the PMT and define it as the photon reception function \(J=\Omega(R)T(R)\epsilon(\eta)\). Given the vertex and direction, this propagation process is only related to the generation position of the photon, that is, the distance from the photon generation point to the exit point when the photon is generated. We can write \(J\) as a function of \(s\) and perform a polynomial expansion, retaining the second-order approximation, as Eq.~\eqref{eq:jsApp} and the approximate performance is as shown in Fig.~\ref{fig:js}. Under this approximation, we can select 3 points to calculate the line. In the algorithm implementation, this can be quickly solved through methods such as matrix inversion.
+\begin{equation}
+	J(s)=\Omega(R)T(R)\epsilon(\eta)\approx j_0 + j_1s+j_2s^2
+	\label{eq:jsApp}
+\end{equation}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{reconstruction/js.pdf}
+	\end{center}
+	\caption{An example of second-order approximation to calculate $J(s)$.}
+	\label{fig:js}
+\end{figure}
+Thus far, we can decouple the process of photon generation from the process of photon capture, as shown in Eq.~\eqref{eq:mudir}.
+\begin{equation}
+	\begin{aligned}
+		\mu_{\mathrm{dir}} & =\int ds g(p,s,\cos\theta)\phi(p)\Omega(R)T(R)\epsilon(\eta) \\
+		                   & \approx \int ds g(p,s,\cos\theta)\phi(p)(j_0 + j_1s+j_2s^2)  \\
+		                   & =\phi(p)(I_0j_0+I_1j_1+I_2j_2)                               \\
+	\end{aligned}
+	\label{eq:mudir}
+\end{equation}
+Where $I_i = \int ds g(p,s,\cos\theta)s^i$ is a function of $p, R, \cos\theta$ and represents the emission proportion of Cherenkov photons at a certain relative position. We can complete this integral calculation before the reconstruction.
+Due to the relatively large differences in the integration range and emission spectrum at different momenta, we calculate the value of \(I\) for each momentum. Then, we perform a polynomial approximation fitting for momentum and \(I\), as shown in Fig.~\ref{fig:I_fit}. We create a grid with the fitting coefficients in terms of \(R\) and \(\cos\theta\). During the reconstruction process, by looking up different values of \(R\) and \(\cos\theta\) and invoking the corresponding polynomials for calculation, the reconstruction efficiency can be significantly improved.
 
 
 \section{The Fast reconstruction~(FRE) of the JUNO water-phase}
@@ -235,7 +320,7 @@ For a more accurate description, we define several parameters as follows.
 		      [30,40]\si{\nano s}.
 	\item $n_{20}$: The total count of $t_{res}$ in [-20, 20]\si{\nano s},
 	      \textbf{primary measure of energy}.
-	\item $n_c$: The count of $\cos\theta$ in [0.65, 0.85], and the definition of $\theta$ is shown in Fig.~\ref{fig:residual_time}.
+	\item $n_c$: The count of $\cos\theta$ in [0.65, 0.85], and the definition of $\theta$ is shown in Fig.~\ref{Fig:Coordinate}.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -279,7 +364,7 @@ Where $\mathcal{L}$ represents the likelihood of the event with a single vertex,
 By comparing $\delta A$ of dark noise events and \SI{2.2}{MeV} Gamma events, it can be seen that most dark noise events are eliminated, while less than \SI{10}{\%} of Gamma events are removed.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{reconstruction/parameters_Define/AIC_per.pdf}
+	\includegraphics[width=0.475\textwidth]{reconstruction/parameters_Define/AIC_per.pdf}
 	\caption{There is obvious difference between dark noise and
 		\SI{2.2}{MeV} Gamma. We can optimize it to remove dark noise events.}
 \end{figure}
@@ -333,7 +418,7 @@ When contemplating reconstruction, it is essential to assess the quality of both
 \end{itemize}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{reconstruction/parameters_Define/gd.pdf}
+	\includegraphics[width=0.475\textwidth]{reconstruction/parameters_Define/gd.pdf}
 	\caption{The definition of azimuthal angle in the goodness of direction calculation.}
 	\label{fig:goodness}
 \end{figure}
