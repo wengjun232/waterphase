@@ -28,8 +28,8 @@ The first term is the unhit likelihood, which is the probability of no hit in th
 Since in the operation of the detector, only TQ information (time and charge) is recorded for low-energy events, waveform information is unavailable. At the same time only the first hit time can be obtained. Therefore, it is necessary to reformulate the likelihood to adopt a first-hit-time-based reconstruction approach. Xuewei Liu~et.al developed a first-principles-based reconstruction method using time-charge information or time-PE information in liquid scintillator detectors~\cite{Liu:2024cxo}. We adapt their methodology to reformulate the likelihood function for JUNO water-phase. In low-energy events, where each PMT typically detects only few photon, the number of hits can be directly approximated as NPE~($N_{PE}$). We can reformulate the likelihood function as Eq.~\eqref{eq:likelihood}:
 \begin{equation}
 	\begin{aligned}
-		\log \mathcal{L}(\boldsymbol{x};{q},{t})= & \sum_{j \in \{q=0\}}\log P_j \bigl( q=0\bigm| \mu_j \bigr)+                                                                                                                  \\
-		                                          & \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( 0 \bigm| \mu_{i,T_{low}}^{T_i} \bigr) * f_{\mathrm{t}}(T_i) * f_{\mathrm{q}}(N_{PE,i}-1|\mu_{i,T_{i}}^{T_{up}}) \bigr)
+		\log \mathcal{L}(\boldsymbol{x};{q},{t})= & \sum_{j \in \{q=0\}}\log P_j \bigl( q=0\bigm| \mu_j \bigr)+                                                                                                            \\
+		                                          & \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( 0 \bigm| \mu_{i,T_{low}}^{T_i} \bigr)f_{\mathrm{t}}(T_i)f_{\mathrm{q}}(N_{PE,i}-1|\mu_{i,T_{i}}^{T_{up}}) \bigr)
 	\end{aligned}
 	\label{eq:likelihood}
 \end{equation}
@@ -332,8 +332,8 @@ Due to the relatively large differences in the integration range and emission sp
 	\label{fig:I_fit}
 \end{figure}
 
-\subsubsection{The prediction of indirect light based on direct light}
-During the propagation of Cherenkov light, scattering and refraction inevitably occur. Perhaps after a long propagation process, these photons finally reach a certain PMT and are captured. This makes it necessary to take into account the indirect photons when considering the expected number of photons. For a given vertex and momentum, we can perform an integration along the particle track for indirect light, just as we do for direct light. Since indirect light evolves from directly incident light, we can use a proportionality coefficient $A(s)$ to characterize the indirect light component.
+\subsection{The prediction of indirect light based on direct light}
+During the propagation of Cherenkov light, scattering and refraction inevitably occur. Perhaps after a long propagation process, these photons finally reach PMTs and are captured. This makes it necessary to take into account the indirect photons when considering the expected number of photons. For a given vertex and momentum, we can perform an integration along the particle track for indirect light, just as we do for direct light. Since indirect light evolves from directly incident light, we can use a proportionality ratio $A(s)$ to characterize the indirect light component.
 \begin{equation}
 	\begin{aligned}
 		\mu_{\mathrm{ind}} & =\int ds g(p,s,\cos\theta)\phi(p)\Omega(R)T(R)\epsilon(\eta)A(s) \\
@@ -341,6 +341,76 @@ During the propagation of Cherenkov light, scattering and refraction inevitably 
 	\end{aligned}
 	\label{eq:indir}
 \end{equation}
+Through ray tracing in the simulation, we are able to differentiate between direct light and indirect light. We perform binning statistics using \(R\) and \(\cos\theta\), as shown in the Fig.~\ref{fig:fig:dir} and \ref{fig:ind}. At the same time, it is sufficient to depict the corresponding relationship between \(A\) and the relative positions \(R\) and \(\cos\theta\) to make a scatter table, as illustrated in Fig.~\ref{fig:ratio}. Near the vertex and around the Cherenkov angle, the ratio of indirect light to direct light is about 0.1. When far from the vertex and the Cherenkov angle, indirect light is dominant. For low-energy electrons, the track length of their motion typically ranges from several centimeters to over ten centimeters. In the scattering table employed, the bin width of \(R\) is set to \(10\) cm. Under such circumstances, the approximation \(A(s)=A(s = 0)\) is highly adequate. Consequently, the integral of the indirect light can be expressed as Eq.~\eqref{eq:indir_s}.
+\begin{equation}
+	\begin{aligned}
+		\mu_{\mathrm{ind}} & \approx \int ds g(p,s,\cos\theta)\phi(p)(j_0 + j_1s+j_2s^2)A(s) \\
+		                   & \approx \phi(p)(I_0j_0+I_1j_1+I_2j_2)A(s=0)                     \\
+	\end{aligned}
+	\label{eq:indir_s}
+\end{equation}
+The final light prediction can be $\mu=\mu_{dir}+\mu_{ind}=\phi(p)(I_0j_0+I_1j_1+I_2j_2)(1+A(s=0))$.
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[page=1,width=0.95\linewidth]{reconstruction/scatter_ratio.pdf}
+		\caption{direct light}
+		\label{fig:dir}
+	\end{subfigure}% 
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[page=2,width=0.95\linewidth]{reconstruction/scatter_ratio.pdf}
+		\caption{indirect light}
+		\label{fig:ind}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[page=5,width=0.95\linewidth]{reconstruction/scatter_ratio.pdf}
+		\caption{ratio of indirect and direct light}
+		\label{fig:ratio}
+	\end{subfigure}
+	\caption{The scatter table}
+	\label{fig:scatterTable}
+\end{figure}
+
+\subsection{The time response}
+In Cherenkov reconstruction, photons are emitted along the Cherenkov angle rather than isotropically. Consequently, when only charge information is utilized for reconstruction, accurately determining the position becomes challenging. Time serves to characterize both the emission properties and the distance characteristics during propagation. To a certain degree, it offsets the limitations of relying solely on charge information. Thus, in the detector response, time is an essential parameter. As depicted in Fig.~\ref{fig:tres_define}, in the reconstruction process, we employ the residual time obtained by subtracting the time of flight, as defined in Eq.~\eqref{eq:trea_def}.
+\begin{equation}
+	t_{res,i} = t_i - t - s_{\mathrm{mid}}/c - \frac{|\boldsymbol{P}_{\mathrm{PMT}}^i - \boldsymbol{x} - s_{\mathrm{mid}}\widehat{\overrightarrow{d} } |}{c_w}
+	\label{eq:trea_def}
+\end{equation}
+Where $t$ is the event time, $\boldsymbol{x}$ is the vertex, $t_i$ is the hit time at $i$-th PMT and $\boldsymbol{P}_{\mathrm{PMT}}^i$ is the position of $i$-th PMT.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{reconstruction/timepdf/time.pdf}
+	\end{center}
+	\caption{The definition of residual time.}
+	\label{fig:tres_define}
+\end{figure}
+In fiTQun, following the classification of the residual time of the direct light according to the expected number, the mean and standard deviation of the residual time distribution are derived through Gaussian fitting. Subsequently, the means and variances under different expectations are fitted to accomplish the parameterization of the time response. However, this approach is not conducive to considering factors such as TTS. In this study, we directly classify the residual time using the relative distance, approximate the probability density function~($R_p(t)$) with a histogram, and carry out integration to obtain the corresponding cumulative distribution function~($R_c(t)$), as shown in Fig.~\ref{fig:smear0}. Analogously, by leveraging the histogram, we accomplished the time smearing of the TTS response through convolution, as depicted in Fig.~\ref{fig:smear5}. Given that the maximum TTS of the PMT can attain up to \SI{15}{ns}, we carried out the time convolution smearing for the TTS within the range of 0--\SI{15}{ns}.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[page=1, width=0.9\linewidth]{reconstruction/timepdf/sub_0.pdf}
+		\caption{Without TTS smearing}
+		\label{fig:smear0}
+	\end{subfigure}% 
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[page=1, width=0.9\linewidth]{reconstruction/timepdf/sub_5.pdf}
+		\caption{With \SI{5}{ns} TTS smearing.}
+		\label{fig:smear5}
+	\end{subfigure}
+	\caption{The PDF and CDF of $t_{res}$.}
+	\label{fig:time}
+\end{figure}
+
+\subsection{The DCR in reconstruction}
 
 \section{The Fast reconstruction~(FRE) of the JUNO water-phase}
 
