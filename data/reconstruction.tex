@@ -282,7 +282,7 @@ $\epsilon(\cos\eta)$ serves as a correction term for the approximation of the PM
 \end{figure}
 
 \subsubsection{The prediction of direct light}
-For a single photon, we can combine its propagation process and the process of being captured by the PMT and define it as the photon reception function \(J=\Omega(R)T(R)\epsilon(\eta)\). Given the vertex and direction, this propagation process is only related to the generation position of the photon, that is, the distance from the photon generation point to the exit point when the photon is generated. We can write \(J\) as a function of \(s\) and perform a polynomial expansion, retaining the second-order approximation, as Eq.~\eqref{eq:jsApp} and the approximate performance is as shown in Fig.~\ref{fig:js}. Under this approximation, we can select 3 points to calculate the line. In the algorithm implementation, this can be quickly solved through methods such as matrix inversion.
+For a single photon, we can combine its propagation process and the process of being captured by the PMT and define it as the photon reception function \(J=\Omega(R)T(R)\epsilon(\eta)\). Given the vertex and direction, this propagation process is only related to the generation position of the photon, that is, the distance from the photon generation point to the vertex. We can write \(J\) as a function of \(s\) and perform a polynomial expansion, retaining the second-order approximation, as Eq.~\eqref{eq:jsApp} and the approximate performance is as shown in Fig.~\ref{fig:js}. Under this approximation, we can select 3 points to calculate the line. In the algorithm implementation, this can be quickly solved through methods such as matrix inversion.
 \begin{equation}
 	J(s)=\Omega(R)T(R)\epsilon(\eta)\approx j_0 + j_1s+j_2s^2
 	\label{eq:jsApp}
@@ -306,7 +306,41 @@ Thus far, we can decouple the process of photon generation from the process of p
 \end{equation}
 Where $I_i = \int ds g(p,s,\cos\theta)s^i$ is a function of $p, R, \cos\theta$ and represents the emission proportion of Cherenkov photons at a certain relative position. We can complete this integral calculation before the reconstruction.
 Due to the relatively large differences in the integration range and emission spectrum at different momenta, we calculate the value of \(I\) for each momentum. Then, we perform a polynomial approximation fitting for momentum and \(I\), as shown in Fig.~\ref{fig:I_fit}. We create a grid with the fitting coefficients in terms of \(R\) and \(\cos\theta\). During the reconstruction process, by looking up different values of \(R\) and \(\cos\theta\) and invoking the corresponding polynomials for calculation, the reconstruction efficiency can be significantly improved.
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{reconstruction/I0.pdf}
+		\caption{$I_0$}
+		\label{fig:I0}
+	\end{subfigure}% 
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{reconstruction/I1.pdf}
+		\caption{$I_1$}
+		\label{fig:I1}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{reconstruction/I2.pdf}
+		\caption{$I_2$}
+		\label{fig:I2}
+	\end{subfigure}
+	\caption{The fit of $I_i,i=0,1,2$ when $R=\SI{15}{m},\cos\theta=0.72$}
+	\label{fig:I_fit}
+\end{figure}
 
+\subsubsection{The prediction of indirect light based on direct light}
+During the propagation of Cherenkov light, scattering and refraction inevitably occur. Perhaps after a long propagation process, these photons finally reach a certain PMT and are captured. This makes it necessary to take into account the indirect photons when considering the expected number of photons. For a given vertex and momentum, we can perform an integration along the particle track for indirect light, just as we do for direct light. Since indirect light evolves from directly incident light, we can use a proportionality coefficient $A(s)$ to characterize the indirect light component.
+\begin{equation}
+	\begin{aligned}
+		\mu_{\mathrm{ind}} & =\int ds g(p,s,\cos\theta)\phi(p)\Omega(R)T(R)\epsilon(\eta)A(s) \\
+		                   & \approx \int ds g(p,s,\cos\theta)\phi(p)(j_0 + j_1s+j_2s^2)A(s)  \\
+	\end{aligned}
+	\label{eq:indir}
+\end{equation}
 
 \section{The Fast reconstruction~(FRE) of the JUNO water-phase}
 
