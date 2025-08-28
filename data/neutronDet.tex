@@ -1,8 +1,6 @@
-\chapter{Neutron detection in JUNO water phase}
+\chapter{The source calibration in water phase}
 \label{chap:neutronDet}
-\section{JUNO's low-energy threshold in water phase}
-\label{sec:lowenergy}
-\subsection{The source calibration in water phase}
+\subsection{The calibration information}
 Americium-Beryllium~(\ce{AmBe}) and Americium-Carbon~(\ce{AmC}) neutron sources serve as critical reference standards for characterizing neutron detecting capabilities. Both sources leverage the alpha decay of \ce{^241Am}. The neutron producing process can be described as Eq.~\eqref{eq:amn}:
 \begin{equation}
 	\label{eq:amn}
@@ -32,7 +30,8 @@ All the calibration sources were placed along the z-axis, as Fig.~\ref{fig:calib
 	\label{fig:calib_set}
 \end{figure}
 To enhance our capability in studying low-energy events in water phase, we decouple and analyze prompt and delayed signals separately during the calibration source analysis.
-
+\section{JUNO's low-energy threshold in water phase}
+\label{sec:lowenergy}
 \subsection{The reconstruction of the prompt signals}
 \subsubsection{The event selection before reconstruction}
 In this study, we take Run~3671~(calibrated with a \ce{AmBe} source at the position of (0, 0, \SI{-10}{m})) as an illustrative example. To mitigate the data volume, we selectively choose a subset of events from the previous findings (JUNO-doc-12539) based on Baona's reconstruction method. Additionally, partial background events are filtered out. After applying a fiducial volume of \SI{17}{m} cut, we observed that a large number of events were downward, as depicted in Fig.~\ref{fig:downwards}.
@@ -57,13 +56,13 @@ To demonstrate the events selection during the cut process, we apply a cylindric
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/selection/3671.pdf}
+		\includegraphics[page=5,width=0.8\textwidth]{neutron_calib/selection/3671.pdf}
 		\label{fig:nocylinder}
 		% 图片宽度占子图宽度的80%
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=3,width=0.9\textwidth]{neutron_calib/selection/3671.pdf}
+		\includegraphics[page=3,width=0.8\textwidth]{neutron_calib/selection/3671.pdf}
 		\label{fig:cylinder}
 	\end{subfigure}
 	\caption{The distribution of z-coordinate in Run~3671. \subref{fig:nocylinder} shows the distribution without cylindrical cut, while \subref{fig:cylinder} shows the distribution after the cut.}
@@ -113,29 +112,29 @@ These results further demonstrate that JUNO's water phase is capable of detectin
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/prompt/summary.pdf}
+		\includegraphics[page=5,width=0.8\textwidth]{neutron_calib/prompt/summary.pdf}
 		\caption{}
 		\label{fig:AmC_all}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6,width=0.9\textwidth]{neutron_calib/prompt/summary.pdf}
+		\includegraphics[page=6,width=0.8\textwidth]{neutron_calib/prompt/summary.pdf}
 		\caption{}
 		\label{fig:AmC_2m}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=7,width=0.9\textwidth]{neutron_calib/prompt/summary.pdf}
+		\includegraphics[page=7,width=0.8\textwidth]{neutron_calib/prompt/summary.pdf}
 		\caption{}
 		\label{fig:AmBe_all}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=8,width=0.9\textwidth]{neutron_calib/prompt/summary.pdf}
+		\includegraphics[page=8,width=0.8\textwidth]{neutron_calib/prompt/summary.pdf}
 		\caption{}
 		\label{fig:AmBe_2m}
 	\end{subfigure}
-	\caption{The distribution of z-coordinate in \ce{AmC} and \ce{AmBe} source calibration. (\subref{fig:AmC_all}) and (\subref{fig:AmBe_all}) show the distribution without cylindrical cut, while (\subref{fig:AmC_2m}) and (\subref{fig:AmBe_2m}) show the distribution after the cut of \SI{2}{m} cylinder along the z-axis. (\subref{fig:AmC_all}) and (\subref{fig:AmC_2m}) are the results of \ce{AmC} source calibration, and (\subref{fig:AmBe_all}) and (\subref{fig:AmBe_2m}) are the results of \ce{AmBe} source calibration respectively.}
+	\caption{The distribution of z-coordinate in \ce{AmC} and \ce{AmBe} source calibration. \subref{fig:AmC_all} and \subref{fig:AmBe_all} show the distribution without cylindrical cut, while \subref{fig:AmC_2m} and \subref{fig:AmBe_2m} show the distribution after the cut of \SI{2}{m} cylinder along the z-axis. \subref{fig:AmC_all} and \subref{fig:AmC_2m} are the results of \ce{AmC} source calibration, and \subref{fig:AmBe_all} and \subref{fig:AmBe_2m} are the results of \ce{AmBe} source calibration respectively.}
 	\label{fig:promptSummary}
 \end{figure}
 
@@ -156,17 +155,17 @@ After background subtraction, the $n_{20}$ distribution for \SI{4.4}{MeV} Gamma 
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=4,width=0.9\textwidth]{neutron_calib/prompt/3671.pdf}
+		\includegraphics[page=4,width=0.8\textwidth]{neutron_calib/prompt/3671.pdf}
 		\caption{}
 		\label{fig:3671n20}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=4,width=0.9\textwidth]{neutron_calib/prompt/3286.pdf}
+		\includegraphics[page=4,width=0.8\textwidth]{neutron_calib/prompt/3286.pdf}
 		\caption{}
 		\label{fig:3286n20}
 	\end{subfigure}
-	\caption{The energy distribution of prompt signals. The black line represents the background energy distribution, the blue line represents the energy distribution of prompt signals, and the red line represents the prompt signal energy distribution after subtracting the background. (\subref{fig:3671n20}) is the result of Run~3671, representing the energy distribution of \SI{4.4}{MeV} Gamma. (\subref{fig:3286n20}) is the result of Run~3286, representing the energy distribution of \SI{6.1}{MeV} Gamma.}
+	\caption{The energy distribution of prompt signals. The black line represents the background energy distribution, the blue line represents the energy distribution of prompt signals, and the red line represents the prompt signal energy distribution after subtracting the background. \subref{fig:3671n20} is the result of Run~3671, representing the energy distribution of \SI{4.4}{MeV} Gamma. \subref{fig:3286n20} is the result of Run~3286, representing the energy distribution of \SI{6.1}{MeV} Gamma.}
 	\label{fig:n20}
 \end{figure}
 
@@ -227,17 +226,17 @@ In parallel, the position distributions of both prompt and delayed signals are e
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/example/3671_coin_prompt_pos.pdf}
+		\includegraphics[width=0.8\textwidth]{neutron_calib/delayed/example/3671_coin_prompt_pos.pdf}
 		\caption{}
 		\label{fig:promptpos}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/example/3671_coin_delayed_pos.pdf}
+		\includegraphics[width=0.8\textwidth]{neutron_calib/delayed/example/3671_coin_delayed_pos.pdf}
 		\caption{}
 		\label{fig:delayedpos}
 	\end{subfigure}
-	\caption{The position distribution of prompt and delayed signals.  (\subref{fig:promptpos}) is the position distribution of prompt signals, and (\subref{fig:delayedpos}) is the position distribution of delayed signals.}
+	\caption{The position distribution of prompt and delayed signals.  \subref{fig:promptpos} is the position distribution of prompt signals, and \subref{fig:delayedpos} is the position distribution of delayed signals.}
 	\label{fig:coincidentPos}
 \end{figure}
 
@@ -253,31 +252,31 @@ Using this approach, the energy distribution of the \SI{2.2}{\MeV} Gamma from ne
 
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[page=2,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
-		\caption{$n_{20}$ distribution of \SI{4.4}{MeV} Gamma signals.}
+		\includegraphics[page=2,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
+		\caption{\SI{4.4}{MeV} Gamma signals}
 		\label{fig:promptene4}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[page=3,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
-		\caption{$n_{20}$ distribution of \SI{6.1}{MeV} Gamma signals.}
+		\includegraphics[page=3,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
+		\caption{\SI{6.1}{MeV} Gamma signals}
 		\label{fig:promptene6}
-	\end{subfigure}
+	\end{subfigure}%
 
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[page=1,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
-		\caption{$n_{20}$ distribution of \SI{2.2}{MeV} Gamma signals.}
+		\includegraphics[page=1,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
+		\caption{\SI{2.2}{MeV} Gamma signals}
 		\label{fig:promptene2}
-	\end{subfigure}
+	\end{subfigure}%
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[page=4,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
-		\caption{$n_{20}$ distribution of all selected Gamma signals.}
+		\includegraphics[page=4,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
+		\caption{all selected Gamma signals}
 		\label{fig:prompteneall}
 	\end{subfigure}
 	\caption{
@@ -290,29 +289,29 @@ After obtaining the energy spectra of the three characteristic signals, we perfo
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
+		\includegraphics[page=6,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
 		\caption{}
 		\label{fig:fitene4}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=7,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
+		\includegraphics[page=7,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
 		\caption{}
 		\label{fig:fitene6}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
+		\includegraphics[page=5,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
 		\caption{}
 		\label{fig:fitene2}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=8,width=0.9\textwidth]{neutron_calib/light_yield.pdf}
+		\includegraphics[page=8,width=0.8\textwidth]{neutron_calib/light_yield.pdf}
 		\caption{}
 		\label{fig:yield}
 	\end{subfigure}
-	\caption{Gaussian fit of the $n_{20}$ distribution of 4.4, 6.1 and \SI{2.2}{MeV} Gamma signals. (\subref{fig:yield}) is the Cherenkov light yiled fit.}
+	\caption{Gaussian fit of the $n_{20}$ distribution of 4.4, 6.1 and \SI{2.2}{MeV} Gamma signals. \subref{fig:yield} is the Cherenkov light yiled fit.}
 	\label{fig:FitYield}
 \end{figure}
 
@@ -347,7 +346,7 @@ The fitted lifetime is required to satisfy the following criteria:
 \end{itemize}
 
 \begin{table}[htbp]
-	\caption{\textbf{Neutron Tagging Optimization Parameter Scan Specifications}}%标题
+	\caption{Neutron Tagging Optimization Parameter Scan Specifications}%标题
 	\label{tab:param-scan}
 	\centering%把表居中
 	\begin{tabular}{ccc}
@@ -400,31 +399,31 @@ Maximizing neutron detection efficiency is crucial for capturing the largest pos
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=1,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=1,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{Efficiency vs. $dR$}
 		\label{fig:effdR}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=2,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=2,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{Efficiency vs. $n_{20}$}
 		\label{fig:effn20}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=3,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=3,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{Efficiency vs. $\delta A$}
 		\label{fig:effdA}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=4,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=4,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{Efficiency vs. $G_{vd}$}
 		\label{fig:effGvd}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=5,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{Efficiency vs. $LE$}
 		\label{fig:effLE}
 	\end{subfigure}
@@ -442,17 +441,17 @@ The resulting fit yields a $\chi^{2}/\mathrm{ndf}$ of $27.3/30$, demonstrating g
 \begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/delayed/highesteff/3671.pdf}
+		\includegraphics[page=5,width=0.8\textwidth]{neutron_calib/delayed/highesteff/3671.pdf}
 		\caption{}
 		\label{fig:3671HighestEffProPos}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6,width=0.9\textwidth]{neutron_calib/delayed/highesteff/3671.pdf}
+		\includegraphics[page=6,width=0.8\textwidth]{neutron_calib/delayed/highesteff/3671.pdf}
 		\caption{}
 		\label{fig:3671HighestEffDelPos}
 	\end{subfigure}
-	\caption{The position distribution when getting the highest efficiency in Run~3671. (\subref{fig:3671HighestEffProPos}) is the position distribution of the prompt signals, and (\subref{fig:3671HighestEffDelPos}) is of the delayed signals.}
+	\caption{The position distribution when getting the highest efficiency in Run~3671. \subref{fig:3671HighestEffProPos} is the position distribution of the prompt signals, and \subref{fig:3671HighestEffDelPos} is of the delayed signals.}
 	\label{fig:highestEffPos}
 \end{figure}
 \begin{figure}[H]
@@ -466,22 +465,22 @@ As illustrated in Fig.~\ref{fig:SummaryEff}, neutron detection efficiency exceed
 \begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/effsnr/0202_eff.pdf}
+		\includegraphics[width=0.8\textwidth]{neutron_calib/delayed/effsnr/0202_eff.pdf}
 		\caption{}
 		\label{fig:SummaryEff0202}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/effsnr/0207_eff.pdf}
+		\includegraphics[width=0.8\textwidth]{neutron_calib/delayed/effsnr/0207_eff.pdf}
 		\caption{}
 		\label{fig:SummaryEff0207}
 	\end{subfigure}
-	\caption{The final highest neutron detection efficiency in all 14 calibration runs. (\subref{fig:SummaryEff0202}) is the result of calibrations on February 2-nd, and (\subref{fig:SummaryEff0207}) is of calibrations on February 7-th. }
+	\caption{The final highest neutron detection efficiency in all 14 calibration runs. \subref{fig:SummaryEff0202} is the result of calibrations on February 2-nd, and \subref{fig:SummaryEff0207} is of calibrations on February 7-th. }
 	\label{fig:SummaryEff}
 \end{figure}
 
 \subsection{The highest neutron detection signal-to-noise ratio}
-Maximizing the signal-to-noise ratio (SNR) is essential for enhancing the clarity of true signal events relative to background fluctuations, thereby improving measurement accuracy and extending the detector's capability to resolve subtle physical effects. In this context, the parameter scan results are analyzed to identify the configuration yielding the highest SNR within the defined event selection criteria. As illustrated in Fig.~\ref{fig:High-snr}, the maximum SNR achieved is over 40 in Run~3671, with the corresponding selection parameters summarized in Table~\ref{tab:param-scan-snr}.
+Maximizing SNR is essential for enhancing the clarity of true signal events relative to background fluctuations, thereby improving measurement accuracy and extending the detector's capability to resolve subtle physical effects. In this context, the parameter scan results are analyzed to identify the configuration yielding the highest SNR within the defined event selection criteria. As illustrated in Fig.~\ref{fig:High-snr}, the maximum SNR achieved is over 40 in Run~3671, with the corresponding selection parameters summarized in Table~\ref{tab:param-scan-snr}.
 
 \begin{table}[htbp]
 	\caption{\textbf{The parameters when get highest SNR}}%标题
@@ -504,31 +503,31 @@ Maximizing the signal-to-noise ratio (SNR) is essential for enhancing the clarit
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=6,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{SNR vs. $dR$}
 		\label{fig:snrdR}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=7,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=7,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{SNR vs. $n_{20}$}
 		\label{fig:snrn20}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=8,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=8,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{SNR vs. $\delta A$}
 		\label{fig:snrdA}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=9,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=9,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{SNR vs. $G_{vd}$}
 		\label{fig:snrGvd}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=10,width=0.9\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
+		\includegraphics[page=10,width=0.8\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 		\caption{SNR vs. $LE$}
 		\label{fig:snrLE}
 	\end{subfigure}
@@ -540,17 +539,17 @@ Similarly, as shown in Fig.~\ref{fig:highestSNRPos} and \ref{fig:3671_HighestSNR
 \begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/delayed/highestsnr/3671.pdf}
+		\includegraphics[page=5,width=0.8\textwidth]{neutron_calib/delayed/highestsnr/3671.pdf}
 		\caption{}
 		\label{fig:3671HighestSNRProPos}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6,width=0.9\textwidth]{neutron_calib/delayed/highestsnr/3671.pdf}
+		\includegraphics[page=6,width=0.8\textwidth]{neutron_calib/delayed/highestsnr/3671.pdf}
 		\caption{}
 		\label{fig:3671HighestSNRDelPos}
 	\end{subfigure}
-	\caption{The position distribution when getting the highest SNR in Run~3671. (\subref{fig:3671HighestSNRProPos}) is the position distribution of the prompt signals, and (\subref{fig:3671HighestSNRDelPos}) is of the delayed signals.}
+	\caption{The position distribution when getting the highest SNR in Run~3671. \subref{fig:3671HighestSNRProPos} is the position distribution of the prompt signals, and \subref{fig:3671HighestSNRDelPos} is of the delayed signals.}
 	\label{fig:highestSNRPos}
 \end{figure}
 \begin{figure}[htbp]
@@ -564,17 +563,17 @@ As shown in Fig.~\ref{fig:SummarySNR}, all 14 calibration runs demonstrate robus
 \begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/effsnr/0202_snr.pdf}
+		\includegraphics[width=0.8\textwidth]{neutron_calib/delayed/effsnr/0202_snr.pdf}
 		\caption{}
 		\label{fig:SummarySNR0202}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/effsnr/0207_snr.pdf}
+		\includegraphics[width=0.8\textwidth]{neutron_calib/delayed/effsnr/0207_snr.pdf}
 		\caption{}
 		\label{fig:SummarySNR0207}
 	\end{subfigure}
-	\caption{The final highest neutron detection SNR in all 14 calibration runs. (\subref{fig:SummarySNR0202}) is the result of calibrations on February 2-nd, and (\subref{fig:SummarySNR0207}) is of calibrations on February 7-th. }
+	\caption{The final highest neutron detection SNR in all 14 calibration runs. \subref{fig:SummarySNR0202} is the result of calibrations on February 2-nd, and \subref{fig:SummarySNR0207} is of calibrations on February 7-th. }
 	\label{fig:SummarySNR}
 \end{figure}
 
@@ -599,8 +598,8 @@ To better characterize muon properties, we define the following parameters, as s
 	\item Distance from events to muon track: $dR$
 \end{itemize}
 
-From the distribution of $D_{tc}^2$ as shown in Fig.~\ref{fig:dfcc}, we observe cosmic-ray muons uniformly traversing the Central Detector. The Total PE distribution reveals that the majority of muons deposit between $10^5$ and $10^6$~\si{PE}, while a small fraction exhibit total PE counts below $10^5$, as evidenced in Fig.~\ref{fig:pe}. Fig.~\ref{fig:track-pe} demonstrates a strong correlation between muon track length and total PE for primary muons, forming a concentrated distribution band. However, events with $<10^5$~PE despite long reconstructed tracks likely originate from PMT flasher artifacts or electronic noise mimicking muon signals. Therefore, we implement a selection cut requiring muon candidates to have total PE $>10^5$. After the cut of $D_{tc}<\SI{17.7}{m}$ and Total PE $>10^5$, the muon event rate is \SI{4.03}{Hz}, which is consistent with the result of simulation~($0.004~\text{Hz/m}^2$)~\cite{muon207}. Also from simulation~\cite{muon207}, the average energy of muon is \SI{207}{GeV}.
-\begin{figure}
+From the distribution of $D_{tc}^2$ as shown in Fig.~\ref{fig:dfcc}, we observe cosmic-ray muons uniformly traversing the Central Detector. The Total PE distribution reveals that the majority of muons deposit between $10^5$ and $10^6$~\si{PE}, while a small fraction exhibit total PE counts below $10^5$, as evidenced in Fig.~\ref{fig:pe}. Fig.~\ref{fig:track-pe} demonstrates a strong correlation between muon track length and total PE for primary muons, forming a concentrated distribution band. However, events with $<10^5$~PE despite long reconstructed tracks likely originate from PMT flasher artifacts or electronic noise mimicking muon signals. Therefore, we implement a selection cut requiring muon candidates to have total PE $>10^5$. After the cut of $D_{tc}<\SI{17.7}{m}$ and Total PE $>10^5$, the muon event rate is \SI{4.03}{Hz}, which is consistent with the result of simulation~($0.004~\text{Hz/m}^2$)~\cite{muon207}. Also, the average energy of muon is \SI{207}{GeV}.
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.45\textwidth]{spallation_n/track_define.pdf}
 	\caption{The defination of parameters used in spallation neutron search.}
@@ -612,29 +611,29 @@ From the distribution of $D_{tc}^2$ as shown in Fig.~\ref{fig:dfcc}, we observe 
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=4, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=4, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:dfcc}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=6, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:pe}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=7, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=7, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:track-pe}
 	\end{subfigure}
-	\caption{(\subref{fig:dfcc}) shows the distribution of $D_{tc}^2$, (\subref{fig:pe}) evidences the total PE of muons and (\subref{fig:track-pe}) demonstrates the relationship between total PE and the track length of muons.}
+	\caption{\subref{fig:dfcc} shows the distribution of $D_{tc}^2$, \subref{fig:pe} evidences the total PE of muons and \subref{fig:track-pe} demonstrates the relationship between total PE and the track length of muons.}
 	\label{fig:MuonInfo}
 \end{figure}
 
 \section{The search for spallation neutron}
 Similar to Sec.~\ref{sec:coincidentRecon}, we also use coincident reconstruction for spallation neutron, as shown in Fig.~\ref{fig:coinRecSPN}. For accidental coincident backgrounds, we reconstruct all events in 20--\SI{2000}{us} after muons. In 0--\SI{20}{us}, events are influenced by baseline, after-pulse and Michel electrons, and would not be included in our study.
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{spallation_n/spn_area.pdf}
 	\caption{The coincident reconstruction of spallation neutrons}
@@ -650,10 +649,10 @@ Validated through \ce{AmBe} and \ce{AmC} calibration, we get some basic cut for 
 
 After applying basical cuts, we observe residual downward events clustered near the detector center, as illustrated in Fig.~\ref{fig:pzcut}. To suppress this unknown background component, we implement an additional directional cut based on reconstructed direcition~$p_z/p>-0.75$.
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=16,width=0.45\textwidth]{spallation_n/yield_sdu.pdf}
-	\caption{The coincident reconstruction of spallation neutrons}
+	\caption{The distribution of $p_z/p$ in different regions}
 	\label{fig:pzcut}
 \end{figure}
 
@@ -663,13 +662,13 @@ After background subtraction, the distribution of $dR$ reveals significant event
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=17, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=17, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinDisSPN0}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=18, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=18, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinDisSPN1}
 	\end{subfigure}
@@ -681,13 +680,13 @@ After background subtraction, the distribution of $dR$ reveals significant event
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=19, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=19, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinESPN0}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=20, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=20, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinESPN1}
 	\end{subfigure}
@@ -707,27 +706,27 @@ At this stage, we calculate the number of spallation neutrons using capture life
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=9, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=9, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinPOS_sig}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=10, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=10, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinPOS_bkg}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=11, width=0.9\textwidth]{spallation_n/yield_sdu.pdf}
+		\includegraphics[page=11, width=0.8\textwidth]{spallation_n/yield_sdu.pdf}
 		\caption{}
 		\label{fig:coinPOS_ex}
 	\end{subfigure}
-	\caption{The position distribution. (\subref{fig:coinPOS_sig}) evidences the distribution of the selected events. (\subref{fig:coinPOS_sig}) shows the distribution of the background events in 1100--\SI{2000}{us} after muon. (\subref{fig:coinPOS_ex}) displays the result of histogram subtraction between two distributions}
+	\caption{The position distribution. \subref{fig:coinPOS_sig} evidences the distribution of the selected events. \subref{fig:coinPOS_sig} shows the distribution of the background events in 1100--\SI{2000}{us} after muon. \subref{fig:coinPOS_ex} displays the result of histogram subtraction between two distributions}
 	\label{fig:coinPOS}
 \end{figure}
 
-\section{The spallation neutron yield calibration}
+\section{The spallation neutron yield calculation}
 By combining data from the previous 14 calibration runs, we can estimate the average neutron detection efficiency within a 16-meter radius of the detector. We employed an $R^3$-weighted position averaging method to compute the position-dependent neutron detection efficiency, yielding a volume-averaged efficiency of $3.3\pm\SI{0.4}{\%}$, and the final efficiencies in our study are in Table.~\ref{tab:spn_eff}.
 The spallation neutron yield $Y_n$ is defined as the neutron production rate per unit muon track length and per unit density, as defined in Eq.~\eqref{eq:yn}.
 \begin{equation}
@@ -736,7 +735,7 @@ The spallation neutron yield $Y_n$ is defined as the neutron production rate per
 \end{equation}
 Only consider the statistical uncertainty, the spallation neutron yield is $Y_n = (2.31\pm0.41 \text{(stat.)})\times 10^{-4} \mathrm{\mu}^{-1}\text{g}^{-1}\text{cm}^2$.
 \begin{table}[H]
-	\caption{\textbf{The efficiencies in spallation neutron search}}%标题bottomrule
+	\caption{The efficiencies in spallation neutron search}%标题bottomrule
 	\label{tab:spn_eff}
 	\centering%把表居中
 	\begin{tabular}{ccc}
@@ -783,12 +782,12 @@ The final source of systematic uncertainty stems from detector inhomogeneity and
 		\label{fig:muonEffUncerntainty}
 	\end{subfigure}
 
-	\caption{The estimation of uncertainty from efficiency. (\subref{fig:SPNsourceCalib}) evidences the efficiency estimated from \ce{AmBe} calibration with the same selection of spallation neutron. (\subref{fig:muonEffUncerntainty}) shows that the final efficiency is influenced by the efficiency at $z=\SI{-16}{m}$.}
+	\caption{The estimation of uncertainty from efficiency. \subref{fig:SPNsourceCalib} evidences the efficiency estimated from \ce{AmBe} calibration with the same selection of spallation neutron. \subref{fig:muonEffUncerntainty} shows that the final efficiency is influenced by the efficiency at $z=\SI{-16}{m}$.}
 	\label{fig:muonEffUncer}
 \end{figure}
 
-\begin{table}[H]
-	\caption{\textbf{The systematic uncertainty in spallation neutron search}}%标题
+\begin{table}[htbp]
+	\caption{The systematic uncertainty in spallation neutron search}%标题
 	\label{tab:spn_eff_un}
 	\centering%把表居中
 	\begin{tabular}{ccc}
@@ -825,14 +824,14 @@ In order to cross-check the muon reconstruction in the water phase, we repeat th
 		\caption{}
 		\label{fig:yield_sjtu11}
 	\end{subfigure}
-	\caption{(\subref{fig:yield_sjtu8}) is the lifetime fitting of spallation neutrons using the WP muons. (\subref{fig:yield_sjtu11}) is the position distribution after extracting background.}
+	\caption{\subref{fig:yield_sjtu8} is the lifetime fitting of spallation neutrons using the WP muons. \subref{fig:yield_sjtu11} is the position distribution after extracting background.}
 	\label{fig:yield_sjtu_yield}
 \end{figure}
 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[page=22, width=0.4\linewidth]{spallation_n/yield_sjtu.pdf}
+	\includegraphics[page=22, width=0.475\linewidth]{spallation_n/yield_sjtu.pdf}
 	\caption{The measured spallation neutron yield using WP muon reconstruction.}
 	\label{fig:yield_sjtu22}
 \end{figure}

@@ -28,13 +28,13 @@ The first term is the unhit likelihood, which is the probability of no hit in th
 Since in the operation of the detector, only TQ information (time and charge) is recorded for low-energy events, waveform information is unavailable. At the same time only the first hit time can be obtained. Therefore, it is necessary to reformulate the likelihood to adopt a first-hit-time-based reconstruction approach. Xuewei Liu~et.al developed a first-principles-based reconstruction method using time-charge information or time-PE information in liquid scintillator detectors~\cite{Liu:2024cxo}. We adapt their methodology to reformulate the likelihood function for JUNO water-phase. In low-energy events, where each PMT typically detects only few photon, the number of hits can be directly approximated as NPE~($N_{PE}$). We can reformulate the likelihood function as Eq.~\eqref{eq:likelihood}:
 \begin{equation}
 	\begin{aligned}
-		\log \mathcal{L}(\boldsymbol{x};{q},{t})= & \sum_{j \in \{q=0\}}\log P_j \bigl( q=0\bigm| \mu_j \bigr)+                                                                                                            \\
-		                                          & \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( 0 \bigm| \mu_{i,T_{low}}^{T_i} \bigr)f_{\mathrm{t}}(T_i)f_{\mathrm{q}}(N_{PE,i}-1|\mu_{i,T_{i}}^{T_{up}}) \bigr)
+		\log \mathcal{L}(\boldsymbol{x};{q},{t})= & \sum_{j \in \{q=0\}}\log P_j \bigl( q=0\bigm| \mu_j \bigr)+                                                                                                                        \\
+		                                          & \sum_{i \in \{q>0\}} \log \bigl( f_{\mathrm{q}}\bigl( 0 \bigm| \mu_{i,\underline{t}}^{t_i} \bigr)f_{\mathrm{t}}(t_i)f_{\mathrm{q}}(N_{PE,i}-1|\mu_{i,t_{i}}^{\overline{t}}) \bigr)
 	\end{aligned}
 	\label{eq:likelihood}
 \end{equation}
 
-In this case, we define the data taking as $[T_{low},T_{up}]$, and the first hit time of the $i$-th PMT as $T_{i}$, $\mu_{i,T_{low}}^{T_i}$ is the expected PEs in [$T_{low}$,${T_i}$], same as $\mu_{i,T_{i}}^{T_{up}}$.
+In this case, we define the data taking as $[\underline{t} ,\overline{t} ]$, and the first hit time of the $i$-th PMT as $t_{i}$, $\mu_{i,\underline{t}}^{t_i}$ is the expected PEs in [$\underline{T}$,${T_i}$], same as $\mu_{i,t_{i}}^{\overline{t}}$.
 
 \section{Response of the water-phase dector}
 To compute the likelihood, we need to predict how many photons each PMT will detect when given a vertex. The more accurate the predictions are, the better the reconstruction performances. Therefore, we need a comprehensive understanding of the detector response and develop accurate models for it.
@@ -349,7 +349,7 @@ Through ray tracing in the simulation, we are able to differentiate between dire
 	\end{aligned}
 	\label{eq:indir_s}
 \end{equation}
-The final light prediction can be $\mu=\mu_{dir}+\mu_{ind}=\phi(p)(I_0j_0+I_1j_1+I_2j_2)(1+A(s=0))$.
+The final light prediction can be $\mu_p=\mu_{dir}+\mu_{ind}=\phi(p)(I_0j_0+I_1j_1+I_2j_2)(1+A(s=0))$. After considering the PDE of PMT, the prediction of PE should be $\mu=\varepsilon\mu_p=\varepsilon\phi(p)(I_0j_0+I_1j_1+I_2j_2)(1+A(s=0))$
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
@@ -376,10 +376,10 @@ The final light prediction can be $\mu=\mu_{dir}+\mu_{ind}=\phi(p)(I_0j_0+I_1j_1
 	\label{fig:scatterTable}
 \end{figure}
 
-\subsection{The time response}
+\subsection{The timing response}
 In Cherenkov reconstruction, photons are emitted along the Cherenkov angle rather than isotropically. Consequently, when only charge information is utilized for reconstruction, accurately determining the position becomes challenging. Time serves to characterize both the emission properties and the distance characteristics during propagation. To a certain degree, it offsets the limitations of relying solely on charge information. Thus, in the detector response, time is an essential parameter. As depicted in Fig.~\ref{fig:tres_define}, in the reconstruction process, we employ the residual time obtained by subtracting the time of flight, as defined in Eq.~\eqref{eq:trea_def}.
 \begin{equation}
-	t_{res,i} = t_i - t - s_{\mathrm{mid}}/c - \frac{|\boldsymbol{P}_{\mathrm{PMT}}^i - \boldsymbol{x} - s_{\mathrm{mid}}\widehat{\overrightarrow{d} } |}{c_w}
+	t_{\mathrm{res},i} = t_i - t - s_{\mathrm{mid}}/c - \frac{|\boldsymbol{P}_{\mathrm{PMT}}^i - \boldsymbol{x} - s_{\mathrm{mid}}\widehat{\overrightarrow{d} } |}{c_w}
 	\label{eq:trea_def}
 \end{equation}
 Where $t$ is the event time, $\boldsymbol{x}$ is the vertex, $t_i$ is the hit time at $i$-th PMT and $\boldsymbol{P}_{\mathrm{PMT}}^i$ is the position of $i$-th PMT.
@@ -406,24 +406,46 @@ In fiTQun, following the classification of the residual time of the direct light
 		\caption{With \SI{5}{ns} TTS smearing.}
 		\label{fig:smear5}
 	\end{subfigure}
-	\caption{The PDF and CDF of $t_{res}$.}
+	\caption{The PDF and CDF of $t_{\mathrm{res}}$.}
 	\label{fig:time}
 \end{figure}
 
 \subsection{The DCR in reconstruction}
+From PMT calibration in Sec.~\ref{sec:dcr}, the DCR is determined to be exceedingly high. In the course of the reconstruction process, considering that the dark noise adheres to a homogeneous Poisson intensity process within the time window, the probability of occurrence within a unit time window can be approximated by DCR. Given an intensity of $b$, the predicted PE should be $\mu+b(\overline{t}-\underline{t})$, and the time PDF should be $f_t(t_i)=\mu R_p(t_{\mathrm{res},i})+b$. And our likelihood is as shown in Eq.~\eqref{eq:likelihood_dcr}.
+\begin{equation}
+	\begin{aligned}
+		\mathcal{L}
+		 & = \prod_{j \in \{N_j>0\}} \frac{1}{(N_j-1)!}
+		\exp\Big[ -\mu_j\big(R_c(\overline{t}_{\mathrm{res},j}) - R_c(\underline{t}_{\mathrm{res},j})\big) - b(\overline{t}_{\mathrm{res},j}-\underline{t}_{\mathrm{res},j})\Big]                                          \\
+		 & \quad \times \big( \mu R_p(t_{\mathrm{res},j})+b \big)
+		\quad \times \Big( \mu \big( R_c(\overline{t}_{\mathrm{res},j}) - R_c(\underline{t}_{\mathrm{res},j}) \big) + b(\overline{t}_{\mathrm{res},j} - t_{\mathrm{res},j}) \Big)^{N_j-1}                                  \\
+		 & \quad \times \prod_{j \in \{N_j=0\}} \exp\Big[ -\mu\big(R_c(\overline{t}_{\mathrm{res},j}) - R_T(\underline{t}_{\mathrm{res},j})\big) - b(\overline{t}_{\mathrm{res},j} - \underline{t}_{\mathrm{res},j}) \Big]
+	\end{aligned}
+	\label{eq:likelihood_dcr}
+\end{equation}
 
-\section{The Fast reconstruction~(FRE) of the JUNO water-phase}
+\subsection{Use MCMC for extremization}
+To avoid the influence of local extrema, we use Markov Chain Monte Carlo~(MCMC) for extremization~\cite{MCMC}.
+To expedite convergence, we employ the simulated annealing method~\cite{prefit}. Specifically, we anneal the TTS from \SI{50}{ns} to the actual calibrated result in Sec.~\ref{sec:tts}.
+In each event, we sample a total of 3,000 steps. We use the results of the last 300 steps and calculate the average as the reconstruction result.
+
+\subsection{The preliminary reconstruction}
+Prior to the likelihood-based reconstruction, a faster preliminary reconstruction based on timing information and gridded vertex map is performed to reject unphysical events to  reduce the data volume. In the preliminary reconstruction, two parameters are defined:
+\begin{itemize}
+	\item score: Dark noise event filter based on residual time distribution and charge-weighted vectors from CD center to PMTs. The closer score is to 0, the more likely the event is a dark noise event
+	\item isglass: Glass radioactive event filter developed from the decision tree. Its range is from 0 to 1, and the closer the result is to 1, the more likely the event is a glass radioactive event.
+\end{itemize}
 
 \section{The parameters definition}
 \subsection{The energy related parameters}
-For a more accurate description, we define several parameters as follows.
+For a more accurate description, we define several parameters as shown in Fig.~\ref{fig:dual}.
 \begin{itemize}
-	\item $n_{10}$: The maximum count of residual time $t_{res}$ within a
+	\item $n_{10}$: The maximum count of residual time $t_{\mathrm{res}}$ within a
 	      \SI{10}{\nano s} bin width
-	\item $n_{b}$: The average count of $t_{res}$ in [-20, -10] and
+	\item $n_{b}$: The average count of $t_{\mathrm{res}}$ in [-20, -10] and
 		      [30,40]\si{\nano s}.
-	\item $n_{20}$: The total count of $t_{res}$ in [-20, 20]\si{\nano s},
-	      \textbf{primary measure of energy}.
+	\item $n_{20}$: The total count of $t_{\mathrm{res}}$ in [-20, 20]\si{\nano s},
+	      it is the primary estimation of energy.
 	\item $n_c$: The count of $\cos\theta$ in [0.65, 0.85], and the definition of $\theta$ is shown in Fig.~\ref{Fig:Coordinate}.
 \end{itemize}
 
@@ -432,7 +454,7 @@ For a more accurate description, we define several parameters as follows.
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{reconstruction/parameters_Define/tresCount.pdf}
-		\caption{The distribution of $t_{res}$.}
+		\caption{The distribution of $t_{\mathrm{res}}$.}
 		\label{fig:n20def}
 	\end{subfigure}% 
 	\begin{subfigure}{0.5\textwidth}
@@ -451,8 +473,8 @@ There exist two types of background, which can exert a significant impact on our
 \subsubsection{Kurtosis test~($k$)}
 The value obtained from the Kurtosis test on the residual time distribution is employed to assess the quality of the signal. In the case where the trigger originates from dark noise, the value should be -1.
 
-\subsubsection{Akaike Information Criterion~(AIC)~$\delta A$}
-AIC is frequently employed in model selection. In the context of reconstruction, it is utilized to determine whether the trigger originates from noise or a physical event. This Criterion is defined as Eq.~\eqref{eq:aic}
+\subsubsection{Akaike Information Criterion}
+Akaike Information Criterion~(AIC) is frequently employed in model selection~\cite{AIC}. In the context of reconstruction, it is utilized to determine whether the trigger originates from noise or a physical event. This Criterion is defined as Eq.~\eqref{eq:aic}
 \begin{equation}
 	\begin{aligned}
 		 & \text{AIC}_v = -2 \ln \mathcal{L}_v + 2k_p \\
@@ -473,8 +495,8 @@ By comparing $\delta A$ of dark noise events and \SI{2.2}{MeV} Gamma events, it 
 		\SI{2.2}{MeV} Gamma. We can optimize it to remove dark noise events.}
 \end{figure}
 
-\subsubsection{The likelihood-energy combined Criterion~($LE$)}
-We define the likelihood-energy combined criterion as $LE$, as Eq.~\eqref{eq:le}
+\subsubsection{The likelihood-energy combined Criterion}
+We define the likelihood-energy combined criterion as $LE$, as shown in Eq.~\eqref{eq:le}
 \begin{equation}
 	LE = -\ln \mathcal{L}/n_{20}
 	\label{eq:le}
@@ -482,23 +504,23 @@ We define the likelihood-energy combined criterion as $LE$, as Eq.~\eqref{eq:le}
 This criterion is employed to eliminate events stemming from PMT radioactivity. When the cut $LE < 40$ is applied, over \SI{99.99}{\%} of the events from PMT radioactivity are removed, along with approximately \SI{30}{\%} of the \SI{2.2}{MeV} Gamma.
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}{0.32\textwidth} % 宽度调整为0.32（留出间隙）
+	\begin{subfigure}{0.5\textwidth} % 宽度调整为0.32（留出间隙）
 		\centering
-		\includegraphics[page=3, width=\linewidth]{reconstruction/parameters_Define/glass.pdf}
+		\includegraphics[page=3, width=0.95\linewidth]{reconstruction/parameters_Define/glass.pdf}
 		\caption{\SI{2.2}{MeV} Gamma}
 		\label{fig:glass3}
 	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.32\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=6, width=\linewidth]{reconstruction/parameters_Define/glass.pdf}
+		\includegraphics[page=6, width=0.95\linewidth]{reconstruction/parameters_Define/glass.pdf}
 		\caption{PMT radioactivity}
 		\label{fig:glass6}
 	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.32\textwidth}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[page=9, width=\linewidth]{reconstruction/parameters_Define/glass.pdf}
+		\includegraphics[page=9, width=0.95\linewidth]{reconstruction/parameters_Define/glass.pdf}
 		\caption{dark noise events}
 		\label{fig:glass9}
 	\end{subfigure}
@@ -506,11 +528,11 @@ This criterion is employed to eliminate events stemming from PMT radioactivity. 
 	\label{fig:glass_all}
 \end{figure}
 
-\subsubsection{The goodness of reconstruction~($G_{vd}$)}
+\subsubsection{The goodness of reconstruction}
 When contemplating reconstruction, it is essential to assess the quality of both position and direction. In the case of a successfully reconstructed position, the residual time should be distributed as closely as feasible around zero. For precise direction reconstruction, PMTs adjacent to the Cherenkov ring ought to demonstrate uniform photon acceptance. In accordance with these criteria, we formulate the following two goodness metrics, presented as Eq.~\eqref{eq:goodness}. Finally, we combine these two metrics to obtain the overall goodness of reconstruction, denoted as $G_{vd}=g_v^2-g_d^2$.
 \begin{equation}
 	\begin{aligned}
-		g_v & = \frac{\sum e^{-0.5(t_{res}/w)^2} e^{-0.5(t_{res}/\sigma)^2}}{\sum e^{-0.5(t_{res}/w)^2}}                                \\
+		g_v & = \frac{\sum e^{-0.5(t_{\mathrm{res}}/w)^2} e^{-0.5(t_{\mathrm{res}}/\sigma)^2}}{\sum e^{-0.5(t_{\mathrm{res}}/w)^2}}     \\
 		g_d & = \frac{1}{2\pi} \left[ \max\left( \phi_i - \frac{2i\pi}{N} \right) - \min\left( \phi_i - \frac{2i\pi}{N} \right) \right] \\
 	\end{aligned}
 	\label{eq:goodness}
@@ -526,6 +548,80 @@ When contemplating reconstruction, it is essential to assess the quality of both
 	\caption{The definition of azimuthal angle in the goodness of direction calculation.}
 	\label{fig:goodness}
 \end{figure}
+\section{The performance of reconstruction in simulation}
 
-\subsection{In the dector simulation}
-\subsection{In the electronic simulation}
+To assess the performance of reconstruction, we simulated electrons and \SI{2.2}{MeV} gamma rays and computed the resolution. The information regarding the simulated electrons and Gamma is shown in Table~\ref{tab:particles}. The simulation is conducted based on JUNO software, version J25.1.5. In order to be as close to the actual situation as possible, we update the DCR obtained from the calibration in Sec.~\ref{sec:dcr} into the simulation.
+\begin{table}[ht]
+	\centering
+	\caption{Particles used in simulation}
+	\label{tab:particles}
+	\begin{tabular}{ccc}
+		\toprule
+		Particle & Energy~(MeV)                 & Distribution    \\
+		\midrule
+		$e^-$    & 2, 3, 4, 5, 6, 8, 10, 15, 20 & Uniformly in CD \\
+		Gamma    & 2.2                          & Uniformly in CD \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+We define the \SI{68.3}{\%} quantile of the distribution of $R_{diff}$ as position resolution, and
+the \SI{68.3}{\%} quantile of the distribution of $\theta_{diff}$ as angle resolution, as shown in Fig.~\ref{fig:dir_cal}. For \SI{2.2}{MeV} Gamma, the position resolution is \SI{1.97}{m} and direction resolution is \SI{43.82}{\degree}. It indicates that during the JUNO water phase, we can reconstruct Gamma rays of \SI{2.2}{MeV}. That is to say, we can still reconstruct the n-H capture signal well even though the DCR is pretty high.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\textwidth]{reconstruction/evalvation.pdf}
+	\caption{$R_{diff}$ is the distance between reconstructed position and true position, $\theta_{diff}$ is the angle between reconstructed direction and true direction.}
+	\label{fig:evalvation}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth} % 宽度调整为0.32（留出间隙）
+		\centering
+		\includegraphics[page=21,width=0.8\textwidth]{reconstruction/e_res.pdf}
+		\caption{Position resolution}
+		\label{fig:gamma_pos}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[page=22,width=0.8\textwidth]{reconstruction/e_res.pdf}
+		\caption{Direction resolution}
+		\label{fig:gamma_dir}
+	\end{subfigure}%
+	\caption{The resolution definition based on \SI{2.2}{MeV} Gamma.}
+	\label{fig:dir_cal}
+\end{figure}
+
+After calculation the resolution of different electrons, we get the relationship between resolution and electron kinetic energy, as exhibited in Fig.~\ref{fig:res_pos} and Fig.~\ref{fig:dir_pos}. When compared to the position resolution of SK-IV, the position resolution in the water phase of JUNO is relatively lower. This can be attributed to the fact that the PMTs in JUNO exhibit a higher DCR and poorer TTS. At the low-energy regime, a comprehensive modeling of the charge response of Cherenkov has been conducted, resulting in improved directional resolution than SK-III~(SK-IV's direction resolution is the same as SK-III).
+\begin{figure}[htbp]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		{\includegraphics[page=19,width=0.8\textwidth]{reconstruction/e_res.pdf}}
+		\caption{Position resolution}
+		\label{fig:res_pos}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		{\includegraphics[page=20,width=0.8\textwidth]{reconstruction/e_res.pdf}}
+		\caption{Direction resolution}
+		\label{fig:dir_pos}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		{\includegraphics[width=0.8\textwidth]{reconstruction/SK-pos.pdf}}
+		\caption{SK's position resolution from SK-IV~\cite{SK4}}
+		\label{fig:SKres_pos}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		{\includegraphics[width=0.8\textwidth]{reconstruction/SK-dir.pdf}}
+		\caption{SK's direction resolution from SK-III~\cite{SK3}}
+		\label{fig:SKdir_pos}
+	\end{subfigure}%
+	\caption{The relationship between resolution and energy of electrons.}
+\end{figure}
+
