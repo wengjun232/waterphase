@@ -58,9 +58,9 @@ Thus, the MCP gain for the secondaries differs from that for the PEs entering th
 The SER charge model in Eq.~\eqref{eq:sreal} is no longer sufficient to accurately calibrate this type of PMT.
 Understanding the origin of the jumbo charges is necessary for an appropriate SER charge calibration.
 Considering the structural similarity of the MCP-PMT in the JNE and the fact that the 8-inch PMT is more flexible compared to the 20-inch PMT in JUNO, we take the MCP-PMT in JNE as the research object and extend the results to the 20-inch PMT in JUNO.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/spe.pdf}
+	\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/spe.pdf}
 	\caption{The charge spectrum of the high-CE MCP-PMT GDB-6082~(red) and a dynode-PMT~(blue)~\cite{Zhang:2023ued}.
 		The blue histogram consists of the pedestal $Q=0$ and the principal peak of $Q=Q_1$, while the red histogram includes jumbo charges.}
 	\label{fig:spe_sreal}
@@ -98,7 +98,7 @@ Whereas early theoretical models emphasized mechanistic explanations, the Vaugha
 In the Furman model~\cite{2002Probabilistic}, there are three kinds of secondary electrons, as shown in Fig.~\ref{fig:furmanelectrons}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/furman.pdf}
+	\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/furman.pdf}
 	\caption{The three kinds of secondary electrons in Furman model.}
 	\label{fig:furmanelectrons}
 \end{figure}
@@ -155,7 +155,7 @@ The total spectrum is the sum of three components.
 \end{equation}
 
 When the incident energy~$E_0$ is around \SI{650}{eV}, the energies of the secondaries are usually less than \SI{100}{eV} .
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{PMTRelated/GTmodel/SES.pdf}
 	\caption{The total energy spectrum of the secondary electrons when the incident energy is \SI{650}{eV}.
@@ -189,7 +189,7 @@ In comparison with the experiment conducted by Yang et al. \cite{2017MCP}, in wh
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\linewidth]{PMTRelated/GTmodel/set.pdf}
+	\includegraphics[width=\textwidth]{PMTRelated/GTmodel/set.pdf}
 	\caption{
 		In the context of MCP operation, $\mathrm{M}1$ and $\mathrm{M}3$ serve as the input electrodes, while $\mathrm{M}2$ and $\mathrm{M}4$ function as the output electrodes. These four electrodes establish the potential differences essential for the device's operation. }
 	\label{fig:circuit}
@@ -217,14 +217,14 @@ We acquired approximate values of $\mu_{\mathrm{p}}$ and $\sigma_{\mathrm{p}}$ f
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/fit_noald.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/fit_noald.pdf}
 		\caption{}
 		\label{fig:gain_noald}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/fit_ald.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/fit_ald.pdf}
 		\caption{}
 		\label{fig:gain_ald}
 	\end{subfigure}
@@ -239,20 +239,20 @@ After performing Gaussian fitting, we conduct linear interpolation and extrapola
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/gain_mu.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/gain_mu.pdf}
 		\caption{}
 		\label{fig:gain}
 	\end{subfigure}%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/gain_sigma.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/gain_sigma.pdf}
 		\caption{}
 		\label{fig:sigma}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/gain_sigmamu.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/gain_sigmamu.pdf}
 		\caption{}
 		\label{fig:sigmamu}
 	\end{subfigure}
@@ -265,7 +265,7 @@ After performing Gaussian fitting, we conduct linear interpolation and extrapola
 The Furman model presented in Sec.~\ref{subsec:fuman} forecasts the energies of the secondaries. In our voltage-division experiment detailed in Sec.~\ref{sec:gain}, we measured the correlation between the MCP gain and the incident energies of electrons. We calculate the charge distribution using Monte Carlo following the flowchart shown in Fig.~\ref{fig:process}. In this research, we directed the laser at the apex of the photocathode hemisphere, and the PEs struck M1 with an incident angle of $\theta_0 = 0^\circ$. The intricate amplification process within the channels is characterized by the incident energy-dependent Gamma distributions $\varGamma(\alpha(E), \beta(E))$ as described in Sec.~\ref{gammapossion}. The values of $\alpha(E)$ and $\beta(E)$ are estimated based on the relationships of $\mu(E)$ and $\sigma(E)$ of an MCP-PMT without an \ce{Al2O3}-\ce{MgO} coating on the input electrode. This approach removes the influence of the surface mode.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\linewidth]{PMTRelated/GTmodel/process.pdf}
+	\includegraphics[width=\textwidth]{PMTRelated/GTmodel/process.pdf}
 	\caption{The flowchart of Monte Carlo for calculating the charge spectrum is presented. The output charge is composed of \(n_\mathrm{PE}\) SER charges. In the channel mode, the PEs directly enter the channels, whereas in the surface mode, the PEs strike the input electrode. The energies of the \(n_\mathrm{se}\) secondaries in the surface mode are sampled according to the Furman model. The amplification in the channels is modeled using the incident energy-dependent Gamma distribution.
 	}
 	\label{fig:process}
@@ -318,15 +318,15 @@ For the true-secondary electrons, the count $n$ follows a Poissonian. The sum of
 \end{equation}
 where \(E_{i}\) is sampled from Eq.~(\ref{eq:true}).
 The values of \(\alpha(E_{i})\) and \(\beta(E_{i})\) are derived from \(\mu(E_{i})\) and \(\sigma(E_{i})\) as presented in Fig.~\ref{fig:gaintest}. For the sake of comprehensiveness, \(\delta_\mathrm{ts} = (1-\delta_{\mathrm{bs}} - \delta_{\mathrm{rd}})\delta_{\mathrm{ts}}'\) represents the ratio of the electric current of the true-secondary electrons to that of the primary electrons. The charge spectra corresponding to different values of \(n\) are depicted in Fig.~\ref{fig:true_n}. Owing to the relatively lower energies of the secondary electrons, their charges are smaller. Differentiating each charge formed at the anode is a difficult task because multiple secondary electrons enter the MCP channels at the same time. A larger value of \(n\) leads to a greater charge.
-\begin{figure}[!htbp]
-	\begin{subfigure}{0.5\linewidth}
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/true_all.pdf}
+\begin{figure}[h]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/true_all.pdf}
 		\caption{}
 		\label{fig:true_n}
 	\end{subfigure}%
 	\hfill
-	\begin{subfigure}{0.5\linewidth}
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/allmode.pdf}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/allmode.pdf}
 		\caption{}
 		\label{fig:allmode}
 	\end{subfigure}
@@ -337,18 +337,18 @@ Fig.~\ref{fig:allmode} presents a typical decomposition of the SER charge spectr
 
 \subsection{Parameter Extraction from Data}\label{subsec:chitest}
 From Eq.~(\ref{eq:1}) and (\ref{eq:ts_all}), it can be clearly seen that $\delta_{\mathrm{ts}}'$ and \(p_0\) have a substantial influence on the SER charge distribution, as shown in Fig.~\ref{fig:tsp}. To determine these two parameters, we utilize the MCP - PMT test data provided by Zhang et al.~\cite{Zhang:2023ued}.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/p.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/p.pdf}
 		\caption{}
 		\label{fig:p}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/ts.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/ts.pdf}
 		\caption{}
 		\label{fig:ts}
 	\end{subfigure}
@@ -369,18 +369,18 @@ where \(\hat{k}_{i}=\frac{n_{i}+m_{i}}{N+M}\).
 
 The \(\chi^2_{r - 1}\) values are scanned across the \((p_0,\delta_{\mathrm{ts}}')\) grid. An example is presented in Fig.~\ref{fig:cour}. We adopt a linear model~\cite{Gelman_Hill_2006} to smooth the approximately parabolic relationship between the \(\chi^2_{r - 1}\) and \((p_0, \delta_{\mathrm{ts}}')\). Subsequently, we extract the \((\hat{p}_0, \hat{\delta}_{\mathrm{ts}}')\) values that minimize \(\chi^2_{r - 1}\), along with intervals at \SI{68.3}{\percent} confidence levels~\cite{cowan1997statistical}.
 
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/cour.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/cour.pdf}
 		\caption{}
 		\label{fig:cour}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/hist.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/hist.pdf}
 		\caption{}
 		\label{fig:hist}
 	\end{subfigure}
@@ -391,9 +391,9 @@ The \(\chi^2_{r - 1}\) values are scanned across the \((p_0,\delta_{\mathrm{ts}}
 
 The scatter plot of $\hat{\delta}_{\mathrm{ts}}'$ versus $\hat{p}_0$ for 9 MCP-PMTs shown in Fig.~\ref{fig:true_p} does not suggest a strong correlation. This is because they are decided by independent manufacturing steps. On an average basis, the value of $\delta_{\mathrm{ts}}'$ is 5.979 and that of $p_0$ is 0.5341. % rd=0.09，bs=0.01. 
 The PEs of the channel, back-scattered, and rediffused surface modes make up \SI{53.41}{\percent}, forming the peak. For each of the remaining cases, when hitting the surface, it induces 5.979 true-secondary electrons on average.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/true_p.pdf}
+	\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/true_p.pdf}
 	\caption{When performing convolution with 9 MCP-PMTs, the distribution of $\delta_{\mathrm{ts}}'$ and $p_0$ takes place at the point of minimum chi-square. The blue dashed line represents the expected $\hat{p}_0$ that is estimated from~\cite{chen2018photoelectron}. }
 	\label{fig:true_p}
 \end{figure}
@@ -404,18 +404,18 @@ To make a comparison between our measurement and previous studies, we transform 
 	\delta = \delta_\text{bs} + \delta_\text{rd} + (1-\delta_\text{bs} - \delta_\text{rd}) \delta_\text{ts}'
 \end{equation}
 and the fraction \(p_0\) to \(p\) is determined by Eq.~\eqref{eq:p0}. Cao et al.~\cite{cao_secondary_2021} measured the secondary electron yield (SEY) of the \ce{Al2O3}-\ce{MgO} double - layered film to be in the range of 4 - 5. Chen et al.~\cite{2016Optimization} noted that there exists an electrostatic lens effect at the entrances of the microchannel plate (MCP) channels. This effect results in the ratio of the PEs entering the MCP channels being smaller than the open - area ratio. When the incident angle of the PEs is \(\theta_0 = 0^\circ\), when the open - area ratio of the MCP is \SI{74.9}{\percent}, the proportion of PEs directly entering the MCP channels is approximately \SI{60}{\percent}. Chen et al.~\cite{chen2018photoelectron} showed that when the open - area ratio is \SI{65}{\percent}, this proportion is around \SI{55}{\percent}. In our study, the MCPs have pore diameters of \SI{12}{\mu\meter}, the spacing between pores is \SI{14} {\mu\meter}, and the open - area ratio is \SI{66.6}{\percent}. For \(\delta_{\mathrm{rd}}+\delta_{\mathrm{bs}} = 0.1\), the expected value of \(\hat{p}_0\) is calculated as \(\hat{p}_0=\frac{55\%}{1-(1 - 55\%)\delta_{\mathrm{rd}}+\delta_{\mathrm{bs}}}\approx 57.6\%\).
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/parameter_pp0.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/parameter_pp0.pdf}
 		\caption{}
 		\label{fig:pp0}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/parameters_ts.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/parameters_ts.pdf}
 		\caption{}
 		\label{fig:tsts}
 	\end{subfigure}
@@ -430,18 +430,18 @@ In Fig.~\ref{fig:pdelta}, when considering the typical values of \(\delta = 5\) 
 \subsection{Gamma-Tweedie model for MCP-PMT}\label{sec:model}
 In our computations, the distribution of the MCP charge response to the true-secondary electrons, denoted as $\varGamma(\alpha_{i},\beta_{i})$, is dictated by their energies $E_{i}$. These energies $E_{i}$ meet the condition $\sum_{i}^{n}E_{i}<E_0$. The incident energy \(E_0\) of the PEs is \SI{650}{eV}, which is over ten times the energies of the true secondaries. Since $n$ adheres to a Poisson distribution with an expected value ranging from 5 to 6.5, the probability that $n$ is greater than 10 is extremely low and can be disregarded. Consequently, the influence of $n$ on $E_{i}$ can be neglected, and the energy \(E_{i}\) has an independent and identical distribution, as illustrated in Fig.~\ref{fig:single_pe}. Correspondingly, the charge response of the MCP to a single true-secondary electron can be treated in the same manner, as presented in Fig.~\ref{fig:single_fit}. Moreover, a single Gamma distribution \(\varGamma(\alpha',\beta')\) is sufficiently adaptable to depict the continuous mixture of \(\int dE_{i}\frac{1} {\delta_{\mathrm{ts}}}\frac{d\delta_{\mathrm{ts}}} {dE_{i}}\varGamma[\alpha(E_{i}),\beta(E_{i})]\).
 
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/GTmodel/single_pecharge.pdf}
+		\includegraphics[height=4.5cm]{PMTRelated/GTmodel/single_pecharge.pdf}
 		\caption{}
 		\label{fig:single_pe}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.97\linewidth]{PMTRelated/GTmodel/singlepefit.pdf}
+		\includegraphics[height=4.65cm]{PMTRelated/GTmodel/singlepefit.pdf}
 		\caption{}
 		\label{fig:single_fit}
 	\end{subfigure}
@@ -478,25 +478,25 @@ In addition to defining the gain of the main peak~($G_p$), we also need to defin
 	\item For MCP-PMTs, $G_p=\frac{\alpha}{\beta}$ and $G_m=p_0\frac{\alpha}{\beta}+\lambda\frac{\alpha'}{\beta'}$
 \end{itemize}
 
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{PMTRelated/Gain_DCR_window.pdf}
+	\includegraphics[width=0.5\textwidth]{PMTRelated/Gain_DCR_window.pdf}
 	\caption{The range of PE time for gain and calibration. Only the PEs in the first \SI{100}{ns} are used.}
 	\label{fig:gain_100range}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/Dynode-PMT_fit.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/Dynode-PMT_fit.pdf}
 		\caption{}
 		\label{fig:dynode-fit}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/MCP-PMT_fit.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/MCP-PMT_fit.pdf}
 		\caption{}
 		\label{fig:mcp-fit}
 	\end{subfigure}
@@ -506,25 +506,25 @@ In addition to defining the gain of the main peak~($G_p$), we also need to defin
 
 As illustrated in Fig.~\ref{fig:gmp}, for the two types of PMTs, the fitted $G_p$ values are already aligned quite well. However, regarding $G_m$, the value of MCP-PMT is significantly higher than that of Dynode-PMT. Also, the average gain of MCP-PMTs is much larger than the peak gain. This indicates that in the long-tail structure, $\lambda\frac{\alpha'}{\beta'}$ is greater than $\frac{\alpha}{\beta}$, which is consistent with our experimental conclusion.
 
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/gp.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/gp.pdf}
 		\caption{}
 		\label{fig:gp}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/gm.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/gm.pdf}
 		\caption{}
 		\label{fig:gm}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/mcp-gpm.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/mcp-gpm.pdf}
 		\caption{}
 		\label{fig:gmp_mcp}
 	\end{subfigure}
@@ -540,18 +540,18 @@ Since we imposed restrictions on the selection of dark noise when performing gai
 	\label{eq:dcr}
 \end{equation}
 Taking Run~3279 on February 2nd as an example, the distribution of the DCR obtained from the calibration is shown in the Fig.~\ref{fig:dcr_calib}. It can be seen that the mean dark noise rate of the MCP-PMT is about \SI{33}{kHz}, which is about \SI{5}{kHz} higher than that of the Dynode-PMT. At the same time, from the perspective of the position distribution, the distribution of the DCR is relatively uniform and there is no obvious asymmetry.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.6\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/dcr_3279.pdf}
+		\includegraphics[width=\textwidth]{PMTRelated/dcr_3279.pdf}
 		\caption{}
 		\label{fig:dcr}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{PMTRelated/dcr_3279_pos.pdf}
+		\includegraphics[width=\textwidth]{PMTRelated/dcr_3279_pos.pdf}
 		\caption{}
 		\label{fig:dcrpos}
 	\end{subfigure}
@@ -559,9 +559,9 @@ Taking Run~3279 on February 2nd as an example, the distribution of the DCR obtai
 	\label{fig:dcr_calib}
 \end{figure}
 For each analyzed run, the DCR was calibrated independently. Consequently, the variation law of DCR with the data acquisition time can be straightforwardly investigated, as shown in Fig.~\ref{fig:dcr_time}. It has been observed that as the detector is in operation, the DCR initially increased, then gradually decreased, and ultimately stabilized. Throughout this transformation process, the DCR of the MCP-PMT consistently remained approximately \SI{5}{kHz} higher than that of the Dynode-PMT. Simultaneously, the DCRs of both PMTs consistently exceeded \SI{20}{kHz}. This situation exerted a certain influence on and presents challenges to the Cherenkov reconstruction of the water phase. Thus, it was essential to develop a mathematical model of the dark noise and apply it to the reconstruction.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{PMTRelated/dcr_time.pdf}
+	\includegraphics[width=0.5\textwidth]{PMTRelated/dcr_time.pdf}
 	\caption{The curve of DCR changing with time.}
 	\label{fig:dcr_time}
 \end{figure}
@@ -571,18 +571,18 @@ For each analyzed run, the DCR was calibrated independently. Consequently, the v
 In the water phase, the time characteristics are calibrated by laser.
 What has a relatively large impact on the subsequent reconstruction are the time starting point of each PMT, that is, the time-offset, and the transit time spread~(TTS) of the PMT. In this work, we use the standard deviation to represent TTS instead of using the full width at half maximum.
 The distribution of time-offset is as shown in Fig.~\ref{fig:offset} and that of TTS is as illustrated in Fig.~\ref{fig:tts}. The timing jitter (TTS) of the MCP-PMT is around \SI{10}{ns}, which is significantly higher than that of the Dynode-PMT (around \SI{2.5}{ns}). Therefore, in the reconstruction, the impact of TTS cannot be ignored, and modeling and application are required.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/offset.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/offset.pdf}
 		\caption{}
 		\label{fig:offset}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{PMTRelated/TTS.pdf}
+		\includegraphics[width=0.9\textwidth]{PMTRelated/TTS.pdf}
 		\caption{}
 		\label{fig:tts}
 	\end{subfigure}
@@ -592,9 +592,9 @@ The distribution of time-offset is as shown in Fig.~\ref{fig:offset} and that of
 
 \section{The Photon Detection Efficiency}
 The Photon Detection Efficiency~(PDE, $\varepsilon$) is an important parameter for measuring the photon detection ability of a PMT. Numerically, it is equal to the product of QE and CE. In this work, we directly use the results obtained from the batch tests at Pan-Asia~\cite{JUNO:2022hlz}, as shown in Fig.~\ref{fig:PDE}.
-\begin{figure}[!htbp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{PMTRelated/PDE.pdf}
+	\includegraphics[width=0.5\textwidth]{PMTRelated/PDE.pdf}
 	\caption{The distribution of PDE.}
 	\label{fig:PDE}
 \end{figure}
