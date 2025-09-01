@@ -1,5 +1,6 @@
 \chapter{The source calibration in water phase}
 \label{chap:neutronDet}
+
 \subsection{The calibration information}
 Americium-Beryllium~(\ce{AmBe}) and Americium-Carbon~(\ce{AmC}) neutron sources serve as critical reference standards for characterizing neutron detecting capabilities. Both sources leverage the alpha decay of \ce{^241Am}. The neutron producing process can be described as Eq.~\eqref{eq:amn}:
 \begin{equation}
@@ -10,7 +11,7 @@ Americium-Beryllium~(\ce{AmBe}) and Americium-Carbon~(\ce{AmC}) neutron sources 
 During the water phase, neutron source calibration was performed three times, and the summary of 14 runs are in Table.~\ref{tab:summaryOfRuns}.
 \begin{table}[htbp]
 	\centering
-	\caption{\textbf{The neutron source calibration in water phase}}%标题
+	\caption{The neutron source calibration in water phase}%标题
 	\label{tab:summaryOfRuns}
 	\begin{tabular}{ccc}
 		\toprule
@@ -23,7 +24,7 @@ During the water phase, neutron source calibration was performed three times, an
 	\end{tabular}
 \end{table}
 All the calibration sources were placed along the z-axis, as Fig.~\ref{fig:calib_set} shown.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{neutron_calib/calib_set.pdf}
 	\caption{The calibration source positions in water phase.}
@@ -34,8 +35,9 @@ To enhance our capability in studying low-energy events in water phase, we decou
 \label{sec:lowenergy}
 \subsection{The reconstruction of the prompt signals}
 \subsubsection{The event selection before reconstruction}
+\label{subsec:preselect}
 In this study, we take Run~3671~(calibrated with a \ce{AmBe} source at the position of (0, 0, \SI{-10}{m})) as an illustrative example. To mitigate the data volume, we selectively choose a subset of events from the previous findings (JUNO-doc-12539) based on Baona's reconstruction method. Additionally, partial background events are filtered out. After applying a fiducial volume of \SI{17}{m} cut, we observed that a large number of events were downward, as depicted in Fig.~\ref{fig:downwards}.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=9,width=0.45\textwidth]{neutron_calib/selection/3671.pdf}
 	\caption{The distribution of $p_z/p$ after applying a fiducial volume of \SI{17}{m} cut.}
@@ -52,7 +54,7 @@ We require additional directional cuts. Therefore, our selection criteria are as
 \end{itemize}
 To demonstrate the events selection during the cut process, we apply a cylindrical cut with a radius of \SI{2}{m} along the z-axis and plot the z-coordinate distribution of events as shown in Fig.~\ref{fig:selectionFromBaona}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -73,7 +75,7 @@ After event selection, additional constraints are applied to the PMT photoelectr
 The PE times are binned with a width of \SI{48}{ns} over the interval $t \in [96,576]\si{ns}$.
 A \SI{180}{ns} reconstruction window is then defined, comprising \SI{36}{ns} before and \SI{144}{ns} after the maximum bin within the search range, as illustrated in Fig.~\ref{fig:PEtime}.
 This selection effectively suppresses dark noise contributions and improves the robustness of the vertex reconstruction.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{neutron_calib/PEtime.pdf}
 	\caption{The PE time distribution in Run~3671. We search the maximum bin in the green range and select a \SI{180}{ns} time window for reconstruction.}
@@ -90,7 +92,7 @@ Subsequently, quality and background rejection cuts are applied to remove events
 	\item Energy related: $n_{10}-n_{b}>15$ and $n_c>8$
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=9,width=\textwidth]{neutron_calib/prompt/3671.pdf}
 	\caption{The position distribution of the prompt signals in Run~3671.}
@@ -98,7 +100,7 @@ Subsequently, quality and background rejection cuts are applied to remove events
 \end{figure}
 After these selection cuts, pronounced event clustering is visible near the calibration source position.
 Furthermore, applying a \SI{2}{m} cylindrical cut along the z-axis yields a prominent peak at z = \SI{-10}{m} in the reconstructed event distribution, as shown in Fig.~\ref{fig:positionPrompt_z}.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=10,width=0.5\textwidth]{neutron_calib/prompt/3671.pdf}
 	\caption{The distribution of z-coordinate in Run~3671 after \SI{2}{m} cylindrical cut.}
@@ -108,7 +110,7 @@ Furthermore, applying a \SI{2}{m} cylindrical cut along the z-axis yields a prom
 Applying the same selection cuts and analysis procedure, the reconstructed vertex position distributions of prompt signals are obtained for 14 calibration runs.
 As shown in Fig.~\ref{fig:promptSummary}, prompt signals from both \ce{AmC} and \ce{AmBe} sources are accurately reconstructed at their deployment positions, validating the performance of the position reconstruction algorithm.
 These results further demonstrate that JUNO's water phase is capable of detecting \SI{6.1}{MeV} and \SI{4.4}{MeV} Gamma signals with high statistical significance.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -140,7 +142,7 @@ These results further demonstrate that JUNO's water phase is capable of detectin
 
 \subsubsection{The energy distribution of prompt signals}
 To obtain the energy spectrum of the prompt signals, all events within a \SI{3}{m} radius of the calibration source position are selected, as shown in Fig.~\ref{fig:RtoSource}.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{neutron_calib/prompt/rCut.pdf}
 	\caption{3-meter radius cut around the calibration source position}
@@ -151,7 +153,7 @@ For Run~3671, the background spectrum is derived from Run~3663.
 To mitigate the impact of differing data acquisition durations, the energy spectra are normalized to live time, allowing event rates to serve as the primary comparison metric.
 As shown in Fig.~\ref{fig:3671n20}, substantial background contamination remains in the energy spectrum despite the application of selection cuts.
 After background subtraction, the $n_{20}$ distribution for \SI{4.4}{MeV} Gamma events is obtained. Similarly, for Run~3286, which utilizes an \ce{AmC} source, the background spectrum is derived from Run~3281. The $n_{20}$ distribution for \SI{6.1}{MeV} Gamma events is shown in Fig.~\ref{fig:3286n20}.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -178,7 +180,7 @@ We then investigate the delayed signals arising from neutron capture events.
 To reconstruct these delayed signals while reducing data volume, a coincidence reconstruction algorithm is employed.
 As shown in Fig.~\ref{fig:delayedCoincidence}, a \SI{1000}{u\second} time window is used for delayed signal reconstruction.
 For the study of accidental coincidence backgrounds, additional events are reconstructed within the 1000--\SI{2000}{u\second} interval.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	{\includegraphics[width=0.5\textwidth]{neutron_calib/delayArea.pdf}}
 	\caption{The delayed signal reconstruction time window.}
@@ -215,14 +217,14 @@ The extracted neutron capture lifetime is $203 \pm \SI{24}{u\second}$, in agreem
 In parallel, the position distributions of both prompt and delayed signals are examined. As illustrated in Fig.~\ref{fig:coincidentPos}, events are strongly clustered around the calibration source location, consistent with the deployment geometry. These results demonstrate that the JUNO detector exhibits robust neutron detection capability during the water phase.
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{neutron_calib/delayed/example/3671_dt.pdf}
 	\caption{The coincident time fit.}
 	\label{fig:delayFit}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -241,6 +243,7 @@ In parallel, the position distributions of both prompt and delayed signals are e
 \end{figure}
 
 \subsection{The low-energy threshold in water phase}
+\label{subsec:low_energy}
 Through a detailed analysis of calibration source data, distinct Gamma signals at \SI{6.1}{\MeV} and \SI{4.4}{\MeV} are identified, in addition to the characteristic \SI{2.2}{\MeV} Gamma signal originating from neutron capture on hydrogen.
 To obtain a cleaner prompt signal energy spectrum, additional selection criteria are applied beyond the initial cuts.
 Specifically, prompt events are required to satisfy $\delta A < -50$, and, for the \ce{AmC} source, the condition $n_{10} - n_{b} > 20$ is imposed.
@@ -250,7 +253,7 @@ Furthermore, the energy cut used in the coincidence analysis is removed.
 Coincidences occurring within \SI{1000}{u\second} are designated as signal, while those in the 1000--\SI{2000}{u\second} window are taken as background.
 Using this approach, the energy distribution of the \SI{2.2}{\MeV} Gamma from neutron capture on hydrogen is obtained, as shown in Fig.~\ref{fig:promptene2}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -285,7 +288,7 @@ Using this approach, the energy distribution of the \SI{2.2}{\MeV} Gamma from ne
 	\label{fig:energySpectrum46}
 \end{figure}
 After obtaining the energy spectra of the three characteristic signals, we perform Gaussian fitting to quantify their spectral parameters, as shown in Fig.~\ref{fig:FitYield}. When we use $n_{20}$ to estimate the energy, the light yield is $14.0\pm 0.1$~PE/MeV. Simultaneously, we estimate that each triggered physical event contains an average of \SI{8.1}{PE} originating from PMT dark noise and so on.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -361,7 +364,7 @@ The fitted lifetime is required to satisfy the following criteria:
 		\bottomrule
 	\end{tabular}
 \end{table}
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=12,width=0.45\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 	\caption{The fitted lifetime of Run~3671.}
@@ -395,7 +398,7 @@ Maximizing neutron detection efficiency is crucial for capturing the largest pos
 	\end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -438,7 +441,7 @@ This position correlation indicates that the delayed signals originate predomina
 As illustrated in Fig.~\ref{fig:3671_HighestEffDtFit}, the fitted neutron-capture lifetime is measured to be $207.2 \pm \SI{47.2}{u\second}$, in agreement with the theoretical expectation.
 The resulting fit yields a $\chi^{2}/\mathrm{ndf}$ of $27.3/30$, demonstrating good fit quality.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/delayed/highesteff/3671.pdf}
@@ -462,7 +465,7 @@ The resulting fit yields a $\chi^{2}/\mathrm{ndf}$ of $27.3/30$, demonstrating g
 \end{figure}
 
 As illustrated in Fig.~\ref{fig:SummaryEff}, neutron detection efficiency exceeding \SI{10}{\%} has been experimentally achieved, as validated through comprehensive calibration campaigns with \ce{AmBe} and \ce{AmC} neutron sources. During the calibrations on February 2-nd, the higher MM-trigger threshold resulted in an overall lower neutron detection efficiency compared to results of calibrations on February 2-nd. Simultaneously, significant asymmetry is observed between the positive and negative z-axis regions: detection efficiency in the negative z-axis is notably lower than in the positive z-axis, with the most pronounced deficit occurring at the \SI{16}{m} position. This demonstrates clear non-uniformity in JUNO's detector performance during the water phase.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/effsnr/0202_eff.pdf}
@@ -499,7 +502,7 @@ Maximizing SNR is essential for enhancing the clarity of true signal events rela
 	\end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -536,7 +539,7 @@ Maximizing SNR is essential for enhancing the clarity of true signal events rela
 \end{figure}
 
 Similarly, as shown in Fig.~\ref{fig:highestSNRPos} and \ref{fig:3671_HighestSNRDtFit}, when operating at maximum SNR, the distributions of prompt and delayed signals remain consistent with expectations, and neutron capture lifetime fitting demonstrates excellent agreement with reference values.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[page=5,width=0.9\textwidth]{neutron_calib/delayed/highestsnr/3671.pdf}
@@ -552,7 +555,7 @@ Similarly, as shown in Fig.~\ref{fig:highestSNRPos} and \ref{fig:3671_HighestSNR
 	\caption{The position distribution when getting the highest SNR in Run~3671. \subref{fig:3671HighestSNRProPos} is the position distribution of the prompt signals, and \subref{fig:3671HighestSNRDelPos} is of the delayed signals.}
 	\label{fig:highestSNRPos}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=3,width=0.45\textwidth]{neutron_calib/delayed/highestsnr/3671.pdf}
 	\caption{The lifetime fit when getting the highest SNR in Run~3671.}
@@ -560,7 +563,7 @@ Similarly, as shown in Fig.~\ref{fig:highestSNRPos} and \ref{fig:3671_HighestSNR
 \end{figure}
 
 As shown in Fig.~\ref{fig:SummarySNR}, all 14 calibration runs demonstrate robust SNR performance. However, the calibrations on February 7-th exhibit significantly smaller statistical uncertainties due to higher neutron detection efficiency, resulting in substantially greater data volume for analysis.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{neutron_calib/delayed/effsnr/0202_snr.pdf}
@@ -580,7 +583,7 @@ As shown in Fig.~\ref{fig:SummarySNR}, all 14 calibration runs demonstrate robus
 
 \subsection{The balance between neutron detection efficiency and SNR}
 Based on these results, we observe the relationship between SNR and neutron detection efficiency, as shown in Fig.~\ref{fig:snr-efficiency}. The maximum achievable efficiency exceeds \SI{10}{\%}, while the SNR is lower than 20. This demonstrates a fundamental trade-off: stringent selection criteria yield excellent SNR at the cost of reduced efficiency, whereas relaxed cuts achieve high neutron detection efficiency but introduce significant background contamination.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=21,width=0.5\textwidth]{neutron_calib/delayed/coinsummary/3671.pdf}
 	\caption{The relationship between SNR and neutron detection efficiency. The maximum efficiency exceeds \SI{10}{\%}, and the maximum SNR surpasses 40.}
@@ -599,7 +602,7 @@ To better characterize muon properties, we define the following parameters, as s
 \end{itemize}
 
 From the distribution of $D_{tc}^2$ as shown in Fig.~\ref{fig:dfcc}, we observe cosmic-ray muons uniformly traversing the Central Detector. The Total PE distribution reveals that the majority of muons deposit between $10^5$ and $10^6$~\si{PE}, while a small fraction exhibit total PE counts below $10^5$, as evidenced in Fig.~\ref{fig:pe}. Fig.~\ref{fig:track-pe} demonstrates a strong correlation between muon track length and total PE for primary muons, forming a concentrated distribution band. However, events with $<10^5$~PE despite long reconstructed tracks likely originate from PMT flasher artifacts or electronic noise mimicking muon signals. Therefore, we implement a selection cut requiring muon candidates to have total PE $>10^5$. After the cut of $D_{tc}<\SI{17.7}{m}$ and Total PE $>10^5$, the muon event rate is \SI{4.03}{Hz}, which is consistent with the result of simulation~($0.004~\text{Hz/m}^2$)~\cite{muon207}. Also, the average energy of muon is \SI{207}{GeV}.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{spallation_n/track_define.pdf}
 	\caption{The defination of parameters used in spallation neutron search.}
@@ -607,7 +610,7 @@ From the distribution of $D_{tc}^2$ as shown in Fig.~\ref{fig:dfcc}, we observe 
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -633,7 +636,7 @@ From the distribution of $D_{tc}^2$ as shown in Fig.~\ref{fig:dfcc}, we observe 
 
 \section{The search for spallation neutron}
 Similar to Sec.~\ref{sec:coincidentRecon}, we also use coincident reconstruction for spallation neutron, as shown in Fig.~\ref{fig:coinRecSPN}. For accidental coincident backgrounds, we reconstruct all events in 20--\SI{2000}{us} after muons. In 0--\SI{20}{us}, events are influenced by baseline, after-pulse and Michel electrons, and would not be included in our study.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{spallation_n/spn_area.pdf}
 	\caption{The coincident reconstruction of spallation neutrons}
@@ -649,7 +652,7 @@ Validated through \ce{AmBe} and \ce{AmC} calibration, we get some basic cut for 
 
 After applying basical cuts, we observe residual downward events clustered near the detector center, as illustrated in Fig.~\ref{fig:pzcut}. To suppress this unknown background component, we implement an additional directional cut based on reconstructed direcition~$p_z/p>-0.75$.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=16,width=0.45\textwidth]{spallation_n/yield_sdu.pdf}
 	\caption{The distribution of $p_z/p$ in different regions}
@@ -658,7 +661,7 @@ After applying basical cuts, we observe residual downward events clustered near 
 
 For the coincident distance and energy cut, we choose the events in 50--\SI{650}{us} as signals and in 1400--\SI{2000}{us} as background.
 After background subtraction, the distribution of $dR$ reveals significant event clustering within \SI{6}{m}, as evidenced in Fig.~\ref{fig:coinDisSPN}. This observation justifies implementing a position correlation cut of $dR<\SI{6}{m}$ to isolate true spallation neutron capture events. Similarly, in the $n_{20}$ distribution after background subtraction as shown in Fig.~\ref{fig:coinESPN}, we observe a prominent peak around \SI{35}{PE}. Using Gaussian fitting, the measured peak position is \SI{36.3}{PE}. This contrasts with the expected value of \SI{41}{PE} from that in calibration sources and the light-yield curve estimation of \SI{38.9}{PE}. The primary reason for this discrepancy lies in the calibration sources measuring light yield at fixed positions, whereas the current result represents the average PE expectation within \SI{16}{m} across the detector. Despite the numerical difference, these results remain consistent within the context of detector-scale estimation. Finally, we decide to use a cut of energy: $30<n_{20}<70$.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -676,7 +679,7 @@ After background subtraction, the distribution of $dR$ reveals significant event
 	\label{fig:coinDisSPN}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -695,14 +698,14 @@ After background subtraction, the distribution of $dR$ reveals significant event
 \end{figure}
 
 At this stage, we calculate the number of spallation neutrons using capture lifetime fitting in [30, \SI{930}{us}], as shown in Fig.~\ref{fig:lifeSPNSDU}. From the fit result, $987\pm 119$ spallation neutron events are selected. We similarly examine the position distribution of selected events. By using coincidences within the 1100--\SI{2000}{us} window as background and subtracting them. In both background and selected events, we observe event clustering at the detector center. After background subtraction, we obtain the position distribution of spallation neutrons. The position distribution in the upper hemisphere of the detector exceeds that in the lower hemisphere. This asymmetry aligns with the detector non-uniformity observed during calibration source studies.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=8,width=0.5\textwidth]{spallation_n/yield_sdu.pdf}
 	\caption{The lifetime fitting of spallation neutron.}
 	\label{fig:lifeSPNSDU}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -753,21 +756,21 @@ Only consider the statistical uncertainty, the spallation neutron yield is $Y_n 
 Simultaneously, there are three primary sources of systematic uncertainty. The first kind comes from the muon track reconstruction. We found a systematic \SI{0.2}{\%} bias between reconstructed muon track lengths and their true values, as shown in Fig.~\ref{fig:muontrackUncerntainty}. Consequently, we attribute a \SI{0.2}{\%} systematic uncertainty to muon track reconstruction in our analyses.
 The second source of systematic uncertainty originates from neutron count variations induced by coincident distance selection. We perform parameter scans across multiple coincidence distances, as evidenced in Fig.~\ref{fig:muonCountUncerntainty} and quantified the systematic uncertainty using the maximum deviation from the central value obtained at different coincident distances.
 The final source of systematic uncertainty stems from detector inhomogeneity and discrepancies between simulation and experimental data. During \ce{AmBe} and \ce{AmC} calibrations, the neutron detection efficiency at $z = \SI{-16}{m}$ approaches zero, as shown in Fig.~\ref{fig:SPNsourceCalib}. To quantify the impact of this local efficiency anomaly on the global average efficiency, we perform a parameter scan across a $5\sigma$ range of efficiency uncertainty (0 to \SI{1.2}{\%}) based on the fitting results at this position. The range in the resulting detection efficiency is then adopted as the systematic uncertainty, as shown in Fig.~\ref{fig:muonEffUncerntainty}. All the systematic efficiencies are summarized in Table.~\ref{tab:spn_eff_un}. Our final result of spallation neutron yield measurement is $Y_n = (2.31\pm0.22\text{(sys.)}\pm0.41 \text{(stat.)}) \times 10^{-4}\mu^{-1}\text{g}^{-1}\text{cm}^2$. As shown in Fig.~\ref{fig:yield_final}, our measurements in the water phase demonstrate statistically significant consistency with Super-Kamiokande's benchmark results across key neutron detection parameters, validating the calibration methodology and detector performance.
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{spallation_n/muonTrack_err.pdf}
 	\caption{The track length distribution of reconstructed muon and their truth.}
 	\label{fig:muontrackUncerntainty}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=21, width=0.5\textwidth]{spallation_n/yield_sdu.pdf}
 	\caption{We scan $dR$ from in 3--\SI{9}{m}, and calculate the number of neutrons.}
 	\label{fig:muonCountUncerntainty}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -801,16 +804,16 @@ The final source of systematic uncertainty stems from detector inhomogeneity and
 	\end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[page=22,width=0.45\textwidth]{spallation_n/yield_sdu.pdf}
-	\caption{The final yield measurement. The result of SK comes from~\cite{SK_spnYn}, and of SNO comes from~\cite{sno_spnYn}.}
+	\caption{The final yield measurement. The result of SK comes from~\cite{SK_spnYn}, of SNO comes from~\cite{sno_spnYn} and the prediction of LS is from \cite{Predict_LS_Wang}.}
 	\label{fig:yield_final}
 \end{figure}
 \subsection{Cross check using water-pool reconstructed muon}
 In order to cross-check the muon reconstruction in the water phase, we repeat the analysis using the water pool muon reconstruction method~(JUNO-doc-13604). Except for the removal of the muon selection cut, all other selection criteria remain identical to those applied when using CD muons. The final result is $Y_n =( 2.32\pm0.19\text{(sys.)}\pm0.44 \text{(stat.)}) \times 10^{-4}\mu^{-1}\text{g}^{-1}\text{cm}^2$, as shown in Fig.~\ref{fig:yield_sjtu_yield} and \ref{fig:yield_sjtu22}. Those two results are consistent with each other.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -835,4 +838,61 @@ In order to cross-check the muon reconstruction in the water phase, we repeat th
 \end{figure}
 
 \subsection{The prediction of $Y_n$ in water}
+At present, regarding the research on the muon-induced spallation neutron yield, multiple underground experiments have completed the measurements. Among them, most experiments measured the yield in LS. SK~\cite{SK_spnYn} was the first to complete the measurement of the yield in the water phase, and SNO~\cite{sno_spnYn} experiment completed the measurement of the yield in heavy water. The relevant results are summarized in Tab.~\ref{tab:syn_summary}.
 
+\begin{table}[htbp]
+	\centering
+	\caption{The measurement of spallation neutron yield}
+	\label{tab:syn_summary}
+	\begin{tabular}{cccc}
+		\toprule
+		Target          & Experiment                            & $E_{\mu}$ (\si{GeV}) & $Y_n$ ($\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$) \\
+		\midrule
+		LS              & Hertenberger~\cite{spnYn_hertenberge} & 13                   & $(2.0 \pm 0.7) \times 10^{-5}$                   \\
+		LS              & Boehm~\cite{spnYn_Boehm}              & 16.5                 & $(3.6 \pm 0.4) \times 10^{-5}$                   \\
+		LS              & DayaBayEH2~\cite{spnYn_Daya_bay}      & $64.7\pm3.9$         & $(10.22 \pm 0.87) \times 10^{-5}$                \\
+		LS              & Aberdeen~\cite{spnYn_Aberdeen}        & $89.8\pm2.9$         & $(1.19 \pm 0.29) \times 10^{-4}$                 \\
+		LS              & DayaBayEH3~\cite{spnYn_Daya_bay}      & $143.0\pm8.6$        & $(1.703 \pm0.122) \times 10^{-4}$                \\
+		LS              & KamLAND~\cite{spnYn_KamLAND}          & $268\pm8$            & $(2.8 \pm 0.3) \times 10^{-4}$                   \\
+		LS              & Borexino~\cite{spnYn_Borexino}        & $280$                & $(3.10 \pm 0.11) \times 10^{-4}$                 \\
+		LS              & JNE~\cite{spnYn_JNE}                  & $\sim 360$           & $(3.37 \pm 1.44) \times 10^{-4}$                 \\
+		Water~(\ce{Gd}) & SK~\cite{SK_spnYn}                    & $259\pm9$            & $(2.76 \pm 0.26) \times 10^{-4}$                 \\
+		Water           & This work                             & $207$                & $(2.31 \pm 0.45) \times 10^{-4}$                 \\
+		Hevey Water     & SNO~\cite{sno_spnYn}                  & $363\pm1.2$          & $(7.28 \pm 1.59) \times 10^{-4}$                 \\
+		% 请在此处添加其他行数据
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+In LS, the yield of spallation neutrons is positively correlated with the average energy of muons and can be described by an empirical formula, as shown in Eq.~\eqref{eq:yn_formular}~\cite{spnYn_Boehm,Predict_LS_Wang,Formuler_1,Predict_LS_Mei}. Wang, Y.-F. et al~\cite{Predict_LS_Wang} and Mei. et al~\cite{Predict_LS_Mei} , Kudryavtsev. et al~\cite{Kudryavtsev} and Daya Bay\cite{spnYn_Daya_bay} used some yield measurement to fit and their fit results are in Tab.~\ref{tab:fit_E_mu}.
+\begin{equation}
+	\label{eq:yn_formular}
+	Y_n(E_{\mu}) = a_{\mu}E_{\mu}^{b_{\mu}}
+\end{equation}
+
+\begin{table}[htbp]
+	\centering
+	\caption{The fitted parameters of Eq.~\eqref{eq:yn_formular}}
+	\label{tab:fit_E_mu}
+	\begin{tabular}{cccc}
+		\toprule
+		                 & Fitted $a_{\mu}$($10^{-6}\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$) & Fitted $b_{\mu}$ \\
+		\midrule
+		Wang Y.-F. et al & 4.14                                                              & 0.74             \\
+		Mei. et al       & 3.824                                                             & 0.849            \\
+		Kudryavtsev      & 3.2                                                               & 0.79             \\
+		Daya Bay         & 4.0                                                               & 0.77             \\
+		This work        & 3.36                                                              & 0.793            \\
+		% 请在此处添加其他行数据
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+As shown in Fig.~\ref{fig:yield_fit_formuler}, with the exception that the fitting results of Mei et al. deviate notably from these experiments, the other three fitting results are generally in agreement with the experimental measurements, despite some minor discrepancies. Meanwhile, the three prediction results incorporate the results of the two measurements in water phase. This indicates that the predicted curve of the neutron yield of LS as a function of the average muon energy can approximately characterize the neutron yield of the water phase. Additionally, calculations were performed based on the two measurement results from the water phase of JUNO and SK, and the result is $a_{\mu}=3.36\times10^{-6}\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$, $b_{\mu}=0.793$.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[page=23,width=0.6\textwidth]{spallation_n/yield_sdu.pdf}
+	\caption{The inverted triangle markers denote the measurements outcome in LS, the square markers represent the measurement results in heavy water, and the circular markers indicate the measurement findings in water. The dashed line depicts the yield curve derived from fitting the measurement results in LS, while the red solid line represents the yield prediction curve computed using the measurement results in the water phase. }
+	\label{fig:yield_fit_formuler}
+\end{figure}
