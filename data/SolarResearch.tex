@@ -36,7 +36,7 @@ Given that likelihood-based reconstruction is time-consuming, we conduct event s
 	\item $n_{20}>12$
 \end{itemize}
 
-\subsection{The energy criterion}
+\subsection{The energy selection}
 In the water phase, solar neutrinos engage in elastic scattering~(ES) with electrons. As a result of this scattering process, the scattered electrons acquire energy and emit Cherenkov light, which is subsequently detected. Based on previous research, the mass of electron neutrinos is found to be less than \SI{0.31}{eV} at \SI{90}{\%} CL~\cite{KATRIN}. When observing neutrinos within the \si{MeV} energy range, the kinetic energy \(E_{k,\nu}\) is significantly greater than mass \(E_{\nu}\), i.e., \(E_{k,\nu} >> E_{\nu}\). During the calculation in ES, the mass of the neutrino itself can be neglected. Under such circumstances, the neutrino can be equivalently treated as Gamma. Consequently, the screening conditions can be derived from the calibration of the Gamma source, enabling us to determine the reasonableness of the remaining events.
 From Sec.~\ref{subsec:low_energy}, we can get the relationship between Gamma energy and $n_{20}$ is $n_{20}=14E+8.1$. When the energy scale of Gamma is applied to neutrinos, it becomes possible to directly bypass the recoil electrons, directly estimate the corresponding neutrino energy and optimize the selection of neutrino signals.
 As shown in Fig.~\ref{fig:solar_n20_select}, we have a cut of energy: $93<n_{20}<233$, corresponding to the neutrino energy range of 6.1 -- \SI{16}{MeV}.
@@ -47,4 +47,26 @@ As shown in Fig.~\ref{fig:solar_n20_select}, we have a cut of energy: $93<n_{20}
 	\label{fig:solar_n20_select}
 \end{figure}
 
-\subsection{}
+\subsection{The position selection}
+Following the energy screening, it was observed that a substantial number of events converged at the center of the detector, as shown in Fig.~\ref{fig:solar_pos_cut}. Analogous to the scenario depicted in Fig.~\ref{fig:solar_direction}, the events at the center exhibited a downward tendency. Given that the search for solar neutrinos is highly direction-dependent, rather than implementing a direction cut, we chose a cylindrical region at the center of the detector for screening, as illustrated in Fig.~\ref{fig:solar_pos_cut}. Our final FV cut is:
+\begin{itemize}
+	\item $x^2+y^2>50$~\si{m^2}
+	\item $r<14$~\si{m}
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{solarSearch/Position_Cut.pdf}
+		\label{fig:solar_pos_cut}
+		% 图片宽度占子图宽度的80%
+	\end{subfigure}% 
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{solarSearch/pzp_FV.pdf}
+		\label{fig:solar_direction}
+	\end{subfigure}
+	\caption{The position selection of solar neutrino. \subref{fig:solar_pos_cut} shows the final FV selection, while \subref{fig:solar_direction} shows direction distribution in different regions.}
+	\label{fig:solar_position_cut}
+\end{figure}
