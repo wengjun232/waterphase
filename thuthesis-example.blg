@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thuthesis-example.aux
+The style file: thuthesis-numeric.bst
+A level-1 auxiliary file: bu.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 150 items from 100.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ref/ref_pmtcalib.bib
+Database file #2: ref/ref_reconstruction.bib
+Database file #3: ref/ref_spallation.bib
+Database file #4: ref/ref_solar.bib
+Warning--empty author in muon207
+You've used 74 entries,
+            5428 wiz_defined-function locations,
+            1627 strings with 22765 characters,
+and the built_in function-call counts, 483152 in all, are:
+= -- 12992
+> -- 53186
+< -- 64081
++ -- 17439
+- -- 4405
+* -- 4386
+:= -- 66798
+add.period$ -- 282
+call.type$ -- 74
+change.case$ -- 2936
+chr.to.int$ -- 15841
+cite$ -- 76
+duplicate$ -- 1645
+empty$ -- 7565
+format.name$ -- 1685
+if$ -- 125798
+int.to.chr$ -- 1
+int.to.str$ -- 75
+missing$ -- 0
+newline$ -- 444
+num.names$ -- 219
+pop$ -- 22260
+preamble$ -- 1
+purify$ -- 139
+quote$ -- 0
+skip$ -- 51675
+stack$ -- 0
+substring$ -- 24613
+swap$ -- 74
+text.length$ -- 1182
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 790
+warning$ -- 1
+while$ -- 1318
+width$ -- 0
+write$ -- 1171
+(There was 1 warning)

@@ -1,0 +1,2017 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.6.27)  2 SEP 2025 22:31
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**thuthesis-example.tex
+(./thuthesis-example.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (./thuthesis.cls
+Document Class: thuthesis 2025/03/28 7.6.0 Tsinghua University Thesis Template
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexbook.cls
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
+
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count181
+\l__color_backend_stack_int=\count182
+\g__color_backend_stack_int=\count183
+\g__graphics_track_int=\count184
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count185
+\g__pdf_backend_annotation_int=\count186
+\g__pdf_backend_link_int=\count187
+))
+Document Class: ctexbook 2021/12/12 v2.5.8 Chinese adapter for class book (CTEX
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2021/12/12 v2.5.8 Document and package hooks (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2021/12/12 v2.5.8 Patching commands (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\l__ctex_tmp_int=\count188
+\l__ctex_tmp_box=\box51
+\l__ctex_tmp_dim=\dimen138
+\g__ctex_section_depth_int=\count189
+\g__ctex_font_size_int=\count190
+
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2021/12/12 v2.5.8 Option configuration file (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count191
+\c@chapter=\count192
+\c@section=\count193
+\c@subsection=\count194
+\c@subsubsection=\count195
+\c@paragraph=\count196
+\c@subparagraph=\count197
+\c@figure=\count198
+\c@table=\count199
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen139
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2021/12/12 v2.5.8 XeLaTeX adapter (CTEX)
+
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2021/12/12 v3.8.8 Typesetting CJK scripts with XeLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2022-01-12 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen140
+\l__xtemplate_tmp_int=\count266
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip49
+)
+\l__xeCJK_tmp_int=\count267
+\l__xeCJK_tmp_box=\box52
+\l__xeCJK_tmp_dim=\dimen141
+\l__xeCJK_tmp_skip=\skip50
+\g__xeCJK_space_factor_int=\count268
+\l__xeCJK_begin_int=\count269
+\l__xeCJK_end_int=\count270
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip51
+\g__xeCJK_node_int=\count271
+\c__xeCJK_CJK_node_dim=\dimen142
+\c__xeCJK_CJK-space_node_dim=\dimen143
+\c__xeCJK_default_node_dim=\dimen144
+\c__xeCJK_default-space_node_dim=\dimen145
+\c__xeCJK_CJK-widow_node_dim=\dimen146
+\c__xeCJK_normalspace_node_dim=\dimen147
+\l__xeCJK_ccglue_skip=\skip52
+\l__xeCJK_ecglue_skip=\skip53
+\l__xeCJK_punct_kern_skip=\skip54
+\l__xeCJK_last_penalty_int=\count272
+\l__xeCJK_last_bound_dim=\dimen148
+\l__xeCJK_last_kern_dim=\dimen149
+\l__xeCJK_widow_penalty_int=\count273
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2337.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen150
+\l__xeCJK_mixed_punct_width_dim=\dimen151
+\l__xeCJK_middle_punct_width_dim=\dimen152
+\l__xeCJK_fixed_margin_width_dim=\dimen153
+\l__xeCJK_mixed_margin_width_dim=\dimen154
+\l__xeCJK_middle_margin_width_dim=\dimen155
+\l__xeCJK_bound_punct_width_dim=\dimen156
+\l__xeCJK_bound_margin_width_dim=\dimen157
+\l__xeCJK_margin_minimum_dim=\dimen158
+\l__xeCJK_kerning_total_width_dim=\dimen159
+\l__xeCJK_same_align_margin_dim=\dimen160
+\l__xeCJK_different_align_margin_dim=\dimen161
+\l__xeCJK_kerning_margin_width_dim=\dimen162
+\l__xeCJK_kerning_margin_minimum_dim=\dimen163
+\l__xeCJK_bound_dim=\dimen164
+\l__xeCJK_reverse_bound_dim=\dimen165
+\l__xeCJK_margin_dim=\dimen166
+\l__xeCJK_minimum_bound_dim=\dimen167
+\l__xeCJK_kerning_margin_dim=\dimen168
+\g__xeCJK_family_int=\count274
+\l__xeCJK_fam_int=\count275
+\g__xeCJK_fam_allocation_int=\count276
+\l__xeCJK_verb_case_int=\count277
+\l__xeCJK_verb_exspace_skip=\skip55
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count278
+\l__fontspec_language_int=\count279
+\l__fontspec_strnum_int=\count280
+\l__fontspec_tmp_int=\count281
+\l__fontspec_tmpa_int=\count282
+\l__fontspec_tmpb_int=\count283
+\l__fontspec_tmpc_int=\count284
+\l__fontspec_em_int=\count285
+\l__fontspec_emdef_int=\count286
+\l__fontspec_strong_int=\count287
+\l__fontspec_strongdef_int=\count288
+\l__fontspec_tmpa_dim=\dimen169
+\l__fontspec_tmpb_dim=\dimen170
+\l__fontspec_tmpc_dim=\dimen171
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2021/12/12 v3.8.8 Configuration file for xeCJK package
+))
+\ccwd=\dimen172
+\l__ctex_ccglue_skip=\skip56
+)
+\l__ctex_ziju_dim=\dimen173
+
+(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count289
+
+(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
+))
+\l__ctex_heading_skip=\skip57
+
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-plain-book.def
+File: ctex-scheme-plain-book.def 2021/12/12 v2.5.8 Plain scheme for book (CTEX)
+
+) (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex-cs4size.clo
+File: ctex-cs4size.clo 2021/12/12 v2.5.8 cs4size option (CTEX)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count290
+)
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2020/09/29 v0.8a Hooks for input files
+
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook-2020.sty
+Package: filehook-2020 2020/09/29 v0.8a Hooks for input files
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count291
+\Gm@cntv=\count292
+\c@Gm@tempcnt=\count293
+\Gm@bindingoffset=\dimen174
+\Gm@wd@mp=\dimen175
+\Gm@odd@mp=\dimen176
+\Gm@even@mp=\dimen177
+\Gm@layoutwidth=\dimen178
+\Gm@layoutheight=\dimen179
+\Gm@layouthoffset=\dimen180
+\Gm@layoutvoffset=\dimen181
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip58
+\f@nch@O@elh=\skip59
+\f@nch@O@erh=\skip60
+\f@nch@O@olh=\skip61
+\f@nch@O@orh=\skip62
+\f@nch@O@elf=\skip63
+\f@nch@O@erf=\skip64
+\f@nch@O@olf=\skip65
+\f@nch@O@orf=\skip66
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2021/07/05 v2.14 TOC entries
+\ttl@leftsep=\dimen182
+)
+(/usr/share/texlive/texmf-dist/tex/latex/notoccite/notoccite.sty
+Package: notoccite 2000/07/20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip67
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen183
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen184
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count294
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count295
+\leftroot@=\count296
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count297
+\DOTSCASE@=\count298
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen185
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count299
+\c@MaxMatrixCols=\count300
+\dotsspace@=\muskip17
+\c@parentequation=\count301
+\dspbrk@lvl=\count302
+\tag@help=\toks19
+\row@=\count303
+\column@=\count304
+\maxfields@=\count305
+\andhelp@=\toks20
+\eqnshift@=\dimen186
+\alignsep@=\dimen187
+\tagshift@=\dimen188
+\tagwidth@=\dimen189
+\totwidth@=\dimen190
+\lineht@=\dimen191
+\@envbody=\toks21
+\multlinegap=\skip68
+\multlinetaggap=\skip69
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen192
+\Gin@req@width=\dimen193
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen194
+\captionmargin@=\dimen195
+\captionwidth=\dimen196
+\caption@tempdima=\dimen197
+\caption@indent=\dimen198
+\caption@parindent=\dimen199
+\caption@hangindent=\dimen256
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count306
+\c@continuedfloat=\count307
+)
+\c@subfigure=\count308
+\c@subtable=\count309
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count310
+\calc@Bcount=\count311
+\calc@Adimen=\dimen257
+\calc@Bdimen=\dimen258
+\calc@Askip=\skip70
+\calc@Bskip=\skip71
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count312
+\calc@Cskip=\skip72
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen259
+\ESO@tempdimb=\dimen260
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+))
+\AM@pagewidth=\dimen261
+\AM@pageheight=\dimen262
+\AM@fboxrule=\dimen263
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/ppxetex.def
+File: ppxetex.def 2022/01/29 v0.5u Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count313
+\AM@pagebox=\box55
+\AM@global@opts=\toks23
+\AM@pagecnt=\count314
+\AM@toc@title=\toks24
+\c@AM@survey=\count315
+\AM@templatesizebox=\box56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip73
+\enit@outerparindent=\dimen264
+\enit@toks=\toks25
+\enit@inbox=\box57
+\enit@count@id=\count316
+\enitdp@description=\count317
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks26
+\footnotemargin=\dimen265
+\c@pp@next@reset=\count318
+\c@@fnserial=\count319
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+Package: xeCJKfntef 2021/12/12 v3.8.8 xeCJK font effect
+
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box58
+\UL@hyphenbox=\box59
+\UL@skip=\skip74
+\UL@hook=\toks27
+\UL@height=\dimen266
+\UL@pe=\count320
+\UL@pixel=\dimen267
+\ULC@box=\box60
+Package: ulem 2019/11/18
+\ULdepth=\dimen268
+)
+\l__xeCJK_space_skip=\skip75
+\c__xeCJK_ulem-begin_node_dim=\dimen269
+\l__xeCJK_hidden_box=\box61
+\l__xeCJK_fntef_box=\box62
+\l__xeCJK_under_symbol_box=\box63
+\c__xeCJK_filll_skip=\skip76
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen270
+\ar@mcellbox=\box64
+\extrarowheight=\dimen271
+\NC@list=\toks28
+\extratabsurround=\skip77
+\backup@length=\skip78
+\ar@cellbox=\box65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen272
+\lightrulewidth=\dimen273
+\cmidrulewidth=\dimen274
+\belowrulesep=\dimen275
+\belowbottomsep=\dimen276
+\aboverulesep=\dimen277
+\abovetopsep=\dimen278
+\cmidrulesep=\dimen279
+\cmidrulekern=\dimen280
+\defaultaddspace=\dimen281
+\@cmidla=\count321
+\@cmidlb=\count322
+\@aboverulesep=\dimen282
+\@belowrulesep=\dimen283
+\@thisruleclass=\count323
+\@lastruleclass=\count324
+\@thisrulewidth=\dimen284
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Command `\normalsize' is already robust on input line 626.
+
+Package thuthesis Info: Detected system: unix
+Package thuthesis Info: Detected fontset: fandol
+Package thuthesis Info: Detected CJK font: fandol
+
+Package fontspec Info: Font family 'FandolSong(0)' created for font
+(fontspec)             'FandolSong' with options
+(fontspec)             [Extension={.otf},UprightFont={*-Regular},ItalicFeatures
+={Extension
+(fontspec)             =
+(fontspec)             .otf},BoldFont={*-Bold},ItalicFont={FandolKai-Regular}].
+
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+\thu@stretch@box=\box66
+\thu@pad@box=\box67
+\c@thu@csl@count=\count325
+\enitdp@thu@denotation=\count326
+\c@achievementsi=\count327
+\enitdp@achievements=\count328
+) (./thusetup.tex (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
+\thm@preskip=\skip79
+\thm@postskip=\skip80
+\thm@headsep=\skip81
+\dth@everypar=\toks34
+)
+\c@assumption=\count329
+\c@definition=\count330
+\c@proposition=\count331
+\c@lemma=\count332
+\c@theorem=\count333
+\c@axiom=\count334
+\c@corollary=\count335
+\c@exercise=\count336
+\c@example=\count337
+\c@remark=\count338
+\c@problem=\count339
+\c@conjecture=\count340
+
+Package fontspec Info: Font family 'texgyretermes(0)' created for font
+(fontspec)             'texgyretermes' with options [Ligatures=TeX,Extension =
+(fontspec)             .otf,UprightFont = *-regular,BoldFont =
+(fontspec)             *-bold,ItalicFont = *-italic,BoldItalicFont =
+(fontspec)             *-bolditalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-regular.otf]/OT:script=latn;language=
+dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-regular.otf]/OT:script=latn;language=
+dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-bold.otf]/OT:script=latn;language=dfl
+t;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-bold.otf]/OT:script=latn;language=dfl
+t;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-italic.otf]/OT:script=latn;language=d
+flt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-italic.otf]/OT:script=latn;language=d
+flt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-bolditalic.otf]/OT:script=latn;langua
+ge=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[texgyretermes-bolditalic.otf]/OT:script=latn;langua
+ge=dflt;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: Font family 'texgyreheros(0)' created for font
+(fontspec)             'texgyreheros' with options [Ligatures=TeX,Extension =
+(fontspec)             .otf,UprightFont = *-regular,BoldFont =
+(fontspec)             *-bold,ItalicFont = *-italic,BoldItalicFont =
+(fontspec)             *-bolditalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-regular.otf]/OT:script=latn;language=d
+flt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-regular.otf]/OT:script=latn;language=d
+flt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-bold.otf]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-bold.otf]/OT:script=latn;language=dflt
+;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-italic.otf]/OT:script=latn;language=df
+lt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-italic.otf]/OT:script=latn;language=df
+lt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-bolditalic.otf]/OT:script=latn;languag
+e=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[texgyreheros-bolditalic.otf]/OT:script=latn;languag
+e=dflt;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: texgyrecursor-regular scale = 1.079131642024103.
+
+
+Package fontspec Info: texgyrecursor-regular scale = 1.079131642024103.
+
+
+Package fontspec Info: texgyrecursor-regular scale = 1.079131642024103.
+
+
+Package fontspec Info: texgyrecursor-bold scale = 1.029745477736549.
+
+
+Package fontspec Info: texgyrecursor-bold scale = 1.029745477736549.
+
+
+Package fontspec Info: texgyrecursor-italic scale = 1.079131642024103.
+
+
+Package fontspec Info: texgyrecursor-italic scale = 1.079131642024103.
+
+
+Package fontspec Info: texgyrecursor-bolditalic scale = 1.029745477736549.
+
+
+Package fontspec Info: texgyrecursor-bolditalic scale = 1.029745477736549.
+
+
+Package fontspec Info: Font family 'texgyrecursor(0)' created for font
+(fontspec)             'texgyrecursor' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Extension
+(fontspec)             = .otf,UprightFont = *-regular,BoldFont =
+(fontspec)             *-bold,ItalicFont = *-italic,BoldItalicFont =
+(fontspec)             *-bolditalic,Scale = MatchLowercase,Ligatures =
+(fontspec)             CommonOff].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.079131642024103]"[texgyrecursor-regular.otf]/OT:
+script=latn;language=dflt;-liga;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.079131642024103]"[texgyrecursor-regular.otf]/OT:
+script=latn;language=dflt;-liga;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.029745477736549]"[texgyrecursor-bold.otf]/OT:scr
+ipt=latn;language=dflt;-liga;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1.029745477736549]"[texgyrecursor-bold.otf]/OT:scr
+ipt=latn;language=dflt;-liga;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.079131642024103]"[texgyrecursor-italic.otf]/OT:s
+cript=latn;language=dflt;-liga;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.079131642024103]"[texgyrecursor-italic.otf]/OT:s
+cript=latn;language=dflt;-liga;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.029745477736549]"[texgyrecursor-bolditalic.otf]/
+OT:script=latn;language=dflt;-liga;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1.029745477736549]"[texgyrecursor-bolditalic.otf]/
+OT:script=latn;language=dflt;-liga;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
+TeX
+\g__um_fam_int=\count341
+\g__um_fonts_used_int=\count342
+\l__um_primecount_int=\count343
+\g__um_primekern_muskip=\muskip19
+
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+LaTeX Info: Redefining \boldsymbol on input line 130.
+LaTeX Info: Redefining \mathellipsis on input line 130.
+
+Package fontspec Info: Font family 'XITSMath-Regular(0)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,Extension={.otf},StylisticSet={}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[XITSMath-Regular.otf]/OT:script=math;language=dflt;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'XITSMath-Regular(1)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;langu
+age=dflt;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;language=d
+flt;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+s
+sty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 130.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular(1)/m/n on input lin
+e 130.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 130.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular(1)/b/n on input li
+ne 130.
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: Font family 'XITSMath-Regular(2)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={},ScaleAgain=1.0001,FontAdjustment={\fon
+tdimen
+(fontspec)             8\font =6.9861pt\relax \fontdimen 9\font
+(fontspec)             =5.7816pt\relax \fontdimen 10\font =5.7816pt\relax
+(fontspec)             \fontdimen 11\font =8.4315pt\relax \fontdimen 12\font
+(fontspec)             =5.7816pt\relax \fontdimen 13\font =4.818pt\relax
+(fontspec)             \fontdimen 14\font =4.818pt\relax \fontdimen 15\font
+(fontspec)             =3.31238pt\relax \fontdimen 16\font =3.01125pt\relax
+(fontspec)             \fontdimen 17\font =3.01125pt\relax \fontdimen 18\font
+(fontspec)             =4.51688pt\relax \fontdimen 19\font =0.60225pt\relax
+(fontspec)             \fontdimen 22\font =3.01125pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[1.0001]"[XITSMath-Regular.otf]/OT:script=
+math;language=dflt;"<8.130375-10.539375>s*[1.0001]"[XITSMath-Regular.otf]/OT:sc
+ript=math;language=dflt;+ssty=0;"<-8.130375>s*[1.0001]"[XITSMath-Regular.otf]/O
+T:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.9861pt\relax \fontdimen 9\font
+(fontspec)             =5.7816pt\relax \fontdimen 10\font =5.7816pt\relax
+(fontspec)             \fontdimen 11\font =8.4315pt\relax \fontdimen 12\font
+(fontspec)             =5.7816pt\relax \fontdimen 13\font =4.818pt\relax
+(fontspec)             \fontdimen 14\font =4.818pt\relax \fontdimen 15\font
+(fontspec)             =3.31238pt\relax \fontdimen 16\font =3.01125pt\relax
+(fontspec)             \fontdimen 17\font =3.01125pt\relax \fontdimen 18\font
+(fontspec)             =4.51688pt\relax \fontdimen 19\font =0.60225pt\relax
+(fontspec)             \fontdimen 22\font =3.01125pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 130.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular(2)/m/n on input li
+ne 130.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 130.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular(2)/b/n on input li
+ne 130.
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: Font family 'XITSMath-Regular(3)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={},ScaleAgain=0.9999,FontAdjustment={\fon
+tdimen
+(fontspec)             8\font =0.79497pt\relax \fontdimen 9\font
+(fontspec)             =1.80675pt\relax \fontdimen 10\font =1.80675pt\relax
+(fontspec)             \fontdimen 11\font =3.6135pt\relax \fontdimen 12\font
+(fontspec)             =7.227pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[0.9999]"[XITSMath-Regular.otf]/OT:script=
+math;language=dflt;"<8.130375-10.539375>s*[0.9999]"[XITSMath-Regular.otf]/OT:sc
+ript=math;language=dflt;+ssty=0;"<-8.130375>s*[0.9999]"[XITSMath-Regular.otf]/O
+T:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.79497pt\relax \fontdimen 9\font
+(fontspec)             =1.80675pt\relax \fontdimen 10\font =1.80675pt\relax
+(fontspec)             \fontdimen 11\font =3.6135pt\relax \fontdimen 12\font
+(fontspec)             =7.227pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+30.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/m/n on input li
+ne 130.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 130
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/b/n on input li
+ne 130.
+
+Package fontspec Info: Font family 'XITSMath-Regular(4)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={1}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;langu
+age=dflt;+ss01;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;lang
+uage=dflt;+ss01;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;lang
+uage=dflt;+ss01;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+\sym__um_fam1=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
+(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/m
+/n on input line 130.
+LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
+(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/b
+/n on input line 130.
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box68
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip82
+\multirow@cntb=\count344
+\multirow@dima=\skip83
+\bigstrutjot=\dimen285
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip84
+\LTright=\skip85
+\LTpre=\skip86
+\LTpost=\skip87
+\LTchunksize=\count345
+\LTcapwidth=\dimen286
+\LT@head=\box69
+\LT@firsthead=\box70
+\LT@foot=\box71
+\LT@lastfoot=\box72
+\LT@gbox=\box73
+\LT@cols=\count346
+\LT@rows=\count347
+\c@LT@tables=\count348
+\c@LT@chunks=\count349
+\LT@p@ftn=\toks35
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count350
+\float@exts=\toks36
+\float@box=\box74
+\@float@everytoks=\toks37
+\@floatcapt=\box75
+)
+\@float@every@algorithm=\toks38
+\c@algorithm=\count351
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count352
+\c@ALC@line=\count353
+\c@ALC@rem=\count354
+\c@ALC@depth=\count355
+\ALC@tlm=\skip88
+\algorithmicindent=\skip89
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2022-02-02 v3.0.46 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen287
+\l__siunitx_angle_marker_box=\box76
+\l__siunitx_angle_unit_box=\box77
+\l__siunitx_compound_count_int=\count356
+
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/01/04 v1.11 internationalization of LaTeX2e packages
+ (CN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+\l__siunitx_number_exponent_fixed_int=\count357
+\l__siunitx_number_min_decimal_int=\count358
+\l__siunitx_number_min_integer_int=\count359
+\l__siunitx_number_round_precision_int=\count360
+\l__siunitx_number_group_minimum_int=\count361
+\l__siunitx_table_tmp_box=\box78
+\l__siunitx_table_tmp_dim=\dimen288
+\l__siunitx_table_column_width_dim=\dimen289
+\l__siunitx_table_integer_box=\box79
+\l__siunitx_table_decimal_box=\box80
+\l__siunitx_table_before_box=\box81
+\l__siunitx_table_after_box=\box82
+\l__siunitx_table_before_dim=\dimen290
+\l__siunitx_table_carry_dim=\dimen291
+\l__siunitx_unit_tmp_int=\count362
+\l__siunitx_unit_position_int=\count363
+\l__siunitx_unit_total_int=\count364
+)
+(/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen292
+\c@nlinenum=\count365
+\TeXr@lab=\toks39
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2021/12/31 v4.09 for typesetting chemical formulae
+
+(/usr/share/texlive/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
+ in chemistry (CN)
+\l__chemgreek_tmpa_int=\count366
+\g__chemgreek_tmpa_int=\count367
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count368
+\__mhchem_arrow_extPgfLength_skip=\skip90
+\mhchem@minispace@tmp=\skip91
+\mhchem@minibackspace@tmp=\skip92
+\mhchem@bondwidth=\skip93
+\mhchem@bondheight=\skip94
+\mhchem@smallbondwidth@tmpA=\skip95
+\mhchem@smallbondwidth@tmpB=\skip96
+\mhchem@smallbondwidth=\skip97
+\mhchem@bondtmp@minussidebearingleft=\skip98
+\mhchem@bondtmp@minussidebearingright=\skip99
+\l__mhchem_option_version_int=\count369
+\mhchem@option@minusmathsidebearingleft=\dimen293
+\mhchem@option@minusmathsidebearingright=\dimen294
+\mhchem@option@minustextsidebearingleft=\dimen295
+\mhchem@option@minustextsidebearingright=\dimen296
+
+
+Package mhchem Warning: You did not specify a 'version' option for the mhchem
+(mhchem)                package. Please write \usepackage[version=4]{mhchem}
+(mhchem)                in your preamble (or any lower number for
+(mhchem)                compatibility mode), because you might get slightly
+(mhchem)                different output with the same input in future versions
+.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip100
+\bibsep=\skip101
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count370
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bibunits/bibunits.sty
+Package: bibunits 2004/05/12 v2.4 Multiple bibliographies in one document.
+\@bibunitaux=\write3
+\@bibunitauxcnt=\count371
+)
+\c@thu@translation@index=\count372
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen297
+\Hy@linkcounter=\count373
+\Hy@pagecounter=\count374
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count375
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4073
+.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Option `psdextra' set `true' on input line 4073.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def
+File: puenc-greekbasic.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (
+greek block) (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/psdextra.def
+File: psdextra.def 2021-06-07 v7.00m Hyperref: Additions to PDF string support
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4073.
+Package hyperref Info: Option `plainpages' set `false' on input line 4073.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 407
+3.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count376
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen298
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count377
+\Field@Width=\dimen299
+\Fld@charsize=\dimen300
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count378
+\c@Item=\count379
+\c@Hfootnote=\count380
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box83
+\c@Hy@AnnotLevel=\count381
+\HyField@AnnotCount=\count382
+\Fld@listcount=\count383
+\c@bookmark@seq@number=\count384
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip102
+)
+\c@thu@bookmark=\count385
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 21.
+
+(./thuthesis-example.aux (./bu.aux)
+
+LaTeX Warning: Label `fig:solar_isotops' multiply defined.
+
+)
+\openout1 = `thuthesis-example.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-72.26997pt
+* \headheight=76.82234pt
+* \headsep=8.5359pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=56.9055pt
+* \marginparsep=14.22636pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+)
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/texgyretermes(0)/m/n 
+on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/texgyretermes(0)/m/it on input line
+ 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/texgyretermes(0)/b/n on input line 
+21.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/texgyreheros(0)/m/n on input line 2
+1.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/texgyreheros(0)/b/n on input line 
+21.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/texgyrecursor(0)/m/n on input line 
+21.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/texgyrecursor(0)/b/n on input line 
+21.
+
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
+nary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 21.
+
+Package chemgreek Info: Activating mapping `fontspec' on line 21.
+
+Package hyperref Info: Link coloring OFF on input line 21.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count386
+)
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
+
+(./thuthesis-example.out) (./thuthesis-example.out)
+\@outlinefile=\write4
+\openout4 = `thuthesis-example.out'.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(99.58464pt, 398.3386pt, 99.58464pt)
+* v-part:(T,H,B)=(56.9055pt, 617.42482pt, 170.71652pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=398.3386pt
+* \textheight=617.42482pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-100.72273pt
+* \headheight=76.82234pt
+* \headsep=8.5359pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=56.9055pt
+* \marginparsep=14.22636pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: Font family 'FandolHei(0)' created for font 'FandolHei'
+(fontspec)             with options
+(fontspec)             [Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bo
+ld}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'FandolFang(0)' created for font
+(fontspec)             'FandolFang' with options
+(fontspec)             [Extension={.otf},UprightFont={*-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 16.0617pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 14.05399pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 10.54048pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 16.05827pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 14.05098pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 10.53824pt on input line 25.
+ [1
+
+
+
+] [2
+
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(96.73918pt, 404.02951pt, 96.73918pt)
+* v-part:(T,H,B)=(156.49014pt, 546.29292pt, 142.26378pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=404.02951pt
+* \textheight=546.29292pt
+* \oddsidemargin=24.4692pt
+* \evensidemargin=24.4692pt
+* \topmargin=-1.13809pt
+* \headheight=76.82234pt
+* \headsep=8.5359pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=56.9055pt
+* \marginparsep=14.22636pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 15.05785pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 12.04628pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 9.0347pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 15.05463pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 12.0437pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 9.03276pt on input line 25.
+ [3
+
+]
+(./thuthesis-example.toc [4
+
+
+
+
+
+]
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 9.03471pt on input line 63.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 7.22777pt on input line 63.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 9.03278pt on input line 63.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 7.22623pt on input line 63.
+)
+\tf@toc=\write5
+\openout5 = `thuthesis-example.toc'.
+
+ [5] [6
+
+] (./data/introduction.tex
+Chapter 1
+) (./data/junoDetector.tex [1
+
+]
+Chapter 2
+) (./data/pmtcalib.tex [2
+
+]
+Chapter 3
+[3
+
+] [4] [5]
+File: figures//PMTRelated/GTmodel/spe.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/spe.pdf>
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 65
+.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 11.04242pt on input line 65.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 7.72966pt on input line 65.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 5.5212pt on input line 65.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 11.04005pt on input line 65.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 7.728pt on input line 65.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 5.52002pt on input line 65.
+ [6] [7]
+File: figures//PMTRelated/GTmodel/furman.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/furman.pdf>
+ [8]
+Missing character: There is no 𝜋 (U+1D70B) in font [texgyretermes-regular.otf]/
+OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 𝜋 (U+1D70B) in font [texgyretermes-regular.otf]/
+OT:script=latn;language=dflt;mapping=tex-text;!
+[9]
+File: figures//PMTRelated/GTmodel/SES.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/SES.pdf>
+ [10]
+File: figures//PMTRelated/GTmodel/set.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/set.pdf>
+ [11] [12]
+File: figures//PMTRelated/GTmodel/fit_noald.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/fit_noald.pdf>
+File: figures//PMTRelated/GTmodel/fit_ald.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/fit_ald.pdf>
+File: figures//PMTRelated/GTmodel/gain_mu.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/gain_mu.pdf>
+File: figures//PMTRelated/GTmodel/gain_sigma.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/gain_sigma.pdf>
+File: figures//PMTRelated/GTmodel/gain_sigmamu.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/gain_sigmamu.pdf>
+File: figures//PMTRelated/GTmodel/process.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/process.pdf>
+ [13] [14] [15]
+Missing character: There is no 𝜋 (U+1D70B) in font [texgyretermes-regular.otf]/
+OT:script=latn;language=dflt;mapping=tex-text;!
+File: figures//PMTRelated/GTmodel/true_all.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/true_all.pdf>
+File: figures//PMTRelated/GTmodel/allmode.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/allmode.pdf>
+[16]
+File: figures//PMTRelated/GTmodel/p.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/p.pdf>
+File: figures//PMTRelated/GTmodel/ts.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/ts.pdf>
+ [17]
+File: figures//PMTRelated/GTmodel/cour.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/cour.pdf>
+File: figures//PMTRelated/GTmodel/hist.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/hist.pdf>
+File: figures//PMTRelated/GTmodel/true_p.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/true_p.pdf>
+ [18]
+Missing character: There is no 𝜇 (U+1D707) in font [texgyretermes-regular.otf]/
+OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 𝜇 (U+1D707) in font [texgyretermes-regular.otf]/
+OT:script=latn;language=dflt;mapping=tex-text;!
+File: figures//PMTRelated/GTmodel/parameter_pp0.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/parameter_pp0.pdf>
+File: figures//PMTRelated/GTmodel/parameters_ts.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/parameters_ts.pdf>
+[19]
+File: figures//PMTRelated/GTmodel/single_pecharge.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/single_pecharge.pdf>
+File: figures//PMTRelated/GTmodel/singlepefit.pdf Graphic file (type pdf)
+<use figures//PMTRelated/GTmodel/singlepefit.pdf>
+
+Missing character: There is no 𝜋 (U+1D70B) in font [texgyretermes-regular.otf]/
+OT:script=latn;language=dflt;mapping=tex-text;!
+[20] [21]
+File: figures//PMTRelated/Gain_DCR_window.pdf Graphic file (type pdf)
+<use figures//PMTRelated/Gain_DCR_window.pdf>
+File: figures//PMTRelated/Dynode-PMT_fit.pdf Graphic file (type pdf)
+<use figures//PMTRelated/Dynode-PMT_fit.pdf>
+File: figures//PMTRelated/MCP-PMT_fit.pdf Graphic file (type pdf)
+<use figures//PMTRelated/MCP-PMT_fit.pdf>
+ [22]
+File: figures//PMTRelated/gp.pdf Graphic file (type pdf)
+<use figures//PMTRelated/gp.pdf>
+File: figures//PMTRelated/gm.pdf Graphic file (type pdf)
+<use figures//PMTRelated/gm.pdf>
+File: figures//PMTRelated/mcp-gpm.pdf Graphic file (type pdf)
+<use figures//PMTRelated/mcp-gpm.pdf>
+File: figures//PMTRelated/dcr_3279.pdf Graphic file (type pdf)
+<use figures//PMTRelated/dcr_3279.pdf>
+File: figures//PMTRelated/dcr_3279_pos.pdf Graphic file (type pdf)
+<use figures//PMTRelated/dcr_3279_pos.pdf>
+File: figures//PMTRelated/dcr_time.pdf Graphic file (type pdf)
+<use figures//PMTRelated/dcr_time.pdf>
+ [23] [24]
+File: figures//PMTRelated/offset.pdf Graphic file (type pdf)
+<use figures//PMTRelated/offset.pdf>
+File: figures//PMTRelated/TTS.pdf Graphic file (type pdf)
+<use figures//PMTRelated/TTS.pdf>
+File: figures//PMTRelated/PDE.pdf Graphic file (type pdf)
+<use figures//PMTRelated/PDE.pdf>
+) (./data/reconstruction.tex [25] [26]
+Chapter 4
+[27
+
+] [28]
+File: figures//reconstruction/cherenkov_emission.pdf Graphic file (type pdf)
+<use figures//reconstruction/cherenkov_emission.pdf>
+File: figures//reconstruction/zuobiao.pdf Graphic file (type pdf)
+<use figures//reconstruction/zuobiao.pdf>
+ [29]
+File: figures//reconstruction/emmisionProfile/2.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/2.pdf, page 1>
+File: figures//reconstruction/emmisionProfile/5.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/5.pdf, page 1>
+File: figures//reconstruction/emmisionProfile/10.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/10.pdf, page 1>
+File: figures//reconstruction/emmisionProfile/20.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/20.pdf, page 1>
+File: figures//reconstruction/emmisionProfile/2.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/2.pdf, page 2>
+File: figures//reconstruction/emmisionProfile/5.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/5.pdf, page 2>
+File: figures//reconstruction/emmisionProfile/10.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/10.pdf, page 2>
+File: figures//reconstruction/emmisionProfile/20.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/20.pdf, page 2>
+File: figures//reconstruction/emmisionProfile/2.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/2.pdf, page 3>
+File: figures//reconstruction/emmisionProfile/5.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/5.pdf, page 3>
+File: figures//reconstruction/emmisionProfile/10.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/10.pdf, page 3>
+File: figures//reconstruction/emmisionProfile/20.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/20.pdf, page 3>
+File: figures//reconstruction/emmisionProfile/multiscatter.pdf Graphic file (ty
+pe pdf)
+<use figures//reconstruction/emmisionProfile/multiscatter.pdf>
+File: figures//reconstruction/emmisionProfile/yield_gauss_fit_20.pdf Graphic fi
+le (type pdf)
+<use figures//reconstruction/emmisionProfile/yield_gauss_fit_20.pdf>
+File: figures//reconstruction/emmisionProfile/phip.pdf Graphic file (type pdf)
+<use figures//reconstruction/emmisionProfile/phip.pdf>
+ [30] [31] [32]
+File: figures//reconstruction/eta/fig.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/fig.pdf, page 1>
+File: figures//reconstruction/eta/fig.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/fig.pdf, page 2>
+File: figures//reconstruction/eta/fig.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/fig.pdf, page 3>
+File: figures//reconstruction/eta/fig.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/fig.pdf, page 4>
+File: figures//reconstruction/eta/cd.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/cd.pdf, page 45>
+File: figures//reconstruction/eta/fit.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/fit.pdf, page 1>
+File: figures//reconstruction/eta/fit.pdf Graphic file (type pdf)
+<use figures//reconstruction/eta/fit.pdf, page 2>
+ [33] [34] [35] [36]
+File: figures//reconstruction/js.pdf Graphic file (type pdf)
+<use figures//reconstruction/js.pdf>
+File: figures//reconstruction/I0.pdf Graphic file (type pdf)
+<use figures//reconstruction/I0.pdf>
+File: figures//reconstruction/I1.pdf Graphic file (type pdf)
+<use figures//reconstruction/I1.pdf>
+File: figures//reconstruction/I2.pdf Graphic file (type pdf)
+<use figures//reconstruction/I2.pdf>
+ [37]
+
+LaTeX Warning: Reference `fig:fig:dir' on page 38 undefined on input line 344.
+
+[38]
+File: figures//reconstruction/scatter_ratio.pdf Graphic file (type pdf)
+<use figures//reconstruction/scatter_ratio.pdf, page 1>
+File: figures//reconstruction/scatter_ratio.pdf Graphic file (type pdf)
+<use figures//reconstruction/scatter_ratio.pdf, page 2>
+File: figures//reconstruction/scatter_ratio.pdf Graphic file (type pdf)
+<use figures//reconstruction/scatter_ratio.pdf, page 5>
+ [39]
+File: figures//reconstruction/timepdf/time.pdf Graphic file (type pdf)
+<use figures//reconstruction/timepdf/time.pdf>
+File: figures//reconstruction/timepdf/sub_0.pdf Graphic file (type pdf)
+<use figures//reconstruction/timepdf/sub_0.pdf, page 1>
+File: figures//reconstruction/timepdf/sub_5.pdf Graphic file (type pdf)
+<use figures//reconstruction/timepdf/sub_5.pdf, page 1>
+ [40] [41]
+File: figures//reconstruction/parameters_Define/tresCount.pdf Graphic file (typ
+e pdf)
+<use figures//reconstruction/parameters_Define/tresCount.pdf>
+File: figures//reconstruction/parameters_Define/cosCount.pdf Graphic file (type
+ pdf)
+<use figures//reconstruction/parameters_Define/cosCount.pdf>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 473.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 473.
+
+[42]
+File: figures//reconstruction/parameters_Define/AIC_per.pdf Graphic file (type 
+pdf)
+<use figures//reconstruction/parameters_Define/AIC_per.pdf>
+File: figures//reconstruction/parameters_Define/glass.pdf Graphic file (type pd
+f)
+<use figures//reconstruction/parameters_Define/glass.pdf, page 3>
+File: figures//reconstruction/parameters_Define/glass.pdf Graphic file (type pd
+f)
+<use figures//reconstruction/parameters_Define/glass.pdf, page 6>
+File: figures//reconstruction/parameters_Define/glass.pdf Graphic file (type pd
+f)
+<use figures//reconstruction/parameters_Define/glass.pdf, page 9>
+ [43]
+File: figures//reconstruction/parameters_Define/gd.pdf Graphic file (type pdf)
+<use figures//reconstruction/parameters_Define/gd.pdf>
+ [44]
+File: figures//reconstruction/evalvation.pdf Graphic file (type pdf)
+<use figures//reconstruction/evalvation.pdf>
+File: figures//reconstruction/e_res.pdf Graphic file (type pdf)
+<use figures//reconstruction/e_res.pdf, page 21>
+File: figures//reconstruction/e_res.pdf Graphic file (type pdf)
+<use figures//reconstruction/e_res.pdf, page 22>
+File: figures//reconstruction/e_res.pdf Graphic file (type pdf)
+<use figures//reconstruction/e_res.pdf, page 19>
+File: figures//reconstruction/e_res.pdf Graphic file (type pdf)
+<use figures//reconstruction/e_res.pdf, page 20>
+File: figures//reconstruction/SK-pos.pdf Graphic file (type pdf)
+<use figures//reconstruction/SK-pos.pdf>
+File: figures//reconstruction/SK-dir.pdf Graphic file (type pdf)
+<use figures//reconstruction/SK-dir.pdf>
+ [45]) (./data/neutronDet.tex [46]
+Chapter 5
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 4.
+
+File: figures//neutron_calib/calib_set.pdf Graphic file (type pdf)
+<use figures//neutron_calib/calib_set.pdf>
+File: figures//neutron_calib/selection/3671.pdf Graphic file (type pdf)
+<use figures//neutron_calib/selection/3671.pdf, page 9>
+[47
+
+]
+File: figures//neutron_calib/selection/3671.pdf Graphic file (type pdf)
+<use figures//neutron_calib/selection/3671.pdf, page 5>
+File: figures//neutron_calib/selection/3671.pdf Graphic file (type pdf)
+<use figures//neutron_calib/selection/3671.pdf, page 3>
+File: figures//neutron_calib/PEtime.pdf Graphic file (type pdf)
+<use figures//neutron_calib/PEtime.pdf>
+ [48] [49]
+File: figures//neutron_calib/prompt/3671.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/3671.pdf, page 9>
+File: figures//neutron_calib/prompt/3671.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/3671.pdf, page 10>
+File: figures//neutron_calib/prompt/summary.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/summary.pdf, page 5>
+File: figures//neutron_calib/prompt/summary.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/summary.pdf, page 6>
+File: figures//neutron_calib/prompt/summary.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/summary.pdf, page 7>
+File: figures//neutron_calib/prompt/summary.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/summary.pdf, page 8>
+File: figures//neutron_calib/prompt/rCut.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/rCut.pdf>
+File: figures//neutron_calib/prompt/3671.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/3671.pdf, page 4>
+File: figures//neutron_calib/prompt/3286.pdf Graphic file (type pdf)
+<use figures//neutron_calib/prompt/3286.pdf, page 4>
+ [50]
+File: figures//neutron_calib/delayArea.pdf Graphic file (type pdf)
+<use figures//neutron_calib/delayArea.pdf>
+ [51] [52] [53]
+File: figures//neutron_calib/delayed/example/3671_dt.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/example/3671_dt.pdf>
+File: figures//neutron_calib/delayed/example/3671_coin_prompt_pos.pdf Graphic f
+ile (type pdf)
+<use figures//neutron_calib/delayed/example/3671_coin_prompt_pos.pdf>
+File: figures//neutron_calib/delayed/example/3671_coin_delayed_pos.pdf Graphic 
+file (type pdf)
+<use figures//neutron_calib/delayed/example/3671_coin_delayed_pos.pdf>
+ [54]
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 2>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 3>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 1>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 4>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 6>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 7>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 5>
+File: figures//neutron_calib/light_yield.pdf Graphic file (type pdf)
+<use figures//neutron_calib/light_yield.pdf, page 8>
+ [55] [56]
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 12>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 17>
+ [57]
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 1>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 2>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 3>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 4>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 5>
+ [58] [59]
+File: figures//neutron_calib/delayed/highesteff/3671.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/highesteff/3671.pdf, page 5>
+File: figures//neutron_calib/delayed/highesteff/3671.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/highesteff/3671.pdf, page 6>
+File: figures//neutron_calib/delayed/highesteff/3671.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/highesteff/3671.pdf, page 3>
+File: figures//neutron_calib/delayed/effsnr/0202_eff.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/effsnr/0202_eff.pdf>
+File: figures//neutron_calib/delayed/effsnr/0207_eff.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/effsnr/0207_eff.pdf>
+ [60]
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 6>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 7>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 8>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 9>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 10>
+File: figures//neutron_calib/delayed/highestsnr/3671.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/highestsnr/3671.pdf, page 5>
+File: figures//neutron_calib/delayed/highestsnr/3671.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/highestsnr/3671.pdf, page 6>
+File: figures//neutron_calib/delayed/highestsnr/3671.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/highestsnr/3671.pdf, page 3>
+File: figures//neutron_calib/delayed/effsnr/0202_snr.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/effsnr/0202_snr.pdf>
+File: figures//neutron_calib/delayed/effsnr/0207_snr.pdf Graphic file (type pdf
+)
+<use figures//neutron_calib/delayed/effsnr/0207_snr.pdf>
+File: figures//neutron_calib/delayed/coinsummary/3671.pdf Graphic file (type pd
+f)
+<use figures//neutron_calib/delayed/coinsummary/3671.pdf, page 21>
+ [61]
+[62] [63] [64]
+Chapter 6
+File: figures//spallation_n/track_define.pdf Graphic file (type pdf)
+<use figures//spallation_n/track_define.pdf>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 4>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 6>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 7>
+File: figures//spallation_n/spn_area.pdf Graphic file (type pdf)
+<use figures//spallation_n/spn_area.pdf>
+[65
+
+] [66]
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 16>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 17>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 18>
+ [67]
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 19>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 20>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 8>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 9>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 10>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 11>
+ [68] [69]
+File: figures//spallation_n/muonTrack_err.pdf Graphic file (type pdf)
+<use figures//spallation_n/muonTrack_err.pdf>
+ [70]
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 21>
+File: figures//spallation_n/eff_err.pdf Graphic file (type pdf)
+<use figures//spallation_n/eff_err.pdf, page 9>
+File: figures//spallation_n/eff_err.pdf Graphic file (type pdf)
+<use figures//spallation_n/eff_err.pdf, page 11>
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 22>
+ [71]
+File: figures//spallation_n/yield_sjtu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sjtu.pdf, page 8>
+File: figures//spallation_n/yield_sjtu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sjtu.pdf, page 11>
+File: figures//spallation_n/yield_sjtu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sjtu.pdf, page 22>
+LaTeX Font Info:    Calculating math sizes for size <13.04874> on input line 84
+0.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 13.05013pt on input line 840.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 9.13503pt on input line 840.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 6.52505pt on input line 840.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 13.04733pt on input line 840.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 9.13309pt on input line 840.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 6.52367pt on input line 840.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 840.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 840.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 840.
+
+[72] [73]
+File: figures//spallation_n/yield_sdu.pdf Graphic file (type pdf)
+<use figures//spallation_n/yield_sdu.pdf, page 23>
+) (./data/SolarResearch.tex [74]
+Chapter 7
+[75
+
+]
+File: figures//solarSearch/n20Cut.pdf Graphic file (type pdf)
+<use figures//solarSearch/n20Cut.pdf>
+ [76]
+File: figures//solarSearch/Position_Cut.pdf Graphic file (type pdf)
+<use figures//solarSearch/Position_Cut.pdf>
+File: figures//solarSearch/pzp_FV.pdf Graphic file (type pdf)
+<use figures//solarSearch/pzp_FV.pdf>
+File: figures//solarSearch/iso.pdf Graphic file (type pdf)
+<use figures//solarSearch/iso.pdf, page 10>
+File: figures//solarSearch/iso.pdf Graphic file (type pdf)
+<use figures//solarSearch/iso.pdf, page 11>
+ [77] [78]
+File: figures//solarSearch/spallation_cut.pdf Graphic file (type pdf)
+<use figures//solarSearch/spallation_cut.pdf>
+)
+\openout3 = `bu.aux'.
+
+ (./thuthesis-example.bbl [79]
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 25.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 25.
+ [80
+
+
+] [81] [82] [83])
+(./bu.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) [84] (./thuthesis-example.aux (./bu.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `thuthesis-example.out' has not changed.
+(rerunfilecheck)             Checksum: 0E3F79F4E42CB96E9A82788BAB080F09;19504.
+ ) 
+Here is how much of TeX's memory you used:
+ 32909 strings out of 476191
+ 711471 string characters out of 5812072
+ 1170175 words of memory out of 5000000
+ 52995 multiletter control sequences out of 15000+600000
+ 480758 words of font info for 177 fonts, out of 8000000 for 9000
+ 1349 hyphenation exceptions out of 8191
+ 102i,20n,132p,1419b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on thuthesis-example.xdv (90 pages, 1648012 bytes).

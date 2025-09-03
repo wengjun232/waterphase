@@ -60,7 +60,7 @@ Understanding the origin of the jumbo charges is necessary for an appropriate SE
 Considering the structural similarity of the MCP-PMT in the JNE and the fact that the 8-inch PMT is more flexible compared to the 20-inch PMT in JUNO, we take the MCP-PMT in JNE as the research object and extend the results to the 20-inch PMT in JUNO.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/spe.pdf}
+	\includegraphics[width=0.6\textwidth]{PMTRelated/GTmodel/spe.pdf}
 	\caption{The charge spectrum of the high-CE MCP-PMT GDB-6082~(red) and a dynode-PMT~(blue)~\cite{Zhang:2023ued}.
 		The blue histogram consists of the pedestal $Q=0$ and the principal peak of $Q=Q_1$, while the red histogram includes jumbo charges.}
 	\label{fig:spe_sreal}
@@ -157,7 +157,7 @@ The total spectrum is the sum of three components.
 When the incident energy~$E_0$ is around \SI{650}{eV}, the energies of the secondaries are usually less than \SI{100}{eV} .
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{PMTRelated/GTmodel/SES.pdf}
+	\includegraphics[width=0.6\textwidth]{PMTRelated/GTmodel/SES.pdf}
 	\caption{The total energy spectrum of the secondary electrons when the incident energy is \SI{650}{eV}.
 		The violet, blue, and red lines represent $\mathrm{d}\delta_{\mathrm{bs}}/\mathrm{d}E$, $\mathrm{d}\delta_{\mathrm{rd}}/\mathrm{d}E$, and
 		$\mathrm{d}\delta_{\mathrm{ts}}/\mathrm{d}E$, repectively.
@@ -187,7 +187,7 @@ potential difference between the photocathode and $\mathrm{M}1$, which can help 
 Our circuit design was adapted from the circuit implementation presented in~\cite{Luo:2023jdf}. In our modification, we eliminated the redundant resistors R1 and R2, while keeping the remaining resistors unaltered.
 In comparison with the experiment conducted by Yang et al. \cite{2017MCP}, in which the potentials of all electrodes M1 - 4 are controllable, our design represents a simplified adaptation. This adaptation is specifically aimed at tuning the energies of the PEs using commercially available HV products.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{PMTRelated/GTmodel/set.pdf}
 	\caption{
@@ -213,7 +213,7 @@ In Fig.~\ref{fig:gain_fit}, the peaks are associated with the channel mode. The 
 
 We acquired approximate values of $\mu_{\mathrm{p}}$ and $\sigma_{\mathrm{p}}$ for the charge distribution. These values were used to supply initial values and ranges for a detailed fitting process. The fitting ranges were decided based on the incident energies of the PEs. Specifically, when $E_0>100$~\si{eV}, the range was set as $[\mu_{\mathrm{p}} - 1.3\sigma_{\mathrm{p}}, \mu_{\mathrm{p}}+1.6\sigma_{\mathrm{p}}]$; when $30<E_0\leqslant 100$~\si{eV}, it was $[\mu_{\mathrm{p}} - 0.8\sigma_{\mathrm{p}}, \mu_{\mathrm{p}}+1.6\sigma_{\mathrm{p}}]$; and when $E_0\leqslant 30$~\si{eV}, the range became $[\mu_{\mathrm{p}} - 1.5\sigma_{\mathrm{p}}, \mu_{\mathrm{p}}+1.8\sigma_{\mathrm{p}}]$. To measure the MCP gain for electrons at various energies, it suffices to extract the mean charge $\mu(E_0)$ and the standard deviation $\sigma(E_0)$ of the channel - mode peak.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
@@ -235,7 +235,7 @@ We acquired approximate values of $\mu_{\mathrm{p}}$ and $\sigma_{\mathrm{p}}$ f
 \end{figure}
 
 After performing Gaussian fitting, we conduct linear interpolation and extrapolation to acquire the relationships of $\mu(E_0)$ and $\sigma(E_0)$ presented in Fig.~\ref{fig:gaintest}. The disparity in the relationships of MCP-PMTs with and without \ce{Al2O3}-\ce{MgO} deposited on $\mathrm{M}1$ stems from the impact of the charge contributed by the surface mode. When \(E_0 < \SI{200}{eV}\), $\mu(E_0)$ experiences a rapid increase. Once \(E_0 > \SI{200}{eV}\), $\mu(E_0)$ gradually reaches a stable state. The $\sigma(E_0)$ generally increases in a manner similar to $\mu(E_0)$, yet it shows a decrease around \SI{200}{eV}. Yang et al.~\cite{2017MCP} reported a similar tendency for $\mu(E_0)$. In our study, the optimal relative resolution $\sigma/\mu$ occurs at approximately \SI{600}{eV}, while the results of Yang et al. indicated \SI{200}{eV}. Cao et al.\cite{cao_secondary_2021} discovered that the SEY of \ce{Al2O3}-\ce{MgO} rises with the incident energy within the range of 100 - \SI{600}{eV}. Even though the film structure and thickness we employed are different, taking into account the variation curves of the SEY of \ce{Al2O3} and \ce{MgO} with energy, we can still make a rough evaluation that the trend of $\sigma/\mu$ obtained herein is reasonable.
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
@@ -263,7 +263,7 @@ After performing Gaussian fitting, we conduct linear interpolation and extrapola
 
 \subsubsection{Charge-Spectra Decomposition}\label{sec:convolution}
 The Furman model presented in Sec.~\ref{subsec:fuman} forecasts the energies of the secondaries. In our voltage-division experiment detailed in Sec.~\ref{sec:gain}, we measured the correlation between the MCP gain and the incident energies of electrons. We calculate the charge distribution using Monte Carlo following the flowchart shown in Fig.~\ref{fig:process}. In this research, we directed the laser at the apex of the photocathode hemisphere, and the PEs struck M1 with an incident angle of $\theta_0 = 0^\circ$. The intricate amplification process within the channels is characterized by the incident energy-dependent Gamma distributions $\varGamma(\alpha(E), \beta(E))$ as described in Sec.~\ref{gammapossion}. The values of $\alpha(E)$ and $\beta(E)$ are estimated based on the relationships of $\mu(E)$ and $\sigma(E)$ of an MCP-PMT without an \ce{Al2O3}-\ce{MgO} coating on the input electrode. This approach removes the influence of the surface mode.
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{PMTRelated/GTmodel/process.pdf}
 	\caption{The flowchart of Monte Carlo for calculating the charge spectrum is presented. The output charge is composed of \(n_\mathrm{PE}\) SER charges. In the channel mode, the PEs directly enter the channels, whereas in the surface mode, the PEs strike the input electrode. The energies of the \(n_\mathrm{se}\) secondaries in the surface mode are sampled according to the Furman model. The amplification in the channels is modeled using the incident energy-dependent Gamma distribution.
@@ -393,7 +393,7 @@ The scatter plot of $\hat{\delta}_{\mathrm{ts}}'$ versus $\hat{p}_0$ for 9 MCP-P
 The PEs of the channel, back-scattered, and rediffused surface modes make up \SI{53.41}{\percent}, forming the peak. For each of the remaining cases, when hitting the surface, it induces 5.979 true-secondary electrons on average.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{PMTRelated/GTmodel/true_p.pdf}
+	\includegraphics[width=0.6\textwidth]{PMTRelated/GTmodel/true_p.pdf}
 	\caption{When performing convolution with 9 MCP-PMTs, the distribution of $\delta_{\mathrm{ts}}'$ and $p_0$ takes place at the point of minimum chi-square. The blue dashed line represents the expected $\hat{p}_0$ that is estimated from~\cite{chen2018photoelectron}. }
 	\label{fig:true_p}
 \end{figure}
@@ -480,7 +480,7 @@ In addition to defining the gain of the main peak~($G_p$), we also need to defin
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{PMTRelated/Gain_DCR_window.pdf}
+	\includegraphics[width=0.6\textwidth]{PMTRelated/Gain_DCR_window.pdf}
 	\caption{The range of PE time for gain and calibration. Only the PEs in the first \SI{100}{ns} are used.}
 	\label{fig:gain_100range}
 \end{figure}
@@ -561,7 +561,7 @@ Taking Run~3279 on February 2nd as an example, the distribution of the DCR obtai
 For each analyzed run, the DCR was calibrated independently. Consequently, the variation law of DCR with the data acquisition time can be straightforwardly investigated, as shown in Fig.~\ref{fig:dcr_time}. It has been observed that as the detector is in operation, the DCR initially increased, then gradually decreased, and ultimately stabilized. Throughout this transformation process, the DCR of the MCP-PMT consistently remained approximately \SI{5}{kHz} higher than that of the Dynode-PMT. Simultaneously, the DCRs of both PMTs consistently exceeded \SI{20}{kHz}. This situation exerted a certain influence on and presents challenges to the Cherenkov reconstruction of the water phase. Thus, it was essential to develop a mathematical model of the dark noise and apply it to the reconstruction.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{PMTRelated/dcr_time.pdf}
+	\includegraphics[width=0.6\textwidth]{PMTRelated/dcr_time.pdf}
 	\caption{The curve of DCR changing with time.}
 	\label{fig:dcr_time}
 \end{figure}
