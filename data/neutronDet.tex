@@ -736,7 +736,7 @@ The spallation neutron yield $Y_n$ is defined as the neutron production rate per
 	\label{eq:yn}
 	Y_n = \frac{N_n}{\rho N_{muon}L_{t,ave}}= \frac{N_n}{\rho \Sigma_{muon} L_t}
 \end{equation}
-Only consider the statistical uncertainty, the spallation neutron yield is $Y_n = (2.31\pm0.41 \text{(stat.)})\times 10^{-4} \mu^{-1}\text{g}^{-1}\text{cm}^2$.
+Only consider the statistical uncertainty, the spallation neutron yield is $Y_n = (2.31\pm0.41 \text{(stat.)})\times 10^{-4}~\mu^{-1}\text{g}^{-1}\text{cm}^2$.
 \begin{table}[H]
 	\caption{The efficiencies in spallation neutron search}%标题bottomrule
 	\label{tab:spn_eff}
@@ -755,7 +755,7 @@ Only consider the statistical uncertainty, the spallation neutron yield is $Y_n 
 
 Simultaneously, there are three primary sources of systematic uncertainty. The first kind comes from the muon track reconstruction. We found a systematic \SI{0.2}{\%} bias between reconstructed muon track lengths and their true values, as shown in Fig.~\ref{fig:muontrackUncerntainty}. Consequently, we attribute a \SI{0.2}{\%} systematic uncertainty to muon track reconstruction in our analyses.
 The second source of systematic uncertainty originates from neutron count variations induced by coincident distance selection. We perform parameter scans across multiple coincidence distances, as evidenced in Fig.~\ref{fig:muonCountUncerntainty} and quantified the systematic uncertainty using the maximum deviation from the central value obtained at different coincident distances.
-The final source of systematic uncertainty stems from detector inhomogeneity and discrepancies between simulation and experimental data. During \ce{AmBe} and \ce{AmC} calibrations, the neutron detection efficiency at $z = \SI{-16}{m}$ approaches zero, as shown in Fig.~\ref{fig:SPNsourceCalib}. To quantify the impact of this local efficiency anomaly on the global average efficiency, we perform a parameter scan across a $5\sigma$ range of efficiency uncertainty (0 to \SI{1.2}{\%}) based on the fitting results at this position. The range in the resulting detection efficiency is then adopted as the systematic uncertainty, as shown in Fig.~\ref{fig:muonEffUncerntainty}. All the systematic efficiencies are summarized in Table.~\ref{tab:spn_eff_un}. Our final result of spallation neutron yield measurement is $Y_n = (2.31\pm0.22\text{(sys.)}\pm0.41 \text{(stat.)}) \times 10^{-4}\mu^{-1}\text{g}^{-1}\text{cm}^2$. As shown in Fig.~\ref{fig:yield_final}, our measurements in the water phase demonstrate statistically significant consistency with Super-Kamiokande's benchmark results across key neutron detection parameters, validating the calibration methodology and detector performance.
+The final source of systematic uncertainty stems from detector inhomogeneity and discrepancies between simulation and experimental data. During \ce{AmBe} and \ce{AmC} calibrations, the neutron detection efficiency at $z = \SI{-16}{m}$ approaches zero, as shown in Fig.~\ref{fig:SPNsourceCalib}. To quantify the impact of this local efficiency anomaly on the global average efficiency, we perform a parameter scan across a $5\sigma$ range of efficiency uncertainty (0 to \SI{1.2}{\%}) based on the fitting results at this position. The range in the resulting detection efficiency is then adopted as the systematic uncertainty, as shown in Fig.~\ref{fig:muonEffUncerntainty}. All the systematic efficiencies are summarized in Table.~\ref{tab:spn_eff_un}. Our final result of spallation neutron yield measurement is $Y_n = (2.31\pm0.22\text{(sys.)}\pm0.41 \text{(stat.)}) \times 10^{-4}~\mu^{-1}\text{g}^{-1}\text{cm}^2$. As shown in Fig.~\ref{fig:yield_final}, our measurements in the water phase demonstrate statistically significant consistency with Super-Kamiokande's benchmark results across key neutron detection parameters, validating the calibration methodology and detector performance.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{spallation_n/muonTrack_err.pdf}
@@ -811,7 +811,7 @@ The final source of systematic uncertainty stems from detector inhomogeneity and
 	\label{fig:yield_final}
 \end{figure}
 \subsection{Cross check using water-pool reconstructed muon}
-In order to cross-check the muon reconstruction in the water phase, we repeat the analysis using the water pool muon reconstruction method~(JUNO-doc-13604). Except for the removal of the muon selection cut, all other selection criteria remain identical to those applied when using CD muons. The final result is $Y_n =( 2.32\pm0.19\text{(sys.)}\pm0.44 \text{(stat.)}) \times 10^{-4}\mu^{-1}\text{g}^{-1}\text{cm}^2$, as shown in Fig.~\ref{fig:yield_sjtu_yield} and \ref{fig:yield_sjtu22}. Those two results are consistent with each other.
+In order to cross-check the muon reconstruction in the water phase, we repeat the analysis using the water pool muon reconstruction method~(JUNO-doc-13604). Except for the removal of the muon selection cut, all other selection criteria remain identical to those applied when using CD muons. The final result is $Y_n =( 2.32\pm0.19\text{(sys.)}\pm0.44 \text{(stat.)}) \times 10^{-4}~\mu^{-1}\text{g}^{-1}\text{cm}^2$, as shown in Fig.~\ref{fig:yield_sjtu_yield} and \ref{fig:yield_sjtu22}. Those two results are consistent with each other.
 
 \begin{figure}[htbp]
 	\centering
@@ -846,7 +846,7 @@ At present, regarding the research on the muon-induced spallation neutron yield,
 	\label{tab:syn_summary}
 	\begin{tabular}{cccc}
 		\toprule
-		Target          & Experiment                            & $E_{\mu}$ (\si{GeV}) & $Y_n$ ($\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$) \\
+		Target          & Experiment                            & $E_{\mu}$ (\si{GeV}) & $Y_n$~($\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$) \\
 		\midrule
 		LS              & Hertenberger~\cite{spnYn_hertenberge} & 13                   & $(2.0 \pm 0.7) \times 10^{-5}$                   \\
 		LS              & Boehm~\cite{spnYn_Boehm}              & 16.5                 & $(3.6 \pm 0.4) \times 10^{-5}$                   \\
@@ -876,19 +876,19 @@ In LS, the yield of spallation neutrons is positively correlated with the averag
 	\label{tab:fit_E_mu}
 	\begin{tabular}{cccc}
 		\toprule
-		                 & Fitted $a_{\mu}$($10^{-6}\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$) & Fitted $b_{\mu}$ \\
+		                 & Fitted $a_{\mu}~$($10^{-6}\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$) & Fitted $b_{\mu}$ \\
 		\midrule
-		Wang Y.-F. et al & 4.14                                                              & 0.74             \\
-		Mei. et al       & 3.824                                                             & 0.849            \\
-		Kudryavtsev      & 3.2                                                               & 0.79             \\
-		Daya Bay         & 4.0                                                               & 0.77             \\
-		This work        & 3.36                                                              & 0.793            \\
+		Wang Y.-F. et al & 4.14                                                               & 0.74             \\
+		Mei. et al       & 3.824                                                              & 0.849            \\
+		Kudryavtsev      & 3.2                                                                & 0.79             \\
+		Daya Bay         & 4.0                                                                & 0.77             \\
+		This work        & 3.36                                                               & 0.793            \\
 		% 请在此处添加其他行数据
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-As shown in Fig.~\ref{fig:yield_fit_formuler}, with the exception that the fitting results of Mei et al. deviate notably from these experiments, the other three fitting results are generally in agreement with the experimental measurements, despite some minor discrepancies. Meanwhile, the three prediction results incorporate the results of the two measurements in water phase. This indicates that the predicted curve of the neutron yield of LS as a function of the average muon energy can approximately characterize the neutron yield of the water phase. Additionally, calculations were performed based on the two measurement results from the water phase of JUNO and SK, and the result is $a_{\mu}=3.36\times10^{-6}\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$, $b_{\mu}=0.793$.
+As shown in Fig.~\ref{fig:yield_fit_formuler}, with the exception that the fitting results of Mei et al. deviate notably from these experiments, the other three fitting results are generally in agreement with the experimental measurements, despite some minor discrepancies. Meanwhile, the three prediction results incorporate the results of the two measurements in water phase. This indicates that the predicted curve of the neutron yield of LS as a function of the average muon energy can approximately characterize the neutron yield of the water phase. Additionally, calculations were performed based on the two measurement results from the water phase of JUNO and SK, and the result is $a_{\mu}=3.36\times10^{-6}~\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$, $b_{\mu}=0.793$.
 
 \begin{figure}[htbp]
 	\centering

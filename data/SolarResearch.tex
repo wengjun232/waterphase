@@ -1,7 +1,7 @@
 \chapter{The observation of solar neutrino}
 \label{chap:solar}
 
-\section{Searching for Solar neutrino signals}
+\section{Signal screening}
 \label{sec:signal_screening}
 \subsection{The dataset}
 In order to search for solar neutrinos, we used the data from the MM trigger. During the data acquisition process in the water phase, the detector and the trigger system were still in the commissioning phase. Consequently, the data acquisition conditions were unstable. As a result, only a limited amount of data was available for the search of solar neutrinos. To address this, we carefully selected datasets with relatively high data acquisition quality and, to the greatest extent possible, performed calibrations both before and after data acquisition. Afetr selection, there were 9 runs in total, and the information of each run is shown in the Tab.~\ref{tab:summaryOfRuns_solar}. The total lifetime is \SI{18.13}{h} and more than \SI{15}{h} of data were taken at night.
@@ -141,7 +141,7 @@ For solar neutrinos, the most significant background comes from the electrons pr
 		\label{fig:solar_gamma_electron}
 	\end{subfigure}
 	\caption{The distribution of the distance between spallation isotopes~\subref{fig:solar_isotops},  electrons  or Gammas~\subref{fig:solar_gamma_electron} and the muon track.}
-	\label{fig:solar_isotops}
+	\label{fig:solar_isotops_all}
 \end{figure}
 Taking into account the resolution of the reconstruction, position cuts were implemented on the spallation background, which was then partitioned into two components:
 \begin{itemize}
@@ -156,4 +156,109 @@ Taking into account the resolution of the reconstruction, position cuts were imp
 	\label{fig:solar_spallation_cut}
 \end{figure}
 
-\subsection{The observation of solar neutrino signals}
+\subsection{The summary of selections}
+In addition to those cuts before, we have cut on goodness $G_{vd}$ and Cherenkov ring quality $n_c/n_{20}$. All the cut we used for solar neutrinos are in Tab.~\ref{tab:selection_summary}.
+\begin{table}[htbp]
+	\centering
+	\caption{The final selection for solar neutrinos}%标题
+	\label{tab:selection_summary}
+	\begin{tabular}{ccc}
+		\toprule
+		                & selection conditions                                  \\
+		\midrule
+		Fiducial volume & r<\SI{14}{m}                                          \\
+		                & $x^2+y^2>50~\text{m}^2$                               \\
+		Energy          & $93<n_{20}<233$                                       \\
+		Quality         & $n_c/n_{20}>0.23$                                     \\
+		                & $G_{vd}>0.29$                                         \\
+		Spallation cut  & >\SI{5}{ms} after muon                                \\
+		                & >\SI{15}{m}, if muon in 1--\SI{1000}{ms} before event \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{The observation of solar neutrino signals}
+\subsection{Definition of the solar angle}
+Solar neutrinos are produced in the core of the Sun. During the process of ES, the directional properties of neutrinos are maintained. Therefore, the number of solar neutrino events can be estimated by calculating the angle between the direction of the events and the azimuth of the Sun, that is, the solar angle~($\theta_s$), as shown in Fig.~\ref{fig:solar_angle_define}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{solarSearch/solarAngleDef.pdf}
+	\caption{The definition of solar angle.}
+	\label{fig:solar_angle_define}
+\end{figure}
+\subsection{The observation of solar neutrinos}
+After the selections in Sec.~\ref{sec:signal_screening}, we can get the solar angle distribution as shown in Fig.~\ref{fig:solar_angle}, and their position distribution as illustrated in Fig.~\ref{fig:solar_pos}.
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{solarSearch/SolarAngle_err.pdf}
+		\caption{}
+		\label{fig:solar_angle}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{solarSearch/Position_Cut_final.pdf}
+		\caption{}
+		\label{fig:solar_pos}
+	\end{subfigure}
+	\caption{The distribution of solar angle~\subref{fig:solar_angle},  and position distribution of solar neutrino candidates~\subref{fig:solar_pos}.}
+	\label{fig:solar_final_distribution}
+\end{figure}
+
+To check whether the distribution of the solar angle is reasonable, we still use Gamma for approximation. In the Compton scattering of Gamma and electrons, the electrons also possess the directional characteristics of Gamma. We can define the Gamma angle in a way similar to the solar angle, as illustrated in Fig.~\ref{fig:solar_gamma_angle}. We applied the same energy cut and quality cut to the calibration source as those employed in the search for solar neutrinos. A clear peak can be seen at $\cos\theta_{\gamma}=1$, as shown in Fig.~\ref{fig:solar_gamma_dis}, which indicates that we have indeed detected the solar neutrino signal in water phase.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[height=4.5cm]{solarSearch/gamma_angle.pdf}
+		\caption{}
+		\label{fig:solar_gamma_angle}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[height=4.5cm]{solarSearch/gamma_angle_3286.pdf}
+		\caption{}
+		\label{fig:solar_gamma_dis}
+	\end{subfigure}
+	\caption{\subref{fig:solar_gamma_angle}:The definition of Gamma angle~\subref{fig:solar_gamma_angle}. \subref{fig:solar_gamma_dis}: The distribution of $\cos\theta_{\gamma}$ in calibration Run~3286.}
+	\label{fig:solar_final_gamma_angle}
+\end{figure}
+
+We can use the bins with $\cos\theta_s > 0.5$ as the signal interval and obtain 13 candidates for the signal. The bins with $\cos\theta_s < 0$ are used to estimate the background level, which is 1.3 in each bin. Finally, the number of solar neutrino signals obtained is $N_s=6.50\pm2.54$, along with $26.0\pm5.1$ backgrounds.
+
+\section{The estimation of $^8$\ce{B} neutrino flux}
+We can use Eq.~\eqref{eq:flux} to estimate the flux of $^8$\ce{B} neutrino.
+\begin{equation}
+	\phi_{B8}=\frac{N_s}{N_e\sigma_t t_f \eta}
+	\label{eq:flux}
+\end{equation}
+Where $N_s$ is the number of solar $^8$\ce{B} neutrino, $\sigma_t$ is the total cross section of ES, $N_e$ is the number of electrons, $t_f$ is the lifetime and $\eta_s$ is the efficiency, including the  FV and selections.
+
+\subsection{The flux estimation}
+The total number of electrons can be obtained through mathematical calculations:
+\begin{equation}
+	N_e=\frac{4\pi}{3}\times (1770~\text{cm})^3\times 1~\text{g}/\text{cm}^3\times \frac{1}{18}~\text{mol}/\text{g}\times N_A\times 10=7.77\times10^{33}
+\end{equation}
+
+Combining the $^8$\ce{B} neutrino energy distribution mearsured by Winter et al.~\cite{B8_winter} as evidenced in Fig.~\ref{fig:solar_B8_err_e} and the cross section calculated by Bachall~\cite{Bahcall_correct} as shown in Fig.~\ref{fig:solar_B8_cross}, we get the total cross section: $\sigma_t=5.82\times10^{-44}~\text{cm}^2$.
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{solarSearch/B8_spectrum_err_e.pdf}
+		\caption{}
+		\label{fig:solar_B8_err_e}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{solarSearch/B8_spectrum_cross.pdf}
+		\caption{}
+		\label{fig:solar_B8_cross}
+	\end{subfigure}
+	\caption{\subref{fig:solar_B8_err_e} shows the energy distribution and the systematic uncertainty of spectrum shape of $^8$\ce{B} neutrino, and the data comes from~\cite{B8_winter}. \subref{fig:solar_B8_cross} shows the cross section of ES and the calculation comes from~\cite{Bahcall_correct}.}
+\end{figure}
+
+
+In the spallation cut, we can only remove the background with a lifetime less than \SI{300}{ms}. However, for the background with a lifetime on the order of seconds, it is difficult to remove. By estimating from Tab.~\ref{tab:solar_spallation_bkg}, the sum of the yields of this part of the spallation background is $21.159\times 10^{-7}~\mu^{-1}\mathrm{g}^{-1}\mathrm{cm}^{2}$. We can convert it using the neutron yield.
