@@ -62,3 +62,30 @@ The Central Detector consists of an acrylic spherical shell with a diameter of \
 \end{table}
 
 \subsection{The Top Tracker}
+It is mainly used to reconstruct and track the trajectories of atmospheric muons. This detector is modified from the target tracker modules of the decommissioned OPERA experiment. It covers approximately \SI{60}{\%} of the area at the top of CD and contains 63 double-layer scintillator walls~(a total of 496 modules), as shown in Fig.~\ref{fig:TT_0}. Each module is composed of plastic scintillator strips arranged orthogonally, and the signals are read out through wavelength-shifting fibers connected to multi-anode PMTs~(MA-PMTs), as illustrated in Fig.~\ref{fig:juno_TT}. To adapt to the highly radioactive environment of the underground laboratory, its electronics system has been comprehensively upgraded to achieve precise triggering at high counting rates. TT can significantly reduce the interference of cosmic muon spallation background on the measurement of NMO through the reconstruction of muon trajectories with centimeter-level accuracy. It is particularly crucial for identifying the \ce{^9Li}/\ce{^8He} background induced by muons~\cite{top_tracker,muon207}.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.75\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{junoDetector/TT_0.pdf}
+		\caption{}
+		\label{fig:TT_0}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[height=6cm]{junoDetector/TT_1.pdf}
+		\caption{}
+		\label{fig:TT_1}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[height=6cm]{junoDetector/TT_2.pdf}
+		\caption{}
+		\label{fig:TT_2}
+	\end{subfigure}
+	\caption{\subref{fig:TT_0} presents the side view of TT from the CD side. \subref{fig:TT_1} is a schematic illustration of a TT module. This module is composed of 64 strips that are read out by WLS fibers and \subref{fig:TT_2} depicts a plastic scintillator strip wall. These figures are sourced from~\cite{top_tracker}.}
+	\label{fig:juno_TT}
+\end{figure}

@@ -1,6 +1,7 @@
 \chapter{The PMT calibration in water phase}\label{sec:Introduction}
-For the search of solar neutrinos in water phase, calibrating and understanding the detector is of crucial importance. First and foremost is to understand the behavior of photomultiplier tubes~(PMTs). That is, we need to understand how PMTs convert the received photons into basic information for reconstruction. We need to extract from the output information of PMTs how many photons are captured and when they are captured. This requires systematic characterization of key parameters including the PMT timing response, gain stability, linearity, noise levels, and single-photon detection capability. Such calibration is also critical for achieving the high-precision energy resolution and vertex reconstruction necessary for JUNO's physics goals during LS phase, particularly in the determination of neutrino mass ordering. In this chapter, we will investigate the performance characteristics of PMTs in the water phase.
+For the search of solar neutrinos in water phase, calibrating and understanding the detector is of crucial importance. First and foremost is to understand the behavior of photomultiplier tubes~(PMTs). That is, we need to understand how PMTs convert the received photons into basic information for reconstruction. We need to extract from the output information of PMTs how many photons are captured and when they are captured. This requires systematic characterization of key parameters including the PMT timing response, gain stability, linearity, noise levels, and single-photon detection capability. Such calibration is also critical for achieving the high-precision energy resolution and vertex reconstruction necessary for JUNO's physics goals during LS phase, particularly in the determination of neutrino mass ordering. In this chapter, we will investigate the performance characteristics of PMTs in the water phase. In Sec.~\ref{sec:gaincalib}, we will focus on the gain calibration of the newly developed MCP-PMTs, and propose the Gamma-Tweedie model for them. Also, the calibrated gain distribution will be provided. In Sec.~\ref{sec:dcr}, we will discuss the dark count rate. In Sec.~\ref{sec:timing}, we will study the timing calibration of PMTs and the photon detection efficiency will be discussed in Sec.~\ref{sec:pde}.
 \section{The gain calibration}
+\label{sec:gaincalib}
 \subsection{The traditional mixxed Gaussian model}
 As outlined in foundational studies~\cite{1955Scintillation}, a PMT's operational core comprises three functional stages:
 \begin{itemize}
@@ -15,7 +16,7 @@ Electron multiplication relies fundamentally on secondary electron emission~(SEE
 \begin{itemize}
 	\item primary particle kinetic energy
 	\item impact angle
-	\item material composition~\cite{2002Probabilistic}.
+	\item material composition~\cite{2002Probabilistic}
 \end{itemize}
 
 Early SEY characterization employed electron bombardment methodologies: Bruining and Boer~\cite{1938Secondary}, Ushio et al.~\cite{1988Secondary}, and Jokela et al.~\cite{2012Secondary} obtained current-mode measurements, while Olano and Montero~\cite{OLANO2020103456} derived $\mathrm{d}\delta/\mathrm{d}E$ distributions for polymeric substrates (Kapton/Teflon/Ultem) via charge accumulation analysis, observing significantly attenuated secondary electron energies relative to primaries. These bulk-material SEE properties have subsequently informed PMT amplification models~\cite{2012An,2021Effects}.
@@ -591,6 +592,7 @@ The distribution of time-offset is as shown in Fig.~\ref{fig:offset} and that of
 \end{figure}
 
 \section{The Photon Detection Efficiency}
+\label{sec:pde}
 The Photon Detection Efficiency~(PDE, $\varepsilon$) is an important parameter for measuring the photon detection ability of a PMT. Numerically, it is equal to the product of QE and CE. In this work, we directly use the results obtained from the batch tests at Pan-Asia~\cite{JUNO:2022hlz}, as shown in Fig.~\ref{fig:PDE}.
 \begin{figure}[htbp]
 	\centering
